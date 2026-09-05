@@ -6,13 +6,13 @@
     {
       "id": "software-installation-policy-01",
       "section": "4. Policy",
-      "text": "Employees may not install software on <Company Name’s> computing devices operated within the <Company Name> network.",
+      "text": "Employees may not install software on <Company Name\u2019s> computing devices operated within the <Company Name> network.",
       "obligation": "must"
     },
     {
       "id": "software-installation-policy-02",
       "section": "4. Policy",
-      "text": "Software requests must first be approved by the requester’s manager.",
+      "text": "Software requests must first be approved by the requester\u2019s manager.",
       "obligation": "must"
     },
     {
@@ -24,7 +24,7 @@
     {
       "id": "software-installation-policy-04",
       "section": "4. Policy",
-      "text": "Software must be selected from an approved software list, maintained by the Information Technology department, unless no selection on the list meets the requester’s need.",
+      "text": "Software must be selected from an approved software list, maintained by the Information Technology department, unless no selection on the list meets the requester\u2019s need.",
       "obligation": "must"
     },
     {
@@ -45,5 +45,12 @@
       "text": "The Information Technology Department will perform the installation of new software.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "57. software_installation_policy.pdf",
+    "ingested_at": "2026-09-05T18:43:11.527434+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 7
+  }
 }

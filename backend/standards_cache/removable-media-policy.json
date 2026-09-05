@@ -27,5 +27,12 @@
       "text": "When sensitive information is stored on removable media, it must be encrypted in accordance with the <Company Name> Acceptable Encryption Policy.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "49. removable_media_policy.pdf",
+    "ingested_at": "2026-09-05T18:42:43.243059+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 4
+  }
 }

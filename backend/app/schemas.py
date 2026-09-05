@@ -24,11 +24,20 @@ class Requirement(BaseModel):
     obligation: Literal["must", "should", "may"]
 
 
+class IngestMeta(BaseModel):
+    source_filename: str
+    ingested_at: str
+    extraction_model: str
+    embedding_model: str
+    requirement_count: int
+
+
 class StandardExtraction(BaseModel):
     title: str
     summary: str
     scope: str
     requirements: list[Requirement]
+    meta: IngestMeta | None = None
 
 
 # online, LLM output

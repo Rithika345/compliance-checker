@@ -147,5 +147,12 @@
       "text": "Security-related events will be reported to InfoSec, who will review logs and report incidents to IT management.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "55. server_security_policy.pdf",
+    "ingested_at": "2026-09-05T18:43:09.107186+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 24
+  }
 }

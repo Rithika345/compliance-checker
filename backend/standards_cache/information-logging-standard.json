@@ -102,19 +102,19 @@
     {
       "id": "information-logging-standard-17",
       "section": "4.3",
-      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Type of action – examples include authorize, create, read, update, delete, and accept network connection.",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Type of action \u2013 examples include authorize, create, read, update, delete, and accept network connection.",
       "obligation": "must"
     },
     {
       "id": "information-logging-standard-18",
       "section": "4.3",
-      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Subsystem performing the action – examples include process or transaction name, process or transaction identifier.",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Subsystem performing the action \u2013 examples include process or transaction name, process or transaction identifier.",
       "obligation": "must"
     },
     {
       "id": "information-logging-standard-19",
       "section": "4.3",
-      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Identifiers (as many as available) for the subject requesting the action – examples include user name, computer name, IP address, and MAC address.",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Identifiers (as many as available) for the subject requesting the action \u2013 examples include user name, computer name, IP address, and MAC address.",
       "obligation": "must"
     },
     {
@@ -126,7 +126,7 @@
     {
       "id": "information-logging-standard-21",
       "section": "4.3",
-      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Identifiers (as many as available) for the object the action was performed on – examples include file names accessed, unique identifiers of records accessed in a database, query parameters used to determine records accessed in a database, computer name, IP address, and MAC address.",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Identifiers (as many as available) for the object the action was performed on \u2013 examples include file names accessed, unique identifiers of records accessed in a database, query parameters used to determine records accessed in a database, computer name, IP address, and MAC address.",
       "obligation": "must"
     },
     {
@@ -165,5 +165,12 @@
       "text": "The system shall support the formatting and storage of audit logs in such a way as to ensure the integrity of the logs and to support enterprise-level analysis and reporting.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "29. information_logging_standard.pdf",
+    "ingested_at": "2026-09-05T18:42:06.480564+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 27
+  }
 }

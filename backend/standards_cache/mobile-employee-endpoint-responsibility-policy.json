@@ -24,7 +24,7 @@
     {
       "id": "mobile-employee-endpoint-responsibility-policy-04",
       "section": "4.1",
-      "text": "Employees shall run an online malware scanner at least once a month for a “second opinion”.",
+      "text": "Employees shall run an online malware scanner at least once a month for a \u201csecond opinion\u201d.",
       "obligation": "must"
     },
     {
@@ -33,5 +33,12 @@
       "text": "After installing a Browser Add-on, employees shall run a browser testing tool.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "41. mobile_employee_endpoint_responsibility_policy.pdf",
+    "ingested_at": "2026-09-05T18:42:29.431605+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 5
+  }
 }

@@ -24,7 +24,7 @@
     {
       "id": "router-and-switch-security-policy-04",
       "section": "4. Policy",
-      "text": "The router or switch must have the enable password set to the current production router/switch password from the device’s support organization.",
+      "text": "The router or switch must have the enable password set to the current production router/switch password from the device\u2019s support organization.",
       "obligation": "must"
     },
     {
@@ -207,5 +207,12 @@
       "text": "The corporate router configuration standard will define the category of sensitive routing and switching devices, and require additional services or configuration on sensitive devices including: Router console and modem access must be restricted by additional security controls.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "51. router_and_switch_security_policy.pdf",
+    "ingested_at": "2026-09-05T18:42:54.823460+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 34
+  }
 }

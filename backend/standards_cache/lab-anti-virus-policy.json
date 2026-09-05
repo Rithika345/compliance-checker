@@ -45,5 +45,12 @@
       "text": "Any activities with the intention to create and/or distribute malicious programs into <Company Name>'s networks (e.g., viruses, worms, Trojan horses, e-mail bombs, etc.) are prohibited, in accordance with the Acceptable Use Policy.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "38. lab_anti_virus_policy.pdf",
+    "ingested_at": "2026-09-05T18:46:02.905985+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 7
+  }
 }

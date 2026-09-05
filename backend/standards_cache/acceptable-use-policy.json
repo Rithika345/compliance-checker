@@ -234,25 +234,25 @@
     {
       "id": "acceptable-use-policy-39",
       "section": "4.3.3",
-      "text": "Blogging by employees, whether using <Company Name>’s property and systems or personal computer systems, is also subject to the terms and restrictions set forth in this Policy.",
+      "text": "Blogging by employees, whether using <Company Name>\u2019s property and systems or personal computer systems, is also subject to the terms and restrictions set forth in this Policy.",
       "obligation": "must"
     },
     {
       "id": "acceptable-use-policy-40",
       "section": "4.3.3",
-      "text": "Limited and occasional use of <Company Name>’s systems to engage in blogging is acceptable, provided that it is done in a professional and responsible manner, does not otherwise violate <Company Name>’s policy, is not detrimental to <Company Name>’s best interests, and does not interfere with an employee's regular work duties.",
+      "text": "Limited and occasional use of <Company Name>\u2019s systems to engage in blogging is acceptable, provided that it is done in a professional and responsible manner, does not otherwise violate <Company Name>\u2019s policy, is not detrimental to <Company Name>\u2019s best interests, and does not interfere with an employee's regular work duties.",
       "obligation": "must"
     },
     {
       "id": "acceptable-use-policy-41",
       "section": "4.3.3",
-      "text": "Blogging from <Company Name>’s systems is also subject to monitoring.",
+      "text": "Blogging from <Company Name>\u2019s systems is also subject to monitoring.",
       "obligation": "must"
     },
     {
       "id": "acceptable-use-policy-42",
       "section": "4.3.3",
-      "text": "Employees are prohibited from revealing any <Company> confidential or proprietary information, trade secrets or any other material covered by <Company>’s Confidential Information policy when engaged in blogging.",
+      "text": "Employees are prohibited from revealing any <Company> confidential or proprietary information, trade secrets or any other material covered by <Company>\u2019s Confidential Information policy when engaged in blogging.",
       "obligation": "must"
     },
     {
@@ -264,7 +264,7 @@
     {
       "id": "acceptable-use-policy-44",
       "section": "4.3.3",
-      "text": "Employees are also prohibited from making any discriminatory, disparaging, defamatory or harassing comments when blogging or otherwise engaging in any conduct prohibited by <Company Name>’s Non-Discrimination and Anti-Harassment policy.",
+      "text": "Employees are also prohibited from making any discriminatory, disparaging, defamatory or harassing comments when blogging or otherwise engaging in any conduct prohibited by <Company Name>\u2019s Non-Discrimination and Anti-Harassment policy.",
       "obligation": "must"
     },
     {
@@ -282,8 +282,15 @@
     {
       "id": "acceptable-use-policy-47",
       "section": "4.3.3",
-      "text": "<Company Name>’s trademarks, logos and any other <Company Name> intellectual property may also not be used in connection with any blogging activity.",
+      "text": "<Company Name>\u2019s trademarks, logos and any other <Company Name> intellectual property may also not be used in connection with any blogging activity.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "2. acceptable_use_policy.pdf",
+    "ingested_at": "2026-09-05T18:41:47.530604+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 47
+  }
 }

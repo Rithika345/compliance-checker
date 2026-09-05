@@ -225,5 +225,12 @@
       "text": "Remote administration must be performed over secure channels (e.g., encrypted network connections using SSH or IPSEC) or console access independent from the DMZ networks.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "15. dmz_lab_security_policy.pdf",
+    "ingested_at": "2026-09-05T18:41:05.979171+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 37
+  }
 }

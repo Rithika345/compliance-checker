@@ -1,7 +1,7 @@
 {
   "title": "Employee Internet Use Monitoring and Filtering Policy",
   "summary": "This policy establishes standards for monitoring and filtering employee Internet use on the organization's network. It defines requirements for logging, access to monitoring reports, filtering of inappropriate content, and handling of exceptions.",
-  "scope": "This policy applies to all <Company Name> employees, contractors, vendors and agents with a <Company Name>-owned or personally-owned computer or workstation connected to the <Company Name> network. It applies to all end user initiated communications between <Company Name>’s network and the Internet, including web browsing, instant messaging, file transfer, file sharing, and other standard and proprietary protocols. Server to Server communications, such as SMTP traffic, backups, automated data transfers or database communications are excluded from this policy.",
+  "scope": "This policy applies to all <Company Name> employees, contractors, vendors and agents with a <Company Name>-owned or personally-owned computer or workstation connected to the <Company Name> network. It applies to all end user initiated communications between <Company Name>\u2019s network and the Internet, including web browsing, instant messaging, file transfer, file sharing, and other standard and proprietary protocols. Server to Server communications, such as SMTP traffic, backups, automated data transfers or database communications are excluded from this policy.",
   "requirements": [
     {
       "id": "employee-internet-use-monitoring-and-filtering-policy-01",
@@ -48,7 +48,7 @@
     {
       "id": "employee-internet-use-monitoring-and-filtering-policy-08",
       "section": "4.3",
-      "text": "The Information Technology Department shall block access to Internet websites and protocols that are deemed inappropriate for <Company Name>’s corporate environment.",
+      "text": "The Information Technology Department shall block access to Internet websites and protocols that are deemed inappropriate for <Company Name>\u2019s corporate environment.",
       "obligation": "must"
     },
     {
@@ -117,5 +117,12 @@
       "text": "Information Technology will track approved exceptions and report on them upon request.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "18. employee_internet_use_monitoring_and_filtering_policy.pdf",
+    "ingested_at": "2026-09-05T18:41:20.907698+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 19
+  }
 }

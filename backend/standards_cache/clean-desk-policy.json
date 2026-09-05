@@ -81,5 +81,12 @@
       "text": "Treat mass storage devices such as CDROM, DVD or USB drives as sensitive and secure them in a locked drawer.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "8. clean_desk_policy.pdf",
+    "ingested_at": "2026-09-05T18:43:42.757519+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 13
+  }
 }

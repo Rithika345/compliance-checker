@@ -87,5 +87,12 @@
       "text": "Machines must be configured to comply with Infosec's Security Policies.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "59. virtual_private_network_policy.pdf",
+    "ingested_at": "2026-09-05T18:43:16.038742+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 14
+  }
 }

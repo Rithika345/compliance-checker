@@ -42,7 +42,7 @@
     {
       "id": "mobile-device-encryption-policy-07",
       "section": "4.3",
-      "text": "All encryption keys and pass-phrases must meet complexity requirements described in <Company Name>’s Password Protection Policy.",
+      "text": "All encryption keys and pass-phrases must meet complexity requirements described in <Company Name>\u2019s Password Protection Policy.",
       "obligation": "must"
     },
     {
@@ -51,5 +51,12 @@
       "text": "The loss or theft of any mobile device containing <Company Name> data must be reported immediately.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "40. mobile_device_encryption_policy.pdf",
+    "ingested_at": "2026-09-05T18:42:27.228570+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 8
+  }
 }

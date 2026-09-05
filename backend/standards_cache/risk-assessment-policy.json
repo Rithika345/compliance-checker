@@ -21,5 +21,12 @@
       "text": "Employees are further expected to work with the Infosec Risk Assessment Team in the development of a remediation plan.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "50. risk_assessment_policy.pdf",
+    "ingested_at": "2026-09-05T18:42:46.155439+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 3
+  }
 }

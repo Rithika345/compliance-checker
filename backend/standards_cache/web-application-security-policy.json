@@ -1,7 +1,7 @@
 {
   "title": "Web Application Security Policy",
   "summary": "This policy governs the security assessment requirements for web applications within the organization. It defines when and how web application security assessments must be performed, the handling of discovered vulnerabilities, and the assessment methodologies to be used.",
-  "scope": "This policy covers all web application security assessments requested by any individual, group or department for the purposes of maintaining the security posture, compliance, risk management, and change control of technologies in use at <Company Name>. All web application security assessments will be performed by delegated security personnel either employed or contracted by <Company Name>. All findings are considered confidential and are to be distributed to persons on a “need to know” basis. Distribution of any findings outside of <Company Name> is strictly prohibited unless approved by the Chief Information Officer.",
+  "scope": "This policy covers all web application security assessments requested by any individual, group or department for the purposes of maintaining the security posture, compliance, risk management, and change control of technologies in use at <Company Name>. All web application security assessments will be performed by delegated security personnel either employed or contracted by <Company Name>. All findings are considered confidential and are to be distributed to persons on a \u201cneed to know\u201d basis. Distribution of any findings outside of <Company Name> is strictly prohibited unless approved by the Chief Information Officer.",
   "requirements": [
     {
       "id": "web-application-security-policy-01",
@@ -117,5 +117,12 @@
       "text": "Other tools and/or techniques may be used depending upon what is found in the default assessment and the need to determine validity and risk are subject to the discretion of the Security Engineering team.",
       "obligation": "may"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "60. web_application_security_policy.pdf",
+    "ingested_at": "2026-09-05T18:43:22.827742+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 19
+  }
 }

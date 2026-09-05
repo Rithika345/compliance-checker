@@ -129,5 +129,12 @@
       "text": "Should a security incident or a finding that a circuit has been deprecated and is no longer being used to conduct <Company Name> business necessitate a modification of existing permissions, or termination of connectivity, InfoSec and/or the extranet team will notify the POC or the Sponsoring Organization of the change prior to taking any action.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "21. extranet_policy.pdf",
+    "ingested_at": "2026-09-05T18:41:56.321665+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 21
+  }
 }

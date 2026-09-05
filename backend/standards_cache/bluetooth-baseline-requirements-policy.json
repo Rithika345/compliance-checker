@@ -36,7 +36,7 @@
     {
       "id": "bluetooth-baseline-requirements-policy-06",
       "section": "4.3 Device Security Settings",
-      "text": "All Bluetooth devices shall employ ‘security mode 3’ which encrypts traffic in both directions, between your Bluetooth Device and its paired equipment.",
+      "text": "All Bluetooth devices shall employ \u2018security mode 3\u2019 which encrypts traffic in both directions, between your Bluetooth Device and its paired equipment.",
       "obligation": "must"
     },
     {
@@ -129,5 +129,12 @@
       "text": "Bluetooth users are required to report any misuse, loss, or theft of Bluetooth devices or systems immediately to Infosec.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "7. bluetooth_baseline_requirements_policy.pdf",
+    "ingested_at": "2026-09-05T18:43:38.906047+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 21
+  }
 }

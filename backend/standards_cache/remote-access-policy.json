@@ -6,7 +6,7 @@
     {
       "id": "remote-access-policy-01",
       "section": "4",
-      "text": "General access to the Internet for recreational use through the <Company Name> network is strictly limited to <Company Name> employees, contractors, vendors and agents (hereafter referred to as “Authorized Users”).",
+      "text": "General access to the Internet for recreational use through the <Company Name> network is strictly limited to <Company Name> employees, contractors, vendors and agents (hereafter referred to as \u201cAuthorized Users\u201d).",
       "obligation": "must"
     },
     {
@@ -69,5 +69,12 @@
       "text": "Personal equipment used to connect to <Company Name>'s networks must meet the requirements of <Company Name>-owned equipment for remote access as stated in the Hardware and Software Configuration Standards for Remote Access to <Company Name> Networks.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "47. remote_access_policy.pdf",
+    "ingested_at": "2026-09-05T18:42:41.189271+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 11
+  }
 }

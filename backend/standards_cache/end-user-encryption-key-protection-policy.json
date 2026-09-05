@@ -18,7 +18,7 @@
     {
       "id": "end-user-encryption-key-protection-policy-03",
       "section": "4.1",
-      "text": "During distribution, the symmetric encryption keys must be encrypted using a stronger algorithm with a key of the longest key length for that algorithm authorized in <Company Name>’s Acceptable Encryption Policy.",
+      "text": "During distribution, the symmetric encryption keys must be encrypted using a stronger algorithm with a key of the longest key length for that algorithm authorized in <Company Name>\u2019s Acceptable Encryption Policy.",
       "obligation": "must"
     },
     {
@@ -42,13 +42,13 @@
     {
       "id": "end-user-encryption-key-protection-policy-07",
       "section": "4.2.1",
-      "text": "The public-private key pairs used by the <Company Name>’s public key infrastructure (PKI) are generated on the tamper-resistant smart card issued to an individual end user.",
+      "text": "The public-private key pairs used by the <Company Name>\u2019s public key infrastructure (PKI) are generated on the tamper-resistant smart card issued to an individual end user.",
       "obligation": "must"
     },
     {
       "id": "end-user-encryption-key-protection-policy-08",
       "section": "4.2.1",
-      "text": "The private key associated with an end user’s identity certificate, which are only used for digital signatures, will never leave the smart card.",
+      "text": "The private key associated with an end user\u2019s identity certificate, which are only used for digital signatures, will never leave the smart card.",
       "obligation": "must"
     },
     {
@@ -72,7 +72,7 @@
     {
       "id": "end-user-encryption-key-protection-policy-12",
       "section": "4.2.2",
-      "text": "If the public-private key pair is generated on smartcard, the requirements for protecting the private keys are the same as those for private keys associated with <Company Name’s> PKI.",
+      "text": "If the public-private key pair is generated on smartcard, the requirements for protecting the private keys are the same as those for private keys associated with <Company Name\u2019s> PKI.",
       "obligation": "must"
     },
     {
@@ -120,13 +120,13 @@
     {
       "id": "end-user-encryption-key-protection-policy-20",
       "section": "4.3",
-      "text": "Hardware tokens storing encryption keys will be treated as sensitive company equipment, as described in <Company Name>’s Physical Security policy, when outside company offices.",
+      "text": "Hardware tokens storing encryption keys will be treated as sensitive company equipment, as described in <Company Name>\u2019s Physical Security policy, when outside company offices.",
       "obligation": "must"
     },
     {
       "id": "end-user-encryption-key-protection-policy-21",
       "section": "4.3",
-      "text": "All hardware tokens, smartcards, USB tokens, etc., will not be stored or left connected to any end user’s computer when not in use.",
+      "text": "All hardware tokens, smartcards, USB tokens, etc., will not be stored or left connected to any end user\u2019s computer when not in use.",
       "obligation": "must"
     },
     {
@@ -138,7 +138,7 @@
     {
       "id": "end-user-encryption-key-protection-policy-23",
       "section": "4.4",
-      "text": "All PINs, passwords or passphrases used to protect encryption keys must meet complexity and length requirements described in <Company Name>’s Password Policy.",
+      "text": "All PINs, passwords or passphrases used to protect encryption keys must meet complexity and length requirements described in <Company Name>\u2019s Password Policy.",
       "obligation": "must"
     },
     {
@@ -147,5 +147,12 @@
       "text": "The loss, theft, or potential unauthorized disclosure of any encryption key covered by this policy must be reported immediately to The Infosec Team.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "19. end_user_encryption_key_protection_policy.pdf",
+    "ingested_at": "2026-09-05T18:41:31.072281+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 24
+  }
 }

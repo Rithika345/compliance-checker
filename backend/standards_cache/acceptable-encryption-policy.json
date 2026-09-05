@@ -69,5 +69,12 @@
       "text": "Key generation must be seeded from an industry standard random number generator (RNG).",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "1. acceptable_encryption_policy.pdf",
+    "ingested_at": "2026-09-05T18:40:44.358021+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 11
+  }
 }

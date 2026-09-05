@@ -90,7 +90,7 @@
     {
       "id": "email-policy-15",
       "section": "4.10",
-      "text": "<Company Name> employees shall have no expectation of privacy in anything they store, send or receive on the company’s email system.",
+      "text": "<Company Name> employees shall have no expectation of privacy in anything they store, send or receive on the company\u2019s email system.",
       "obligation": "must"
     },
     {
@@ -99,5 +99,12 @@
       "text": "<Company Name> may monitor messages without prior notice.",
       "obligation": "may"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "16. email_policy.pdf",
+    "ingested_at": "2026-09-05T18:41:10.692517+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 16
+  }
 }

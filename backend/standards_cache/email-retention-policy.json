@@ -93,5 +93,12 @@
       "text": "Follow corporate guidelines on export controls on cryptography, and consult your manager and/or corporate legal services for further guidance.",
       "obligation": "must"
     }
-  ]
+  ],
+  "meta": {
+    "source_filename": "17. email_retention_policy.pdf",
+    "ingested_at": "2026-09-05T18:41:15.723203+00:00",
+    "extraction_model": "gpt-4.1",
+    "embedding_model": "text-embedding-ada-002",
+    "requirement_count": 15
+  }
 }
