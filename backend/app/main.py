@@ -1,0 +1,124 @@
+"""FastAPI app: ties extraction, retrieval, and verification into the
+/api/evaluate route. Runs synchronously and entirely in memory -- an upload
+is never written to disk, and its filename is never used in a filesystem
+path (only echoed back in the JSON response).
+"""
+
+import logging
+import time
+from contextlib import asynccontextmanager
+from pathlib import Path
+
+from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+
+from app.config import LLM_MODEL
+from app.extract import UnsupportedDocument, chunk_text, extract_text
+from app.retrieval import get_requirements, list_standards_summary, match_document
+from app.schemas import EvaluateResponse, HealthStatus, StandardSummary
+from app.verify import build_counts, verify_requirements
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(message)s")
+logger = logging.getLogger(__name__)
+
+STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Standards and the API key are already loaded/validated at import time
+    # (app.retrieval, app.config each fail loudly on their own); this just
+    # confirms and logs it once the app is actually up.
+    standards = list_standards_summary()
+    logger.info("startup standards_loaded=%d model=%s", len(standards), LLM_MODEL)
+    yield
+
+
+app = FastAPI(title="Document Compliance Checker", lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+        "http://localhost:5173",  # Stage C (Vite), if it happens
+        "http://127.0.0.1:5173",
+    ],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/")
+def index() -> FileResponse:
+    return FileResponse(STATIC_DIR / "index.html")
+
+
+@app.get("/api/health")
+def health() -> HealthStatus:
+    standards = list_standards_summary()
+    return HealthStatus(ok=True, standards_loaded=len(standards), model=LLM_MODEL)
+
+
+@app.get("/api/standards")
+def standards() -> list[StandardSummary]:
+    return [StandardSummary(**summary) for summary in list_standards_summary()]
+
+
+@app.post("/api/evaluate")
+async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
+    start = time.monotonic()
+    data = await file.read()
+    document_name = file.filename or "uploaded document"
+
+    try:
+        doc_text = extract_text(data)
+    except UnsupportedDocument as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+    try:
+        doc_chunks = chunk_text(doc_text)
+
+        retrieval_start = time.monotonic()
+        match = match_document(doc_text, doc_chunks)
+        retrieval_elapsed = time.monotonic() - retrieval_start
+
+        if not match.matched:
+            logger.info(
+                "evaluate matched=false retrieval=%.2fs total=%.2fs",
+                retrieval_elapsed,
+                time.monotonic() - start,
+            )
+            return EvaluateResponse(
+                document_name=document_name,
+                match=match,
+                counts=build_counts([]),
+                findings=[],
+                model=LLM_MODEL,
+            )
+
+        requirements = get_requirements(match.standard_id)
+        verify_start = time.monotonic()
+        findings = verify_requirements(doc_text, requirements)
+        verify_elapsed = time.monotonic() - verify_start
+
+        logger.info(
+            "evaluate matched=true standard=%s retrieval=%.2fs verify=%.2fs total=%.2fs",
+            match.standard_id,
+            retrieval_elapsed,
+            verify_elapsed,
+            time.monotonic() - start,
+        )
+        return EvaluateResponse(
+            document_name=document_name,
+            match=match,
+            counts=build_counts(findings),
+            findings=findings,
+            model=LLM_MODEL,
+        )
+    except HTTPException:
+        raise
+    except Exception as exc:  # noqa: BLE001 - never leak an internal error to the client
+        logger.info("evaluate failed error=%s", type(exc).__name__)
+        raise HTTPException(status_code=500, detail="An internal error occurred while evaluating the document.") from exc

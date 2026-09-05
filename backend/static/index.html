@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document Compliance Checker</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7f7f8;
+    --panel: #ffffff;
+    --border: #d9dbe0;
+    --text: #1c1e21;
+    --muted: #6b7280;
+    --accent: #2454ff;
+    --aligned: #1a7f37;
+    --aligned-bg: #e9f7ee;
+    --contradicted: #b3261e;
+    --contradicted-bg: #fdecea;
+    --missing: #9a6700;
+    --missing-bg: #fff6e0;
+    --flagged: #3a3f47;
+    --flagged-bg: #eceef1;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px 16px 64px;
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); margin-top: 0; margin-bottom: 24px; font-size: 0.9rem; }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .upload-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  input[type="file"] { flex: 1; min-width: 220px; }
+  button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  #loading { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+  .spinner {
+    width: 16px; height: 16px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    flex-shrink: 0;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  #error-banner {
+    background: var(--contradicted-bg);
+    color: var(--contradicted);
+    border: 1px solid var(--contradicted);
+  }
+
+  .banner-match { border-left: 4px solid var(--aligned); }
+  .banner-no-match { border-left: 4px solid var(--missing); }
+  .banner h2 { margin-top: 0; font-size: 1.1rem; }
+  .runner-up, .doc-name { color: var(--muted); font-size: 0.85rem; }
+
+  .count-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .tile {
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+  .tile-count { font-size: 1.6rem; font-weight: 600; }
+  .tile-label { font-size: 0.8rem; color: var(--muted); }
+  .tile-aligned { background: var(--aligned-bg); }
+  .tile-contradicted { background: var(--contradicted-bg); }
+  .tile-missing { background: var(--missing-bg); }
+  .tile-flagged_for_review { background: var(--flagged-bg); }
+
+  .findings-group h3 { font-size: 1rem; margin: 24px 0 10px; }
+  .finding-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left-width: 4px;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .finding-card.verdict-aligned { border-left-color: var(--aligned); }
+  .finding-card.verdict-contradicted { border-left-color: var(--contradicted); }
+  .finding-card.verdict-missing { border-left-color: var(--missing); }
+  .finding-card.verdict-flagged_for_review { border-left-color: var(--flagged); }
+
+  .finding-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .badge-aligned { color: var(--aligned); background: var(--aligned-bg); }
+  .badge-contradicted { color: var(--contradicted); background: var(--contradicted-bg); }
+  .badge-missing { color: var(--missing); background: var(--missing-bg); }
+  .badge-flagged_for_review { color: var(--flagged); background: var(--flagged-bg); }
+  .finding-section { font-size: 0.8rem; color: var(--muted); }
+
+  .requirement-text { font-weight: 500; margin: 6px 0; }
+  .quote {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin: 6px 0;
+    font-size: 0.88rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: baseline;
+  }
+  .quote-text { font-style: italic; }
+  .quote-marker { font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
+  .quote-marker.verified { color: var(--aligned); }
+  .quote-marker.not-verified { color: var(--contradicted); }
+  .quote-none { color: var(--muted); font-style: italic; }
+
+  .rationale { font-size: 0.9rem; color: var(--text); margin: 8px 0 4px; }
+  .confidence { font-size: 0.8rem; color: var(--muted); margin: 0; }
+
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Document Compliance Checker</h1>
+  <p class="subtitle">Upload an operating procedure (PDF, DOCX, TXT, or MD) to check it against a matching SANS security standard.</p>
+
+  <div class="panel">
+    <div class="upload-row">
+      <input type="file" id="file-input" accept=".pdf,.docx,.txt,.md">
+      <button id="evaluate-button" type="button">Evaluate</button>
+    </div>
+    <div id="loading" hidden>
+      <div class="spinner"></div>
+      <span>Evaluating your document&hellip; this takes 10 to 20 seconds.</span>
+    </div>
+  </div>
+
+  <div id="error-banner" class="panel" hidden></div>
+
+  <div id="results" hidden></div>
+</main>
+
+<script>
+(function () {
+  const fileInput = document.getElementById('file-input');
+  const evaluateButton = document.getElementById('evaluate-button');
+  const loadingEl = document.getElementById('loading');
+  const errorBanner = document.getElementById('error-banner');
+  const resultsEl = document.getElementById('results');
+
+  const VERDICT_LABELS = {
+    aligned: 'Aligned',
+    contradicted: 'Contradicted',
+    missing: 'Missing',
+    flagged_for_review: 'Flagged for review',
+  };
+  const VERDICT_ORDER = ['contradicted', 'missing', 'flagged_for_review', 'aligned'];
+
+  function escapeHtml(value) {
+    const div = document.createElement('div');
+    div.textContent = value === null || value === undefined ? '' : String(value);
+    return div.innerHTML;
+  }
+
+  function showError(message) {
+    errorBanner.innerHTML = escapeHtml(message);
+    errorBanner.hidden = false;
+  }
+
+  function clearError() {
+    errorBanner.hidden = true;
+    errorBanner.innerHTML = '';
+  }
+
+  evaluateButton.addEventListener('click', async function () {
+    const file = fileInput.files[0];
+    if (!file) {
+      showError('Choose a file first.');
+      return;
+    }
+
+    clearError();
+    resultsEl.hidden = true;
+    resultsEl.innerHTML = '';
+    loadingEl.hidden = false;
+    evaluateButton.disabled = true;
+
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      const response = await fetch('/api/evaluate', { method: 'POST', body: formData });
+      const data = await response.json().catch(function () { return null; });
+
+      if (!response.ok) {
+        showError((data && data.detail) || ('Request failed with status ' + response.status + '.'));
+        return;
+      }
+      renderResults(data);
+    } catch (err) {
+      showError('Could not reach the server. Is it running?');
+    } finally {
+      loadingEl.hidden = true;
+      evaluateButton.disabled = false;
+    }
+  });
+
+  function renderResults(data) {
+    clearError();
+    resultsEl.innerHTML = '';
+    resultsEl.hidden = false;
+
+    resultsEl.appendChild(buildMatchBanner(data));
+
+    if (data.match.matched) {
+      resultsEl.appendChild(buildCountTiles(data.counts));
+      resultsEl.appendChild(buildFindingsList(data.findings));
+    }
+  }
+
+  function buildMatchBanner(data) {
+    const container = document.createElement('div');
+    const match = data.match;
+
+    if (match.matched) {
+      const runnerUp = match.candidates.find(function (c) { return c.standard_id !== match.standard_id; });
+      container.className = 'panel banner banner-match';
+      container.innerHTML =
+        '<p class="doc-name">Evaluated: ' + escapeHtml(data.document_name) + '</p>' +
+        '<h2>Matched: ' + escapeHtml(match.title) + '</h2>' +
+        '<p>Score: ' + match.score.toFixed(2) + '</p>' +
+        '<p>' + escapeHtml(match.reason) + '</p>' +
+        (runnerUp
+          ? '<p class="runner-up">Runner-up: ' + escapeHtml(runnerUp.title) + ' (' + runnerUp.score.toFixed(2) + ')</p>'
+          : '');
+    } else {
+      container.className = 'panel banner banner-no-match';
+      container.innerHTML =
+        '<p class="doc-name">Evaluated: ' + escapeHtml(data.document_name) + '</p>' +
+        '<h2>No matching standard found</h2>' +
+        '<p>' + escapeHtml(match.reason) + '</p>';
+    }
+    return container;
+  }
+
+  function buildCountTiles(counts) {
+    const container = document.createElement('div');
+    container.className = 'count-tiles';
+    ['aligned', 'contradicted', 'missing', 'flagged_for_review'].forEach(function (key) {
+      const tile = document.createElement('div');
+      tile.className = 'tile tile-' + key;
+      tile.innerHTML =
+        '<div class="tile-count">' + escapeHtml(counts[key]) + '</div>' +
+        '<div class="tile-label">' + escapeHtml(VERDICT_LABELS[key]) + '</div>';
+      container.appendChild(tile);
+    });
+    return container;
+  }
+
+  function buildFindingsList(findings) {
+    const container = document.createElement('div');
+    container.className = 'findings-list';
+
+    VERDICT_ORDER.forEach(function (verdict) {
+      const group = findings.filter(function (f) { return f.verdict === verdict; });
+      if (group.length === 0) return;
+
+      const groupEl = document.createElement('div');
+      groupEl.className = 'findings-group';
+      const heading = document.createElement('h3');
+      heading.textContent = VERDICT_LABELS[verdict] + ' (' + group.length + ')';
+      groupEl.appendChild(heading);
+
+      group.forEach(function (finding) {
+        groupEl.appendChild(buildFindingCard(finding));
+      });
+      container.appendChild(groupEl);
+    });
+    return container;
+  }
+
+  function buildFindingCard(finding) {
+    const card = document.createElement('div');
+    card.className = 'finding-card verdict-' + finding.verdict;
+
+    const quotesHtml = finding.evidence.length
+      ? finding.evidence.map(function (evidence) {
+          return (
+            '<div class="quote">' +
+            '<span class="quote-text">&ldquo;' + escapeHtml(evidence.quote) + '&rdquo;</span>' +
+            '<span class="quote-marker ' + (finding.quotes_verified ? 'verified' : 'not-verified') + '">' +
+            (finding.quotes_verified ? 'verified' : 'not verified') +
+            '</span>' +
+            '</div>'
+          );
+        }).join('')
+      : '<div class="quote quote-none">No quote provided.</div>';
+
+    card.innerHTML =
+      '<div class="finding-header">' +
+      '<span class="badge badge-' + finding.verdict + '">' + escapeHtml(VERDICT_LABELS[finding.verdict]) + '</span>' +
+      '<span class="finding-section">Section ' + escapeHtml(finding.section) + '</span>' +
+      '</div>' +
+      '<p class="requirement-text">' + escapeHtml(finding.requirement_text) + '</p>' +
+      quotesHtml +
+      '<p class="rationale">' + escapeHtml(finding.rationale) + '</p>' +
+      '<p class="confidence">Confidence: ' + Math.round(finding.confidence * 100) + '%</p>';
+    return card;
+  }
+})();
+</script>
+</body>
+</html>
