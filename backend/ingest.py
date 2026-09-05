@@ -62,7 +62,7 @@ def load_or_extract(pdf_path: Path, slug: str, force: bool) -> StandardExtractio
         raise ValueError(f"extracted text too short ({len(text)} chars); possibly a scanned PDF")
 
     user_message = EXTRACT_REQUIREMENTS_USER_TEMPLATE.format(document_text=text)
-    extraction = chat_json_validated(EXTRACT_REQUIREMENTS_SYSTEM, user_message, StandardExtraction)
+    extraction = chat_json_validated(EXTRACT_REQUIREMENTS_SYSTEM, user_message, StandardExtraction, purpose="extract")
 
     # Ids are assigned here, not trusted from the LLM: the cache-skip check
     # above has to key off a slug computed before any LLM call is made, so
@@ -115,7 +115,8 @@ def build_index(slugs: list[str]) -> None:
         rows_meta.append({"standard_id": slug, "chunk_type": "profile", "requirement_id": None})
 
     vectors = [
-        embed(texts[start : start + EMBED_BATCH_SIZE]) for start in range(0, len(texts), EMBED_BATCH_SIZE)
+        embed(texts[start : start + EMBED_BATCH_SIZE], purpose="embed")
+        for start in range(0, len(texts), EMBED_BATCH_SIZE)
     ]
     index = np.vstack(vectors)
 

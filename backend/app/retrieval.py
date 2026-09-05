@@ -18,7 +18,7 @@ from app.config import (
     TOP_K_CHUNKS_PER_STANDARD,
 )
 from app.extract import DocChunk
-from app.llm import chat_json_validated, embed
+from app.llm import UsageAccumulator, chat_json_validated, embed
 from app.prompts import CANDIDATE_SELECTION_SYSTEM, CANDIDATE_SELECTION_USER_TEMPLATE
 from app.schemas import CandidateScore, CandidateSelection, MatchResult, Requirement, StandardExtraction
 
@@ -85,7 +85,7 @@ def list_standards_summary() -> list[dict]:
     ]
 
 
-def score_standards(doc_chunks: list[DocChunk]) -> list[CandidateScore]:
+def score_standards(doc_chunks: list[DocChunk], usage: UsageAccumulator | None = None) -> list[CandidateScore]:
     """Score every standard against the document, sorted highest first.
 
     For each index row (one requirement or profile chunk), take the max
@@ -94,7 +94,7 @@ def score_standards(doc_chunks: list[DocChunk]) -> list[CandidateScore]:
     rewards sustained overlap across several requirements, not one
     coincidentally similar sentence.
     """
-    doc_vectors = embed([chunk.text for chunk in doc_chunks])
+    doc_vectors = embed([chunk.text for chunk in doc_chunks], purpose="embed", usage=usage)
     doc_norms = np.linalg.norm(doc_vectors, axis=1, keepdims=True)
     doc_vectors = doc_vectors / doc_norms
 
@@ -116,7 +116,9 @@ def score_standards(doc_chunks: list[DocChunk]) -> list[CandidateScore]:
     return scores
 
 
-def select_candidate(candidates: list[CandidateScore], doc_text: str) -> CandidateSelection:
+def select_candidate(
+    candidates: list[CandidateScore], doc_text: str, usage: UsageAccumulator | None = None
+) -> CandidateSelection:
     """Gate 2: show the LLM the top candidates and let it pick one or none.
 
     A single top-1 plausibility check was tried first and confused sibling
@@ -135,12 +137,16 @@ def select_candidate(candidates: list[CandidateScore], doc_text: str) -> Candida
         candidates_block="\n".join(lines),
         document_excerpt=doc_text[:PLAUSIBILITY_EXCERPT_CHARS],
     )
-    return chat_json_validated(CANDIDATE_SELECTION_SYSTEM, user_message, CandidateSelection)
+    return chat_json_validated(
+        CANDIDATE_SELECTION_SYSTEM, user_message, CandidateSelection, purpose="plausibility", usage=usage
+    )
 
 
-def match_document(doc_text: str, doc_chunks: list[DocChunk]) -> MatchResult:
+def match_document(
+    doc_text: str, doc_chunks: list[DocChunk], usage: UsageAccumulator | None = None
+) -> MatchResult:
     """Apply gate 1 (score threshold) then gate 2 (LLM candidate selection)."""
-    candidates = score_standards(doc_chunks)
+    candidates = score_standards(doc_chunks, usage=usage)
     top_candidates = candidates[:CANDIDATE_POOL_SIZE]
     top = candidates[0]
 
@@ -154,7 +160,7 @@ def match_document(doc_text: str, doc_chunks: list[DocChunk]) -> MatchResult:
 
     gate2_pool = candidates[:GATE2_POOL_SIZE]
     try:
-        selection = select_candidate(gate2_pool, doc_text)
+        selection = select_candidate(gate2_pool, doc_text, usage=usage)
     except (ValidationError, ValueError, json.JSONDecodeError) as exc:
         # Validation-type failure (bad JSON shape) surviving chat_json_validated's
         # own retry -- degrade to no-match. Gateway/network errors (APIStatusError,

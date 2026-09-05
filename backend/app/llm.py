@@ -5,6 +5,7 @@ response content, only status codes and timings.
 
 import json
 import logging
+import threading
 import time
 from typing import TypeVar
 
@@ -29,6 +30,45 @@ _client = OpenAI(
     timeout=REQUEST_TIMEOUT_SECONDS,
     max_retries=0,  # we implement one explicit retry ourselves
 )
+
+
+class UsageAccumulator:
+    """Thread-safe running total of LLM calls and token usage for one request.
+
+    Optional at every call site (defaults to None, meaning "don't
+    accumulate, just log"); a caller that wants a per-request total (e.g.
+    the /api/evaluate route) creates one and passes it down.
+    """
+
+    def __init__(self) -> None:
+        self._lock = threading.Lock()
+        self.calls = 0
+        self.prompt_tokens = 0
+        self.completion_tokens = 0
+
+    def record(self, prompt_tokens: int, completion_tokens: int) -> None:
+        with self._lock:
+            self.calls += 1
+            self.prompt_tokens += prompt_tokens
+            self.completion_tokens += completion_tokens
+
+    @property
+    def total_tokens(self) -> int:
+        return self.prompt_tokens + self.completion_tokens
+
+
+def _log_and_record_usage(purpose: str, usage_obj, usage: "UsageAccumulator | None") -> None:
+    prompt_tokens = getattr(usage_obj, "prompt_tokens", 0) or 0
+    completion_tokens = getattr(usage_obj, "completion_tokens", 0) or 0
+    logger.info(
+        "llm usage purpose=%s prompt_tokens=%d completion_tokens=%d total_tokens=%d",
+        purpose,
+        prompt_tokens,
+        completion_tokens,
+        prompt_tokens + completion_tokens,
+    )
+    if usage is not None:
+        usage.record(prompt_tokens, completion_tokens)
 
 
 def _is_retryable(exc: Exception) -> bool:
@@ -61,12 +101,15 @@ def _call_with_one_retry(fn, label: str):
         return result
 
 
-def chat_json(system: str, user: str, model: str = LLM_MODEL) -> dict:
+def chat_json(
+    system: str, user: str, purpose: str, model: str = LLM_MODEL, usage: UsageAccumulator | None = None
+) -> dict:
     """Call the chat model in JSON mode and return the parsed object.
 
     JSON mode guarantees the response is valid JSON; it does not guarantee
     the shape matches any particular schema, so callers must still validate
-    the result (with Pydantic) before trusting it.
+    the result (with Pydantic) before trusting it. `purpose` labels this
+    call for the usage log (e.g. "extract", "plausibility", "verify batch 2").
     """
 
     def _do_call():
@@ -81,6 +124,7 @@ def chat_json(system: str, user: str, model: str = LLM_MODEL) -> dict:
         )
 
     response = _call_with_one_retry(_do_call, label=f"chat_json model={model}")
+    _log_and_record_usage(purpose, response.usage, usage)
     content = response.choices[0].message.content
     if content is None:
         raise ValueError("Chat completion returned no content (possibly filtered by the gateway).")
@@ -90,7 +134,14 @@ def chat_json(system: str, user: str, model: str = LLM_MODEL) -> dict:
 ModelT = TypeVar("ModelT", bound=BaseModel)
 
 
-def chat_json_validated(system: str, user: str, schema: type[ModelT], model: str = LLM_MODEL) -> ModelT:
+def chat_json_validated(
+    system: str,
+    user: str,
+    schema: type[ModelT],
+    purpose: str,
+    model: str = LLM_MODEL,
+    usage: UsageAccumulator | None = None,
+) -> ModelT:
     """Call chat_json and validate the result against `schema`.
 
     On a schema mismatch or a response that isn't valid JSON at all, retry
@@ -100,7 +151,7 @@ def chat_json_validated(system: str, user: str, schema: type[ModelT], model: str
     propagates to the caller.
     """
     try:
-        return schema.model_validate(chat_json(system, user, model=model))
+        return schema.model_validate(chat_json(system, user, purpose, model=model, usage=usage))
     except (ValidationError, ValueError) as first_error:
         if isinstance(first_error, ValidationError):
             locs = [".".join(str(p) for p in e["loc"]) for e in first_error.errors()]
@@ -112,15 +163,16 @@ def chat_json_validated(system: str, user: str, schema: type[ModelT], model: str
             + f"\n\nYour previous JSON response did not match the required schema ({detail}). "
             "Return a corrected JSON object matching the shape exactly. Respond with a JSON object."
         )
-        return schema.model_validate(chat_json(system, retry_user, model=model))
+        return schema.model_validate(chat_json(system, retry_user, purpose, model=model, usage=usage))
 
 
-def embed(texts: list[str], model: str = EMBED_MODEL) -> np.ndarray:
+def embed(texts: list[str], purpose: str, model: str = EMBED_MODEL, usage: UsageAccumulator | None = None) -> np.ndarray:
     """Embed a list of strings in one API call, returning shape (len(texts), dims)."""
 
     def _do_call():
         return _client.embeddings.create(model=model, input=texts)
 
     response = _call_with_one_retry(_do_call, label=f"embed model={model} n={len(texts)}")
+    _log_and_record_usage(purpose, response.usage, usage)
     vectors = [item.embedding for item in response.data]
     return np.array(vectors, dtype=np.float32)

@@ -17,6 +17,7 @@ from openai import APIConnectionError, APIStatusError, APITimeoutError
 
 from app.config import LLM_MODEL, MAX_UPLOAD_BYTES, UPLOAD_READ_CHUNK_BYTES
 from app.extract import UnsupportedDocument, chunk_text, extract_text
+from app.llm import UsageAccumulator
 from app.retrieval import get_requirements, list_standards_summary, match_document
 from app.schemas import EvaluateResponse, HealthStatus, StandardSummary
 from app.verify import build_counts, verify_requirements
@@ -25,6 +26,16 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(message)s
 logger = logging.getLogger(__name__)
 
 STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
+
+
+def _log_usage_summary(usage: UsageAccumulator) -> None:
+    logger.info(
+        "evaluate token summary calls=%d prompt_tokens=%d completion_tokens=%d total_tokens=%d",
+        usage.calls,
+        usage.prompt_tokens,
+        usage.completion_tokens,
+        usage.total_tokens,
+    )
 
 
 @asynccontextmanager
@@ -88,6 +99,7 @@ async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
     start = time.monotonic()
     document_name = file.filename or "uploaded document"
     data = await _read_upload(file)
+    usage = UsageAccumulator()
 
     # extract_text/chunk_text/match_document/verify_requirements are all
     # synchronous and can each take seconds (network calls to the LLM
@@ -99,7 +111,7 @@ async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
         doc_chunks = await run_in_threadpool(chunk_text, doc_text)
 
         retrieval_start = time.monotonic()
-        match = await run_in_threadpool(match_document, doc_text, doc_chunks)
+        match = await run_in_threadpool(match_document, doc_text, doc_chunks, usage)
         retrieval_elapsed = time.monotonic() - retrieval_start
 
         if not match.matched:
@@ -108,6 +120,7 @@ async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
                 retrieval_elapsed,
                 time.monotonic() - start,
             )
+            _log_usage_summary(usage)
             return EvaluateResponse(
                 document_name=document_name,
                 match=match,
@@ -118,7 +131,7 @@ async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
 
         requirements = get_requirements(match.standard_id)
         verify_start = time.monotonic()
-        findings = await run_in_threadpool(verify_requirements, doc_text, requirements)
+        findings = await run_in_threadpool(verify_requirements, doc_text, requirements, usage)
         verify_elapsed = time.monotonic() - verify_start
 
         logger.info(
@@ -128,6 +141,7 @@ async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
             verify_elapsed,
             time.monotonic() - start,
         )
+        _log_usage_summary(usage)
         return EvaluateResponse(
             document_name=document_name,
             match=match,

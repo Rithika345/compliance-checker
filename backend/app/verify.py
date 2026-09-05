@@ -12,7 +12,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pydantic import ValidationError
 
 from app.config import MAX_PARALLEL_WORKERS, VERIFY_BATCH_SIZE
-from app.llm import chat_json_validated
+from app.llm import UsageAccumulator, chat_json_validated
 from app.prompts import VERIFY_SYSTEM, VERIFY_USER_TEMPLATE
 from app.schemas import Finding, FindingBatch, FindingOut, Requirement, Verdict
 
@@ -70,7 +70,9 @@ def _flagged_finding(req: Requirement, rationale: str) -> FindingOut:
     )
 
 
-def _call_batch_with_retry(doc_text: str, batch: list[Requirement]) -> FindingBatch:
+def _call_batch_with_retry(
+    doc_text: str, batch: list[Requirement], batch_number: int, usage: UsageAccumulator | None
+) -> FindingBatch:
     """One call; one retry with the validation error appended on failure.
 
     Network-level retries (429/5xx) already happen inside chat_json -- this
@@ -80,12 +82,20 @@ def _call_batch_with_retry(doc_text: str, batch: list[Requirement]) -> FindingBa
         document_text=doc_text,
         requirements_block=_format_requirements_block(batch),
     )
-    return chat_json_validated(VERIFY_SYSTEM, user_message, FindingBatch)
+    return chat_json_validated(
+        VERIFY_SYSTEM, user_message, FindingBatch, purpose=f"verify batch {batch_number}", usage=usage
+    )
 
 
-def _process_batch(doc_text: str, doc_text_normalized: str, batch: list[Requirement]) -> list[FindingOut]:
+def _process_batch(
+    doc_text: str,
+    doc_text_normalized: str,
+    batch: list[Requirement],
+    batch_number: int,
+    usage: UsageAccumulator | None,
+) -> list[FindingOut]:
     try:
-        finding_batch = _call_batch_with_retry(doc_text, batch)
+        finding_batch = _call_batch_with_retry(doc_text, batch, batch_number, usage)
     except (ValidationError, ValueError, json.JSONDecodeError) as exc:
         # Validation-type failure (bad JSON shape) surviving chat_json_validated's
         # own retry -- degrade this batch to flagged. Gateway/network errors
@@ -132,14 +142,19 @@ def _process_batch(doc_text: str, doc_text_normalized: str, batch: list[Requirem
     return outputs
 
 
-def verify_requirements(doc_text: str, requirements: list[Requirement]) -> list[FindingOut]:
+def verify_requirements(
+    doc_text: str, requirements: list[Requirement], usage: UsageAccumulator | None = None
+) -> list[FindingOut]:
     """Check the document against every requirement of the matched standard."""
     doc_text_normalized = _normalize_for_match(doc_text)
     batches = [requirements[i : i + VERIFY_BATCH_SIZE] for i in range(0, len(requirements), VERIFY_BATCH_SIZE)]
 
     with ThreadPoolExecutor(max_workers=MAX_PARALLEL_WORKERS) as executor:
         batch_results = list(
-            executor.map(lambda batch: _process_batch(doc_text, doc_text_normalized, batch), batches)
+            executor.map(
+                lambda item: _process_batch(doc_text, doc_text_normalized, item[1], item[0], usage),
+                enumerate(batches, start=1),
+            )
         )
 
     findings_by_id: dict[str, FindingOut] = {}
