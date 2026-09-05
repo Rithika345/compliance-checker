@@ -42,6 +42,14 @@ MIN_EXTRACTED_CHARS = 200  # below this, likely empty or a scanned image
 # DESIGN_PLAN 3.3: paragraph groups of roughly 300 words per chunk for retrieval.
 CHUNK_TARGET_WORDS = 300
 
+# Hard upper bound on any single chunk, independent of CHUNK_TARGET_WORDS.
+# Without this, a document with few paragraph breaks (a wall-of-text PDF)
+# can produce one huge chunk that, for token-dense scripts, exceeds the
+# embedding model's context window outright -- observed with a diacritic-
+# heavy Sanskrit transliteration document (23.7k chars = 16.1k tokens vs.
+# ada-002's 8192-token limit, all in one un-split chunk).
+CHUNK_HARD_CAP_WORDS = 400
+
 # Requirements per LLM verification call. Small enough that one bad batch
 # (validation failure, timeout) only degrades a handful of findings.
 VERIFY_BATCH_SIZE = 8

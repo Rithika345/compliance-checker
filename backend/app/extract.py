@@ -11,7 +11,9 @@ from io import BytesIO
 import docx
 from pypdf import PdfReader
 
-from app.config import CHUNK_TARGET_WORDS, MAX_UPLOAD_BYTES, MIN_EXTRACTED_CHARS
+from app.config import CHUNK_HARD_CAP_WORDS, CHUNK_TARGET_WORDS, MAX_UPLOAD_BYTES, MIN_EXTRACTED_CHARS
+
+_SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
 
 
 class UnsupportedDocument(ValueError):
@@ -95,14 +97,58 @@ def extract_text(data: bytes) -> str:
     return text
 
 
+def _split_oversized_paragraph(paragraph: str, cap: int) -> list[str]:
+    """Split one paragraph that's over `cap` words into pieces at most `cap`
+    words each: first on sentence boundaries, then -- for any single
+    sentence that alone is still over the cap -- on raw word count.
+    """
+    pieces: list[str] = []
+    current: list[str] = []
+    for sentence in _SENTENCE_SPLIT_RE.split(paragraph):
+        sentence_words = sentence.split()
+        if not sentence_words:
+            continue
+        if len(sentence_words) > cap:
+            if current:
+                pieces.append(" ".join(current))
+                current = []
+            for i in range(0, len(sentence_words), cap):
+                pieces.append(" ".join(sentence_words[i : i + cap]))
+            continue
+        if current and len(current) + len(sentence_words) > cap:
+            pieces.append(" ".join(current))
+            current = sentence_words
+        else:
+            current.extend(sentence_words)
+    if current:
+        pieces.append(" ".join(current))
+    return pieces
+
+
 def chunk_text(text: str) -> list[DocChunk]:
-    """Group paragraphs into chunks of roughly CHUNK_TARGET_WORDS words each."""
+    """Group paragraphs into chunks of roughly CHUNK_TARGET_WORDS words each,
+    never exceeding CHUNK_HARD_CAP_WORDS in a single chunk. A paragraph
+    already over the hard cap is pre-split (see _split_oversized_paragraph)
+    before grouping; the grouping step itself also refuses to combine
+    pieces past the hard cap, so two merely-large pieces can't stack over it.
+    """
     paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
+
+    pieces: list[str] = []
+    for paragraph in paragraphs:
+        if len(paragraph.split()) > CHUNK_HARD_CAP_WORDS:
+            pieces.extend(_split_oversized_paragraph(paragraph, CHUNK_HARD_CAP_WORDS))
+        else:
+            pieces.append(paragraph)
 
     chunks: list[DocChunk] = []
     current_words: list[str] = []
-    for paragraph in paragraphs:
-        current_words.extend(paragraph.split())
+    for piece in pieces:
+        piece_words = piece.split()
+        if current_words and len(current_words) + len(piece_words) > CHUNK_HARD_CAP_WORDS:
+            chunks.append(DocChunk(text=" ".join(current_words), chunk_index=len(chunks)))
+            current_words = []
+        current_words.extend(piece_words)
         if len(current_words) >= CHUNK_TARGET_WORDS:
             chunks.append(DocChunk(text=" ".join(current_words), chunk_index=len(chunks)))
             current_words = []

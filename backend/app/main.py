@@ -153,10 +153,27 @@ async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except HTTPException:
         raise
-    except (APIConnectionError, APITimeoutError, APIStatusError) as exc:
+    except (APIConnectionError, APITimeoutError) as exc:
         logger.warning("evaluate failed due to LLM gateway error: %s", type(exc).__name__)
         raise HTTPException(
             status_code=503, detail="The language model service is unavailable. Try again in a moment."
+        ) from exc
+    except APIStatusError as exc:
+        if exc.status_code == 429 or exc.status_code >= 500:
+            logger.warning(
+                "evaluate failed due to LLM gateway error: %s status=%s", type(exc).__name__, exc.status_code
+            )
+            raise HTTPException(
+                status_code=503, detail="The language model service is unavailable. Try again in a moment."
+            ) from exc
+        logger.warning(
+            "evaluate failed due to LLM gateway rejection: %s status=%s message=%s",
+            type(exc).__name__,
+            exc.status_code,
+            exc.message,
+        )
+        raise HTTPException(
+            status_code=422, detail="The document could not be processed by the language model service."
         ) from exc
     except Exception as exc:  # noqa: BLE001 - never leak an internal error to the client
         logger.info("evaluate failed error=%s", type(exc).__name__)
