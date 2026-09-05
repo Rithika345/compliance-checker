@@ -14,6 +14,7 @@ limitations in more depth. This file covers what you need to run it.
 
 - Python 3.11 or newer. Built and tested on **Python 3.14, macOS**.
 - A Stanford AI API Gateway key (`STANFORD_API_KEY`).
+- **No Node.js or npm required** — the frontend is a single static HTML page with vanilla JS, no build step.
 
 ## Setup
 
@@ -41,19 +42,33 @@ uvicorn app.main:app --reload
 
 Open **http://localhost:8000** in a browser. Upload a document and click Evaluate.
 
-## The three test inputs
+## Tests
 
-`test_inputs/` has three documents used throughout development to exercise the three possible
-outcomes:
+From `backend/`, with the venv active:
+
+```bash
+pytest -q                    # unit tests: chunking, quote verification, reconcile,
+                              # extraction, batching -- no network calls, LLM mocked where needed
+python tests/run_regression.py   # end-to-end: calls the pipeline functions directly (no HTTP),
+                                  # runs every file in "test inputs" below against the real gateway
+```
+
+## Test inputs
+
+`test_inputs/` has the documents used throughout development to exercise every outcome the app
+can produce, plus an answer key and a set of PDF/DOCX fixtures that check the pipeline behaves
+the same regardless of upload format:
 
 | File | Expected result |
 |---|---|
 | `compliant_procedure.md` | Matches **Password Protection Policy**. 16 of 18 requirements aligned, 2 legitimately missing (the two the document never had reason to address), 0 contradicted. |
 | `violations_procedure.md` | Matches **Password Protection Policy**. 3 aligned, 6 contradicted, 9 missing. Contains 7 deliberately planted violations (5 contradictions, 2 omissions) plus 2 additional correct-but-unplanned findings — see `test_inputs/violations_answer_key.md` for the full breakdown, sentence by sentence, of what was planted and why. |
 | `unrelated_document.md` | A lab-equipment checkout procedure, plainly outside security policy. No standard scores above the match threshold; the app reports no match with a reason instead of forcing a guess. |
+| `compliant_clean_desk_procedure.{md,pdf,docx}` | Format-regression fixtures: the same content in three formats, matching **Clean Desk Policy** (11/13 aligned, 2 legitimately missing) identically across all three — confirms upload format doesn't change the result when the matched standard has no close sibling. |
+| `compliant_procedure.{pdf,docx}` | The `compliant_procedure.md` content, re-flowed with markdown headings stripped. **Known, documented exception, not a bug in the usual sense:** this flattened text stably matches the wrong sibling standard, **Password Construction Guidelines**, instead of Password Protection Policy — kept as an explicit `xfail` in `backend/tests/test_known_issues.py` rather than hidden. See `DECISIONS.md` for the investigation. |
 
-Upload any of the three at `http://localhost:8000` to see the corresponding UI state; screenshots
-of all three are in `screenshots/`.
+Upload any of the `.md`/`.pdf`/`.docx` files at `http://localhost:8000` to see the corresponding
+UI state; screenshots of the three core outcomes are in `screenshots/`.
 
 ## Model
 
@@ -63,49 +78,28 @@ of all three are in `screenshots/`.
 
 ## AI-assistant usage
 
-Claude was used for design planning (`DESIGN_PLAN.md`) before the build started, and Claude Code
-did the implementation, stage by stage, from `BUILD_PLAN.md`.
+- **Claude (chat)** was used for design planning (`DESIGN_PLAN.md`) before the build started. A
+  status summary was prepared partway through the build (covering what had been implemented,
+  tested, and corrected so far) for review in that same chat session, which had the original
+  planning context but hadn't seen anything since.
+- **Claude Code** did the implementation, stage by stage, from `BUILD_PLAN.md`, and later built out
+  the `pytest` unit test suite and the PDF/DOCX format-regression fixtures.
+- **A Chrome browser automation skill** was used to actually drive the UI in a real browser for
+  Stage 5 (upload each test document, confirm each state renders, and adversarially test the
+  escaping behavior with an injected script payload) rather than only testing the API directly.
 
-Every stage ended with a summary of what was built, the verify output, and one thing the
-assistant was unsure about or surprised by, recorded before moving to the next stage. Decisions
-made along the way — including corrections to its own earlier work — are logged chronologically
-in `DECISIONS.md`. This wasn't a rubber-stamp process: over the course of the build, the
-assistant was asked to double-check its own assumptions, and that surfaced two real mistakes in
-the standards library curation (one file wrongly excluded, one wrongly kept over a better
-alternative) that got caught and fixed before they became invisible bugs. It flagged tradeoffs
-it made unilaterally (like how to handle a finding with no supporting quote at all) rather than
-silently deciding and moving on, and it asked before taking actions with consequences outside the
-repo itself — killing an unrelated stray process occupying port 8000, and clarifying who should
-actually write this project's design document versus its own build log.
-
-`DESIGN.md` was written by hand, from `DECISIONS.md` and the planning sections of
-`DESIGN_PLAN.md` — not generated.
+This wasn't a rubber-stamp process. Rithika reviewed the regression outputs at each stage, made
+the actual design decisions when tradeoffs came up (which fix to take, what to leave as a known
+limitation, how to scope a test), and wrote `DESIGN.md` herself, in her own words, from
+`DECISIONS.md` and the planning sections of `DESIGN_PLAN.md` — it was not generated. Every stage
+ended with a summary of what was built, the verify output, and one thing the assistant was unsure
+about or surprised by, recorded before moving to the next stage; every decision and correction —
+including real mistakes the assistant caught in its own earlier work (curation errors, a
+formatting bug, an error-handling gap) — is logged chronologically in `DECISIONS.md`.
 
 ## Known limitations
 
-- **The match threshold is calibrated on 3 test documents.** `MATCH_THRESHOLD = 0.86` sits in a
-  gap only 0.0097 wide between the lowest score that must pass and the highest that must fail. A
-  fourth real-world document could easily land inside that gap and get the wrong match/no-match
-  outcome. This is empirical, not a principled number.
-- **Upload content-sniffing can't reject arbitrary binary garbage** that isn't a PDF or a DOCX
-  zip file. The intended fallback (decode as UTF-8, then latin-1, then reject) can never actually
-  reject anything, because latin-1 can decode any byte value — this is true of any correct
-  implementation of that rule, not just this one. In practice, the 200-character minimum and then
-  retrieval's no-match gate still catch nonsense uploads, just less cleanly than an explicit
-  "unrecognized file type" error would.
-- **The standards library was curated by hand from filenames**, mostly without reading full PDF
-  content. Two of the ~49 candidate files were checked directly and both turned out to be
-  mis-categorized (one wrongly excluded as a form, one wrongly kept over a better alternative);
-  the other ~19 excluded files were not checked the same way, so it's possible more of them are
-  mis-categorized too.
-- **Requirement extraction is one uncorrected LLM pass per standard.** The 30 cached
-  extractions were spot-checked, not exhaustively reviewed by a human.
-- Prompt injection mitigations are partial: the verification prompt tells the model to treat the
-  uploaded document as untrusted data, not instructions, but this is a mitigation, not a
-  guarantee. Separately, the DOM-escaping side of this (an injected `<script>` or similar payload
-  appearing in a quote never becoming executable markup in the browser) has been adversarially
-  tested and confirmed safe.
-- Whole-document-per-batch verification limits practical document length; a top-k-chunks
-  fallback for very long documents (>~60k characters) is designed but not built.
-- Tested on macOS with Python 3.14 only.
-- Non-English documents are out of scope.
+See `DESIGN.md` for the full list, with the reasoning behind each — including the match
+threshold's empirical calibration, the standards library's curation gaps, and the sibling-policy
+confusion noted in the test inputs table above. `DECISIONS.md` has the raw, chronological record
+each one was drawn from.
