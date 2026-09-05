@@ -11,9 +11,7 @@ from io import BytesIO
 import docx
 from pypdf import PdfReader
 
-from app.config import MAX_UPLOAD_BYTES, MIN_EXTRACTED_CHARS
-
-CHUNK_TARGET_WORDS = 300  # DESIGN_PLAN 3.3: paragraph groups of roughly 300 words
+from app.config import CHUNK_TARGET_WORDS, MAX_UPLOAD_BYTES, MIN_EXTRACTED_CHARS
 
 
 class UnsupportedDocument(ValueError):
@@ -43,11 +41,27 @@ def sniff_content_type(data: bytes) -> str:
         return "text"
     except UnicodeDecodeError:
         pass
-    try:
-        data.decode("latin-1")
-        return "text"
-    except UnicodeDecodeError:
+    # latin-1 maps every byte 0-255 to a character, so decode() alone can
+    # never raise UnicodeDecodeError here -- it cannot distinguish legacy-
+    # encoded text from arbitrary binary data (an image, an executable, a
+    # corrupt file). Reject anything with more than a token amount of
+    # non-printable/control bytes, which real text files do not contain.
+    non_printable = sum(1 for b in data if b < 9 or (13 < b < 32) or b == 127)
+    if data and non_printable / len(data) > 0.01:
         raise UnsupportedDocument("File could not be recognized as a PDF, DOCX, or text document.")
+    return "text"
+
+
+def pdf_reader_to_text(reader: PdfReader) -> str:
+    """Join every page's extracted text. Shared with ingest.py's offline extraction."""
+    return "\n".join((page.extract_text() or "") for page in reader.pages)
+
+
+def normalize_whitespace(text: str) -> str:
+    """Collapse run of spaces/tabs and excess blank lines. Shared with ingest.py."""
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
 
 
 def extract_text(data: bytes) -> str:
@@ -57,20 +71,23 @@ def extract_text(data: bytes) -> str:
 
     content_type = sniff_content_type(data)
     if content_type == "pdf":
-        reader = PdfReader(BytesIO(data))
-        text = "\n".join((page.extract_text() or "") for page in reader.pages)
+        try:
+            text = pdf_reader_to_text(PdfReader(BytesIO(data)))
+        except Exception as exc:  # noqa: BLE001 - pypdf raises many exception types for a malformed PDF
+            raise UnsupportedDocument("File could not be read as a valid PDF document.") from exc
     elif content_type == "docx":
-        document = docx.Document(BytesIO(data))
-        text = "\n".join(paragraph.text for paragraph in document.paragraphs)
+        try:
+            document = docx.Document(BytesIO(data))
+            text = "\n".join(paragraph.text for paragraph in document.paragraphs)
+        except Exception as exc:  # noqa: BLE001 - python-docx/lxml raise many exception types for a malformed DOCX
+            raise UnsupportedDocument("File could not be read as a valid DOCX document.") from exc
     else:
         try:
             text = data.decode("utf-8")
         except UnicodeDecodeError:
             text = data.decode("latin-1")
 
-    text = re.sub(r"[ \t]+", " ", text)
-    text = re.sub(r"\n{3,}", "\n\n", text)
-    text = text.strip()
+    text = normalize_whitespace(text)
 
     if len(text) < MIN_EXTRACTED_CHARS:
         raise UnsupportedDocument("Document appears empty or is a scanned image.")

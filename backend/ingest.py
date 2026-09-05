@@ -15,15 +15,15 @@ import numpy as np
 from pydantic import ValidationError
 from pypdf import PdfReader
 
-from app.config import MIN_EXTRACTED_CHARS
-from app.llm import chat_json, embed
+from app.config import EMBED_BATCH_SIZE, MIN_EXTRACTED_CHARS
+from app.extract import normalize_whitespace, pdf_reader_to_text
+from app.llm import chat_json_validated, embed
 from app.prompts import EXTRACT_REQUIREMENTS_SYSTEM, EXTRACT_REQUIREMENTS_USER_TEMPLATE
 from app.schemas import StandardExtraction
 
 BACKEND_ROOT = Path(__file__).resolve().parent
 STANDARDS_SRC = BACKEND_ROOT.parent / "standards_src"
 STANDARDS_CACHE = BACKEND_ROOT / "standards_cache"
-EMBED_BATCH_SIZE = 200  # keeps each embeddings call well under gateway request-size limits
 
 
 def slugify(filename_stem: str) -> str:
@@ -35,11 +35,7 @@ def slugify(filename_stem: str) -> str:
 
 
 def extract_pdf_text(path: Path) -> str:
-    reader = PdfReader(str(path))
-    text = "\n".join((page.extract_text() or "") for page in reader.pages)
-    text = re.sub(r"[ \t]+", " ", text)
-    text = re.sub(r"\n{3,}", "\n\n", text)
-    return text.strip()
+    return normalize_whitespace(pdf_reader_to_text(PdfReader(str(path))))
 
 
 def describe_error(exc: Exception) -> str:
@@ -55,20 +51,6 @@ def describe_error(exc: Exception) -> str:
     return f"{type(exc).__name__}: {exc}"
 
 
-def extract_with_retry(system: str, user: str) -> StandardExtraction:
-    try:
-        return StandardExtraction.model_validate(chat_json(system, user))
-    except ValidationError as first_error:
-        locs = [".".join(str(p) for p in e["loc"]) for e in first_error.errors()]
-        retry_user = (
-            user
-            + f"\n\nYour previous JSON response did not match the required schema "
-            f"(problem fields: {locs}). Return a corrected JSON object matching the "
-            "shape exactly. Respond with a JSON object."
-        )
-        return StandardExtraction.model_validate(chat_json(system, retry_user))
-
-
 def load_or_extract(pdf_path: Path, slug: str, force: bool) -> StandardExtraction:
     cache_path = STANDARDS_CACHE / f"{slug}.json"
     if cache_path.exists() and not force:
@@ -79,7 +61,7 @@ def load_or_extract(pdf_path: Path, slug: str, force: bool) -> StandardExtractio
         raise ValueError(f"extracted text too short ({len(text)} chars); possibly a scanned PDF")
 
     user_message = EXTRACT_REQUIREMENTS_USER_TEMPLATE.format(document_text=text)
-    extraction = extract_with_retry(EXTRACT_REQUIREMENTS_SYSTEM, user_message)
+    extraction = chat_json_validated(EXTRACT_REQUIREMENTS_SYSTEM, user_message, StandardExtraction)
 
     # Ids are assigned here, not trusted from the LLM: the cache-skip check
     # above has to key off a slug computed before any LLM call is made, so

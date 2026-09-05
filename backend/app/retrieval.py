@@ -8,17 +8,19 @@ from pathlib import Path
 
 import numpy as np
 
-from app.config import MATCH_THRESHOLD
+from app.config import (
+    CANDIDATE_POOL_SIZE,
+    GATE2_POOL_SIZE,
+    MATCH_THRESHOLD,
+    PLAUSIBILITY_EXCERPT_CHARS,
+    TOP_K_CHUNKS_PER_STANDARD,
+)
 from app.extract import DocChunk
-from app.llm import chat_json, embed
+from app.llm import chat_json_validated, embed
 from app.prompts import CANDIDATE_SELECTION_SYSTEM, CANDIDATE_SELECTION_USER_TEMPLATE
 from app.schemas import CandidateScore, CandidateSelection, MatchResult, Requirement, StandardExtraction
 
 STANDARDS_CACHE = Path(__file__).resolve().parent.parent / "standards_cache"
-CANDIDATE_POOL_SIZE = 5  # top N reported in the response for explainability
-GATE2_POOL_SIZE = 3  # top N shown to the LLM for gate 2 (see CandidateSelection)
-TOP_K_CHUNKS_PER_STANDARD = 3  # "sustained overlap," not one lucky sentence
-PLAUSIBILITY_EXCERPT_CHARS = 1500
 
 
 def _load_index() -> tuple[np.ndarray, list[dict]]:
@@ -29,6 +31,11 @@ def _load_index() -> tuple[np.ndarray, list[dict]]:
         raise RuntimeError(
             f"Standards cache is missing at {STANDARDS_CACHE}; run `python ingest.py` first."
         ) from exc
+    if vectors.shape[0] != len(meta):
+        raise RuntimeError(
+            f"Standards cache is inconsistent: index.npy has {vectors.shape[0]} rows but "
+            f"index_meta.json has {len(meta)}; re-run `python ingest.py` to rebuild both together."
+        )
     norms = np.linalg.norm(vectors, axis=1, keepdims=True)
     normalized = vectors / norms
     return normalized, meta
@@ -54,6 +61,13 @@ _STANDARDS = _load_standards()
 _STANDARD_ROW_IDS: dict[str, list[int]] = {}
 for _row_idx, _row in enumerate(_INDEX_META):
     _STANDARD_ROW_IDS.setdefault(_row["standard_id"], []).append(_row_idx)
+
+_missing_standards = set(_STANDARD_ROW_IDS) - set(_STANDARDS)
+if _missing_standards:
+    raise RuntimeError(
+        f"Standards cache is inconsistent: index_meta.json references {sorted(_missing_standards)} "
+        "with no matching cached JSON; re-run `python ingest.py` to rebuild both together."
+    )
 
 
 def get_requirements(standard_id: str) -> list[Requirement]:
@@ -117,8 +131,7 @@ def select_candidate(candidates: list[CandidateScore], doc_text: str) -> Candida
         candidates_block="\n".join(lines),
         document_excerpt=doc_text[:PLAUSIBILITY_EXCERPT_CHARS],
     )
-    raw = chat_json(CANDIDATE_SELECTION_SYSTEM, user_message)
-    return CandidateSelection.model_validate(raw)
+    return chat_json_validated(CANDIDATE_SELECTION_SYSTEM, user_message, CandidateSelection)
 
 
 def match_document(doc_text: str, doc_chunks: list[DocChunk]) -> MatchResult:
@@ -126,9 +139,6 @@ def match_document(doc_text: str, doc_chunks: list[DocChunk]) -> MatchResult:
     candidates = score_standards(doc_chunks)
     top_candidates = candidates[:CANDIDATE_POOL_SIZE]
     top = candidates[0]
-
-    if MATCH_THRESHOLD is None:
-        raise RuntimeError("MATCH_THRESHOLD is not set in app/config.py yet.")
 
     if top.score < MATCH_THRESHOLD:
         return MatchResult(

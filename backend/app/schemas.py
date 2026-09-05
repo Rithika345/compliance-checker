@@ -49,11 +49,6 @@ class FindingBatch(BaseModel):
     findings: list[Finding]
 
 
-class PlausibilityCheck(BaseModel):
-    plausible: bool
-    reason: str
-
-
 # Stage 2 escape hatch (DESIGN_PLAN 3.4): retrieval alone confused sibling
 # policies (e.g. Password Protection vs. Password Construction), so gate 2
 # shows the LLM the top-3 candidates and lets it pick one or none, instead

@@ -33,7 +33,25 @@ MAX_PARALLEL_WORKERS = 4  # drop to 1 and report if 429s appear
 # unrelated_document.md top score    = 0.8553 (must fail)
 # Threshold sits at the midpoint of the one gap that matters: between the
 # lowest score that must pass (0.8650) and the highest that must fail (0.8553).
-MATCH_THRESHOLD: float | None = 0.86
+MATCH_THRESHOLD: float = 0.86
 
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024  # 10 MB, per spec
+UPLOAD_READ_CHUNK_BYTES = 1024 * 1024  # read uploads in 1 MB chunks so an oversized file is rejected before it is fully buffered
 MIN_EXTRACTED_CHARS = 200  # below this, likely empty or a scanned image
+
+# DESIGN_PLAN 3.3: paragraph groups of roughly 300 words per chunk for retrieval.
+CHUNK_TARGET_WORDS = 300
+
+# Requirements per LLM verification call. Small enough that one bad batch
+# (validation failure, timeout) only degrades a handful of findings.
+VERIFY_BATCH_SIZE = 8
+
+# Retrieval pool sizes.
+CANDIDATE_POOL_SIZE = 5  # top N reported in the API response for explainability
+GATE2_POOL_SIZE = 3  # top N shown to the LLM for gate 2 candidate selection
+TOP_K_CHUNKS_PER_STANDARD = 3  # "sustained overlap," not one lucky sentence
+PLAUSIBILITY_EXCERPT_CHARS = 1500  # chars of the document shown to gate 2
+
+# Ingest-time embedding batch size; keeps each embeddings call well under
+# gateway request-size limits.
+EMBED_BATCH_SIZE = 200

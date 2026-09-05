@@ -10,10 +10,11 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi.concurrency import run_in_threadpool
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
-from app.config import LLM_MODEL
+from app.config import LLM_MODEL, MAX_UPLOAD_BYTES, UPLOAD_READ_CHUNK_BYTES
 from app.extract import UnsupportedDocument, chunk_text, extract_text
 from app.retrieval import get_requirements, list_standards_summary, match_document
 from app.schemas import EvaluateResponse, HealthStatus, StandardSummary
@@ -66,22 +67,38 @@ def standards() -> list[StandardSummary]:
     return [StandardSummary(**summary) for summary in list_standards_summary()]
 
 
+async def _read_upload(file: UploadFile) -> bytes:
+    """Read the upload in bounded chunks so an oversized file is rejected
+    before it is ever fully buffered in memory.
+    """
+    data = bytearray()
+    while True:
+        chunk = await file.read(UPLOAD_READ_CHUNK_BYTES)
+        if not chunk:
+            break
+        data.extend(chunk)
+        if len(data) > MAX_UPLOAD_BYTES:
+            raise HTTPException(status_code=400, detail="File exceeds the 10 MB upload limit.")
+    return bytes(data)
+
+
 @app.post("/api/evaluate")
 async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
     start = time.monotonic()
-    data = await file.read()
     document_name = file.filename or "uploaded document"
+    data = await _read_upload(file)
 
+    # extract_text/chunk_text/match_document/verify_requirements are all
+    # synchronous and can each take seconds (network calls to the LLM
+    # gateway); running them in a worker thread keeps this route from
+    # blocking every other concurrent request on the event loop.
     try:
-        doc_text = extract_text(data)
-    except UnsupportedDocument as exc:
-        raise HTTPException(status_code=400, detail=str(exc)) from exc
+        doc_text = await run_in_threadpool(extract_text, data)
 
-    try:
-        doc_chunks = chunk_text(doc_text)
+        doc_chunks = await run_in_threadpool(chunk_text, doc_text)
 
         retrieval_start = time.monotonic()
-        match = match_document(doc_text, doc_chunks)
+        match = await run_in_threadpool(match_document, doc_text, doc_chunks)
         retrieval_elapsed = time.monotonic() - retrieval_start
 
         if not match.matched:
@@ -100,7 +117,7 @@ async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
 
         requirements = get_requirements(match.standard_id)
         verify_start = time.monotonic()
-        findings = verify_requirements(doc_text, requirements)
+        findings = await run_in_threadpool(verify_requirements, doc_text, requirements)
         verify_elapsed = time.monotonic() - verify_start
 
         logger.info(
@@ -117,6 +134,8 @@ async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
             findings=findings,
             model=LLM_MODEL,
         )
+    except UnsupportedDocument as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
     except HTTPException:
         raise
     except Exception as exc:  # noqa: BLE001 - never leak an internal error to the client

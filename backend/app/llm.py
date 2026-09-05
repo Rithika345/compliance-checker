@@ -6,9 +6,11 @@ response content, only status codes and timings.
 import json
 import logging
 import time
+from typing import TypeVar
 
 import numpy as np
 from openai import APIStatusError, OpenAI
+from pydantic import BaseModel, ValidationError
 
 from app.config import (
     EMBED_MODEL,
@@ -80,7 +82,37 @@ def chat_json(system: str, user: str, model: str = LLM_MODEL) -> dict:
 
     response = _call_with_one_retry(_do_call, label=f"chat_json model={model}")
     content = response.choices[0].message.content
+    if content is None:
+        raise ValueError("Chat completion returned no content (possibly filtered by the gateway).")
     return json.loads(content)
+
+
+ModelT = TypeVar("ModelT", bound=BaseModel)
+
+
+def chat_json_validated(system: str, user: str, schema: type[ModelT], model: str = LLM_MODEL) -> ModelT:
+    """Call chat_json and validate the result against `schema`.
+
+    On a schema mismatch or a response that isn't valid JSON at all, retry
+    once with the error appended to the prompt (every LLM-JSON call site
+    needs this same recovery, so it lives here instead of being
+    reimplemented per caller). If the retry also fails, the error
+    propagates to the caller.
+    """
+    try:
+        return schema.model_validate(chat_json(system, user, model=model))
+    except (ValidationError, ValueError) as first_error:
+        if isinstance(first_error, ValidationError):
+            locs = [".".join(str(p) for p in e["loc"]) for e in first_error.errors()]
+            detail = f"problem fields: {locs}"
+        else:
+            detail = f"the response was not valid JSON ({type(first_error).__name__})"
+        retry_user = (
+            user
+            + f"\n\nYour previous JSON response did not match the required schema ({detail}). "
+            "Return a corrected JSON object matching the shape exactly. Respond with a JSON object."
+        )
+        return schema.model_validate(chat_json(system, retry_user, model=model))
 
 
 def embed(texts: list[str], model: str = EMBED_MODEL) -> np.ndarray:

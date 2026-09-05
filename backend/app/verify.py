@@ -8,16 +8,12 @@ import logging
 import re
 from concurrent.futures import ThreadPoolExecutor
 
-from pydantic import ValidationError
-
-from app.config import MAX_PARALLEL_WORKERS
-from app.llm import chat_json
+from app.config import MAX_PARALLEL_WORKERS, VERIFY_BATCH_SIZE
+from app.llm import chat_json_validated
 from app.prompts import VERIFY_SYSTEM, VERIFY_USER_TEMPLATE
 from app.schemas import Finding, FindingBatch, FindingOut, Requirement, Verdict
 
 logger = logging.getLogger(__name__)
-
-BATCH_SIZE = 8
 
 
 def _format_requirements_block(requirements: list[Requirement]) -> str:
@@ -37,14 +33,38 @@ def _normalize_for_match(text: str) -> str:
 
 def _quotes_verified(finding: Finding, doc_text_normalized: str) -> bool:
     """A finding's quotes are verified only if it has at least one quote and
-    every quote is a verbatim substring of the document. Missing evidence is
-    treated the same as a failed quote, not as vacuously verified: an
-    aligned/contradicted claim with nothing to point to should not display
-    as confirmed.
+    every quote is a non-empty, verbatim substring of the document. Missing
+    or empty/whitespace-only evidence is treated the same as a failed quote,
+    not as vacuously verified: an aligned/contradicted claim with nothing to
+    point to should not display as confirmed. (The emptiness check has to
+    happen on the *normalized* quote, not the raw one -- a whitespace-only
+    quote like "   " is truthy before normalization, but normalizes to "",
+    and "" is trivially a substring of any string.)
     """
     if not finding.evidence:
         return False
-    return all(_normalize_for_match(e.quote) in doc_text_normalized for e in finding.evidence if e.quote)
+    for evidence in finding.evidence:
+        normalized_quote = _normalize_for_match(evidence.quote)
+        if not normalized_quote or normalized_quote not in doc_text_normalized:
+            return False
+    return True
+
+
+def _flagged_finding(req: Requirement, rationale: str) -> FindingOut:
+    """A FLAGGED finding with no evidence: used both when an LLM batch call
+    fails outright and when a requirement never gets a verdict at all.
+    """
+    return FindingOut(
+        requirement_id=req.id,
+        verdict=Verdict.FLAGGED,
+        evidence=[],
+        rationale=rationale,
+        confidence=0.0,
+        requirement_text=req.text,
+        section=req.section,
+        obligation=req.obligation,
+        quotes_verified=False,
+    )
 
 
 def _call_batch_with_retry(doc_text: str, batch: list[Requirement]) -> FindingBatch:
@@ -57,32 +77,7 @@ def _call_batch_with_retry(doc_text: str, batch: list[Requirement]) -> FindingBa
         document_text=doc_text,
         requirements_block=_format_requirements_block(batch),
     )
-    try:
-        return FindingBatch.model_validate(chat_json(VERIFY_SYSTEM, user_message))
-    except (ValidationError, ValueError) as first_error:
-        retry_message = (
-            user_message
-            + f"\n\nYour previous response was invalid ({type(first_error).__name__}). "
-            "Return a corrected JSON object matching the required shape exactly. Respond with a JSON object."
-        )
-        return FindingBatch.model_validate(chat_json(VERIFY_SYSTEM, retry_message))
-
-
-def _degraded_findings(batch: list[Requirement], rationale: str) -> list[FindingOut]:
-    return [
-        FindingOut(
-            requirement_id=req.id,
-            verdict=Verdict.FLAGGED,
-            evidence=[],
-            rationale=rationale,
-            confidence=0.0,
-            requirement_text=req.text,
-            section=req.section,
-            obligation=req.obligation,
-            quotes_verified=False,
-        )
-        for req in batch
-    ]
+    return chat_json_validated(VERIFY_SYSTEM, user_message, FindingBatch)
 
 
 def _process_batch(doc_text: str, doc_text_normalized: str, batch: list[Requirement]) -> list[FindingOut]:
@@ -94,7 +89,7 @@ def _process_batch(doc_text: str, doc_text_normalized: str, batch: list[Requirem
             [req.id for req in batch],
             type(exc).__name__,
         )
-        return _degraded_findings(batch, "LLM output failed validation.")
+        return [_flagged_finding(req, "LLM output failed validation.") for req in batch]
 
     req_by_id = {req.id: req for req in batch}
     outputs = []
@@ -106,7 +101,10 @@ def _process_batch(doc_text: str, doc_text_normalized: str, batch: list[Requirem
         quotes_ok = _quotes_verified(finding, doc_text_normalized)
         verdict = finding.verdict
         rationale = finding.rationale
-        if not quotes_ok and verdict in (Verdict.CONTRADICTED, Verdict.MISSING):
+        if not quotes_ok and verdict != Verdict.FLAGGED:
+            # Every non-flagged verdict makes a claim (a practice present, absent, or
+            # conflicting) that only the quoted evidence backs up -- an aligned verdict
+            # with an unverifiable quote is exactly as unsupported as a contradicted one.
             verdict = Verdict.FLAGGED
             rationale = f"Model quote could not be located in the source document. {rationale}"
 
@@ -129,7 +127,7 @@ def _process_batch(doc_text: str, doc_text_normalized: str, batch: list[Requirem
 def verify_requirements(doc_text: str, requirements: list[Requirement]) -> list[FindingOut]:
     """Check the document against every requirement of the matched standard."""
     doc_text_normalized = _normalize_for_match(doc_text)
-    batches = [requirements[i : i + BATCH_SIZE] for i in range(0, len(requirements), BATCH_SIZE)]
+    batches = [requirements[i : i + VERIFY_BATCH_SIZE] for i in range(0, len(requirements), VERIFY_BATCH_SIZE)]
 
     with ThreadPoolExecutor(max_workers=MAX_PARALLEL_WORKERS) as executor:
         batch_results = list(
@@ -146,19 +144,7 @@ def verify_requirements(doc_text: str, requirements: list[Requirement]) -> list[
         if req.id in findings_by_id:
             reconciled.append(findings_by_id[req.id])
         else:
-            reconciled.append(
-                FindingOut(
-                    requirement_id=req.id,
-                    verdict=Verdict.FLAGGED,
-                    evidence=[],
-                    rationale="No verdict was returned for this requirement.",
-                    confidence=0.0,
-                    requirement_text=req.text,
-                    section=req.section,
-                    obligation=req.obligation,
-                    quotes_verified=False,
-                )
-            )
+            reconciled.append(_flagged_finding(req, "No verdict was returned for this requirement."))
     return reconciled
 
 
