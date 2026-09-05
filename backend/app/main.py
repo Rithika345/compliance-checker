@@ -13,6 +13,7 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.concurrency import run_in_threadpool
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+from openai import APIConnectionError, APIStatusError, APITimeoutError
 
 from app.config import LLM_MODEL, MAX_UPLOAD_BYTES, UPLOAD_READ_CHUNK_BYTES
 from app.extract import UnsupportedDocument, chunk_text, extract_text
@@ -138,6 +139,11 @@ async def evaluate(file: UploadFile = File(...)) -> EvaluateResponse:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except HTTPException:
         raise
+    except (APIConnectionError, APITimeoutError, APIStatusError) as exc:
+        logger.warning("evaluate failed due to LLM gateway error: %s", type(exc).__name__)
+        raise HTTPException(
+            status_code=503, detail="The language model service is unavailable. Try again in a moment."
+        ) from exc
     except Exception as exc:  # noqa: BLE001 - never leak an internal error to the client
         logger.info("evaluate failed error=%s", type(exc).__name__)
         raise HTTPException(status_code=500, detail="An internal error occurred while evaluating the document.") from exc

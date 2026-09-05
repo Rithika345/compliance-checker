@@ -4,9 +4,11 @@ LLM never sees more than the single best candidate.
 """
 
 import json
+import logging
 from pathlib import Path
 
 import numpy as np
+from pydantic import ValidationError
 
 from app.config import (
     CANDIDATE_POOL_SIZE,
@@ -19,6 +21,8 @@ from app.extract import DocChunk
 from app.llm import chat_json_validated, embed
 from app.prompts import CANDIDATE_SELECTION_SYSTEM, CANDIDATE_SELECTION_USER_TEMPLATE
 from app.schemas import CandidateScore, CandidateSelection, MatchResult, Requirement, StandardExtraction
+
+logger = logging.getLogger(__name__)
 
 STANDARDS_CACHE = Path(__file__).resolve().parent.parent / "standards_cache"
 
@@ -149,7 +153,20 @@ def match_document(doc_text: str, doc_chunks: list[DocChunk]) -> MatchResult:
         )
 
     gate2_pool = candidates[:GATE2_POOL_SIZE]
-    selection = select_candidate(gate2_pool, doc_text)
+    try:
+        selection = select_candidate(gate2_pool, doc_text)
+    except (ValidationError, ValueError, json.JSONDecodeError) as exc:
+        # Validation-type failure (bad JSON shape) surviving chat_json_validated's
+        # own retry -- degrade to no-match. Gateway/network errors (APIStatusError,
+        # APIConnectionError, APITimeoutError) are NOT caught here; they propagate
+        # to the route, which turns them into a 503.
+        logger.warning("gate 2 candidate selection failed validation: %s", type(exc).__name__)
+        return MatchResult(
+            matched=False,
+            score=top.score,
+            candidates=top_candidates,
+            reason="Could not confirm a matching standard: the plausibility check did not return a valid response.",
+        )
     chosen = next((c for c in gate2_pool if c.standard_id == selection.standard_id), None)
     if chosen is None:
         # Either the LLM said no candidate fits, or it returned an id we

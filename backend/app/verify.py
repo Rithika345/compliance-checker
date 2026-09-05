@@ -4,9 +4,12 @@ downgrade unsupported verdicts, and reconcile coverage so every requirement
 ends up with exactly one verdict. Never logs document text.
 """
 
+import json
 import logging
 import re
 from concurrent.futures import ThreadPoolExecutor
+
+from pydantic import ValidationError
 
 from app.config import MAX_PARALLEL_WORKERS, VERIFY_BATCH_SIZE
 from app.llm import chat_json_validated
@@ -83,7 +86,12 @@ def _call_batch_with_retry(doc_text: str, batch: list[Requirement]) -> FindingBa
 def _process_batch(doc_text: str, doc_text_normalized: str, batch: list[Requirement]) -> list[FindingOut]:
     try:
         finding_batch = _call_batch_with_retry(doc_text, batch)
-    except Exception as exc:  # noqa: BLE001 - one bad batch must not fail the whole request
+    except (ValidationError, ValueError, json.JSONDecodeError) as exc:
+        # Validation-type failure (bad JSON shape) surviving chat_json_validated's
+        # own retry -- degrade this batch to flagged. Gateway/network errors
+        # (APIStatusError, APIConnectionError, APITimeoutError) are NOT caught
+        # here; they propagate through verify_requirements to the route, which
+        # turns them into a 503.
         logger.info(
             "verify batch degraded requirement_ids=%s error=%s",
             [req.id for req in batch],
