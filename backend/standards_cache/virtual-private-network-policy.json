@@ -1,0 +1,91 @@
+{
+  "title": "Virtual Private Network (VPN) Policy",
+  "summary": "This policy establishes requirements and guidelines for the use of Virtual Private Network (VPN) connections to access the corporate network. It outlines user responsibilities, technical controls, and security measures for VPN usage.",
+  "scope": "This policy applies to all <Company Name> employees, contractors, consultants, temporaries, and other workers including all personnel affiliated with third parties utilizing VPNs to access the <Company Name> network. This policy applies to implementations of VPN that are directed through an IPSec Concentrator.",
+  "requirements": [
+    {
+      "id": "virtual-private-network-policy-01",
+      "section": "4. Policy",
+      "text": "It is the responsibility of employees with VPN privileges to ensure that unauthorized users are not allowed access to <Company Name> internal networks.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-02",
+      "section": "4. Policy",
+      "text": "VPN use is to be controlled using either a one-time password authentication such as a token device or a public/private key system with a strong passphrase.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-03",
+      "section": "4. Policy",
+      "text": "When actively connected to the corporate network, VPNs will force all traffic to and from the PC over the VPN tunnel: all other traffic will be dropped.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-04",
+      "section": "4. Policy",
+      "text": "Dual (split) tunneling is NOT permitted; only one network connection is allowed.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-05",
+      "section": "4. Policy",
+      "text": "VPN gateways will be set up and managed by <Company Name> network operational groups.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-06",
+      "section": "4. Policy",
+      "text": "All computers connected to <Company Name> internal networks via VPN or any other technology must use the most up-to-date anti-virus software that is the corporate standard (provide URL to this software); this includes personal computers.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-07",
+      "section": "4. Policy",
+      "text": "VPN users will be automatically disconnected from <Company Name>'s network after thirty minutes of inactivity.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-08",
+      "section": "4. Policy",
+      "text": "The user must then logon again to reconnect to the network.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-09",
+      "section": "4. Policy",
+      "text": "Pings or other artificial network processes are not to be used to keep the connection open.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-10",
+      "section": "4. Policy",
+      "text": "The VPN concentrator is limited to an absolute connection time of 24 hours.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-11",
+      "section": "4. Policy",
+      "text": "Users of computers that are not <Company Name>-owned equipment must configure the equipment to comply with <Company Name>'s VPN and Network policies.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-12",
+      "section": "4. Policy",
+      "text": "Only Infosec-approved VPN clients may be used.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-13",
+      "section": "4. Policy",
+      "text": "By using VPN technology with personal equipment, users must understand that their machines are a de facto extension of <Company Name>'s network, and as such are subject to the same rules and regulations that apply to <Company Name>-owned equipment.",
+      "obligation": "must"
+    },
+    {
+      "id": "virtual-private-network-policy-14",
+      "section": "4. Policy",
+      "text": "Machines must be configured to comply with Infosec's Security Policies.",
+      "obligation": "must"
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "title": "DMZ Lab Security Policy",
+  "summary": "This policy establishes security requirements for all networks and equipment deployed in DMZ labs. It governs the configuration, management, and access controls for DMZ lab environments to minimize risks to the organization.",
+  "scope": "<Company Name> Lab networks and devices (including but not limited to routers, switches, hosts, etc.) that are Internet facing and located outside <Company Name> corporate Internet firewalls are considered part of the DMZ Labs and are subject to this policy. This includes DMZ Labs in primary Internet Service Provider (ISP) locations and remote locations. All existing and future equipment, which falls under the scope of this policy, must be configured according to the referenced documents. This policy does not apply to labs residing inside <Company Name>'s corporate Internet firewalls.",
+  "requirements": [
+    {
+      "id": "dmz-lab-security-policy-01",
+      "section": "3.1.1",
+      "text": "All new DMZ Labs must present a business justification with sign-off at the business unit Vice President level.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-02",
+      "section": "3.1.1",
+      "text": "The Infosec Team must keep the business justifications on file.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-03",
+      "section": "3.1.2",
+      "text": "Lab owning organizations are responsible for assigning lab managers, point of contact (POC), and back up POC, for each lab.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-04",
+      "section": "3.1.2",
+      "text": "The lab owners must maintain up to date POC information with the Infosec Team [and the corporate enterprise management system, if one exists].",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-05",
+      "section": "3.1.2",
+      "text": "Lab managers or their backup must be available around-the-clock for emergencies.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-06",
+      "section": "3.1.3",
+      "text": "Changes to the connectivity and/or purpose of existing DMZ Labs and establishment of new DMZ Labs must be requested through a <Company Name> Network Support Organization and approved by the Infosec Team.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-07",
+      "section": "3.1.4",
+      "text": "All ISP connections must be maintained by a <Company Name> Network Support Organization.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-08",
+      "section": "3.1.5",
+      "text": "A Network Support Organization must maintain a firewall device between the DMZ Lab(s) and the Internet.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-09",
+      "section": "3.1.7",
+      "text": "The DMZ Lab will provide and maintain network devices deployed in the DMZ Lab up to the Network Support Organization point of demarcation.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-10",
+      "section": "3.1.8",
+      "text": "The Network Support Organization must record all DMZ Lab address spaces and current contact information [in the corporate enterprise management system, if one exists].",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-11",
+      "section": "3.1.9",
+      "text": "The DMZ Lab Managers are ultimately responsible for their DMZ Labs complying with this policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-12",
+      "section": "3.1.10",
+      "text": "Immediate access to equipment and system logs must be granted to members of the Infosec Team and the Network Support Organization upon request, in accordance with the Audit Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-13",
+      "section": "3.1.11",
+      "text": "Individual lab accounts must be deleted within three (3) days when access is no longer authorized.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-14",
+      "section": "3.1.11",
+      "text": "Group account passwords must comply with the Password Policy and must be changed within three (3) days from a change in the group membership.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-15",
+      "section": "3.2.1",
+      "text": "Production resources must not depend upon resources on the DMZ Lab networks.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-16",
+      "section": "3.2.2",
+      "text": "DMZ Labs must not be connected to <Company Name>'s corporate internal networks, either directly or via a wireless connection.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-17",
+      "section": "3.2.3",
+      "text": "DMZ Labs should be in a physically separate room from any internal networks.",
+      "obligation": "should"
+    },
+    {
+      "id": "dmz-lab-security-policy-18",
+      "section": "3.2.3",
+      "text": "If DMZ Labs cannot be in a physically separate room from any internal networks, the equipment must be in a locked rack with limited access.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-19",
+      "section": "3.2.3",
+      "text": "The Lab Manager must maintain a list of who has access to the equipment.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-20",
+      "section": "3.2.4",
+      "text": "Lab Managers are responsible for complying with the Password Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-21",
+      "section": "3.2.4",
+      "text": "Lab Managers are responsible for complying with the Wireless Communications Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-22",
+      "section": "3.2.4",
+      "text": "Lab Managers are responsible for complying with the Lab Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-23",
+      "section": "3.2.5",
+      "text": "The Network Support Organization maintained firewall devices must be configured in accordance with least-access principles and the DMZ Lab business needs.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-24",
+      "section": "3.2.5",
+      "text": "All firewall filters will be maintained by the Infosec Team.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-25",
+      "section": "3.2.6",
+      "text": "The firewall device must be the only access point between the DMZ Lab and the rest of <Company Name>'s networks and/or the Internet.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-26",
+      "section": "3.2.6",
+      "text": "Any form of cross-connection which bypasses the firewall device is strictly prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-27",
+      "section": "3.2.7",
+      "text": "Original firewall configurations and any changes thereto must be reviewed and approved by the Infosec Team (including both general configurations and rule sets).",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-28",
+      "section": "3.2.7",
+      "text": "The Infosec Team may require additional security measures as needed.",
+      "obligation": "may"
+    },
+    {
+      "id": "dmz-lab-security-policy-29",
+      "section": "3.2.9",
+      "text": "All routers and switches not used for testing and/or training must conform to the DMZ Router and Switch standardization documents.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-30",
+      "section": "3.2.10",
+      "text": "Operating systems of all hosts internal to the DMZ Lab running Internet Services must be configured to the secure host installation and configuration standards.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-31",
+      "section": "3.2.11",
+      "text": "Current applicable security patches/hot-fixes for any applications that are Internet services must be applied.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-32",
+      "section": "3.2.11",
+      "text": "Administrative owner groups must have processes in place to stay current on appropriate patches/hotfixes.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-33",
+      "section": "3.2.12",
+      "text": "All applicable security patches/hot-fixes recommended by the vendor must be installed.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-34",
+      "section": "3.2.12",
+      "text": "Administrative owner groups must have processes in place to stay current on appropriate patches/hotfixes.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-35",
+      "section": "3.2.13",
+      "text": "Services and applications not serving business requirements must be disabled.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-36",
+      "section": "3.2.14",
+      "text": "<Company Name> Confidential information is prohibited on equipment in labs where non-<Company Name> personnel have physical access (e.g., training labs), in accordance with the Data Classification and Protection Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "dmz-lab-security-policy-37",
+      "section": "3.2.15",
+      "text": "Remote administration must be performed over secure channels (e.g., encrypted network connections using SSH or IPSEC) or console access independent from the DMZ networks.",
+      "obligation": "must"
+    }
+  ]
+}

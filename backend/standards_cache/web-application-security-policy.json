@@ -1,0 +1,121 @@
+{
+  "title": "Web Application Security Policy",
+  "summary": "This policy governs the security assessment requirements for web applications within the organization. It defines when and how web application security assessments must be performed, the handling of discovered vulnerabilities, and the assessment methodologies to be used.",
+  "scope": "This policy covers all web application security assessments requested by any individual, group or department for the purposes of maintaining the security posture, compliance, risk management, and change control of technologies in use at <Company Name>. All web application security assessments will be performed by delegated security personnel either employed or contracted by <Company Name>. All findings are considered confidential and are to be distributed to persons on a “need to know” basis. Distribution of any findings outside of <Company Name> is strictly prohibited unless approved by the Chief Information Officer.",
+  "requirements": [
+    {
+      "id": "web-application-security-policy-01",
+      "section": "4.1.a",
+      "text": "New or Major Application Release will be subject to a full assessment prior to approval of the change control documentation and/or release into the live environment.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-02",
+      "section": "4.1.b",
+      "text": "Third Party or Acquired Web Application will be subject to full assessment after which it will be bound to policy requirements.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-03",
+      "section": "4.1.c",
+      "text": "Point Releases will be subject to an appropriate assessment level based on the risk of the changes in the application functionality and/or architecture.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-04",
+      "section": "4.1.d",
+      "text": "Patch Releases will be subject to an appropriate assessment level based on the risk of the changes to the application functionality and/or architecture.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-05",
+      "section": "4.1.e",
+      "text": "Emergency releases will be designated as such by the Chief Information Officer or an appropriate manager who has been delegated this authority.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-06",
+      "section": "4.1.e",
+      "text": "Emergency releases will be allowed to forgo security assessments and carry the assumed risk until such time that a proper assessment can be carried out.",
+      "obligation": "may"
+    },
+    {
+      "id": "web-application-security-policy-07",
+      "section": "4.2.a",
+      "text": "Any high risk issue must be fixed immediately or other mitigation strategies must be put in place to limit exposure before deployment.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-08",
+      "section": "4.2.a",
+      "text": "Applications with high risk issues are subject to being taken off-line or denied release into the live environment.",
+      "obligation": "may"
+    },
+    {
+      "id": "web-application-security-policy-09",
+      "section": "4.2.b",
+      "text": "Medium risk issues should be reviewed to determine what is required to mitigate and scheduled accordingly.",
+      "obligation": "should"
+    },
+    {
+      "id": "web-application-security-policy-10",
+      "section": "4.2.b",
+      "text": "Applications with medium risk issues may be taken off-line or denied release into the live environment based on the number of issues and if multiple issues increase the risk to an unacceptable level.",
+      "obligation": "may"
+    },
+    {
+      "id": "web-application-security-policy-11",
+      "section": "4.2.b",
+      "text": "Issues should be fixed in a patch/point release unless other mitigation strategies will limit exposure.",
+      "obligation": "should"
+    },
+    {
+      "id": "web-application-security-policy-12",
+      "section": "4.2.c",
+      "text": "Issue should be reviewed to determine what is required to correct the issue and scheduled accordingly.",
+      "obligation": "should"
+    },
+    {
+      "id": "web-application-security-policy-13",
+      "section": "4.2",
+      "text": "Remediation validation testing will be required to validate fix and/or mitigation strategies for any discovered issues of Medium risk level or greater.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-14",
+      "section": "4.3.a",
+      "text": "A full assessment is comprised of tests for all known web application vulnerabilities using both automated and manual tools based on the OWASP Testing Guide.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-15",
+      "section": "4.3.a",
+      "text": "A full assessment will use manual penetration testing techniques to validate discovered vulnerabilities to determine the overall risk of any and all discovered.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-16",
+      "section": "4.3.b",
+      "text": "A quick assessment will consist of a (typically) automated scan of an application for the OWASP Top Ten web application security risks at a minimum.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-17",
+      "section": "4.3.c",
+      "text": "A targeted assessment is performed to verify vulnerability remediation changes or new application functionality.",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-18",
+      "section": "4.4",
+      "text": "The current approved web application security assessment tools in use which will be used for testing are: <Tool/Application 1>, <Tool/Application 2>, ...",
+      "obligation": "must"
+    },
+    {
+      "id": "web-application-security-policy-19",
+      "section": "4.4",
+      "text": "Other tools and/or techniques may be used depending upon what is found in the default assessment and the need to determine validity and risk are subject to the discretion of the Security Engineering team.",
+      "obligation": "may"
+    }
+  ]
+}

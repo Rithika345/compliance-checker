@@ -1,0 +1,97 @@
+{
+  "title": "Email Retention Policy",
+  "summary": "This policy defines the retention requirements for different categories of email and instant messaging correspondence within the organization. It also specifies approved technologies and procedures for storing, encrypting, and accessing electronic communications.",
+  "scope": "This email retention policy is secondary to <Company Name> policy on Freedom of Information and Business Record Keeping. Any email that contains information in the scope of the Business Record Keeping policy should be treated in that manner. All <Company Name> email information is categorized into four main classifications with retention guidelines: Administrative Correspondence, Fiscal Correspondence, General Correspondence, and Ephemeral Correspondence.",
+  "requirements": [
+    {
+      "id": "email-retention-policy-01",
+      "section": "4.1",
+      "text": "All email with the information sensitivity label Management Only shall be treated as Administrative Correspondence.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-retention-policy-02",
+      "section": "4.1",
+      "text": "To ensure Administrative Correspondence is retained, a mailbox admin@<Company Name> has been created; if you copy (cc) this address when you send email, retention will be administered by the IT Department.",
+      "obligation": "should"
+    },
+    {
+      "id": "email-retention-policy-03",
+      "section": "4.2",
+      "text": "To ensure Fiscal Correspondence is retained, a mailbox fiscal@<Company Name> has been created; if you copy (cc) this address when you send email, retention will be administered by the IT Department.",
+      "obligation": "should"
+    },
+    {
+      "id": "email-retention-policy-04",
+      "section": "4.3",
+      "text": "The individual employee is responsible for email retention of General Correspondence.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-retention-policy-05",
+      "section": "4.5",
+      "text": "Instant Messenger General Correspondence may be saved with logging function of Instant Messenger, or copied into a file and saved.",
+      "obligation": "may"
+    },
+    {
+      "id": "email-retention-policy-06",
+      "section": "4.5",
+      "text": "Instant Messenger conversations that are Administrative or Fiscal in nature should be copied into an email message and sent to the appropriate email retention address.",
+      "obligation": "should"
+    },
+    {
+      "id": "email-retention-policy-07",
+      "section": "4.5",
+      "text": "The Jabber Secure IM Client is the only IM that is approved for use on <Company Name> computers.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-retention-policy-08",
+      "section": "4.6",
+      "text": "<Company Name> encrypted communications should be stored in a manner consistent with <Company Name> Information Sensitivity Policy.",
+      "obligation": "should"
+    },
+    {
+      "id": "email-retention-policy-09",
+      "section": "4.6",
+      "text": "In general, information should be stored in a decrypted format.",
+      "obligation": "should"
+    },
+    {
+      "id": "email-retention-policy-10",
+      "section": "4.7",
+      "text": "No effort will be made to remove email from the offsite backup tapes.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-retention-policy-11",
+      "section": "4.8",
+      "text": "Approved Electronic Mail includes all mail systems supported by the IT Support Team.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-retention-policy-12",
+      "section": "4.8",
+      "text": "If you have a business need to use other mailers contact the appropriate support organization.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-retention-policy-13",
+      "section": "4.8",
+      "text": "The Jabber Secure IM Client is the only IM that is approved for use on <Company Name> computers.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-retention-policy-14",
+      "section": "4.8",
+      "text": "Secure <Company Name> Sensitive information in accordance with the Acceptable Encryption Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-retention-policy-15",
+      "section": "4.8",
+      "text": "Follow corporate guidelines on export controls on cryptography, and consult your manager and/or corporate legal services for further guidance.",
+      "obligation": "must"
+    }
+  ]
+}

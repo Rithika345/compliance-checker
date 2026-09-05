@@ -1,0 +1,133 @@
+{
+  "title": "Bluetooth Baseline Requirements Policy",
+  "summary": "This policy establishes minimum security requirements for connecting Bluetooth-enabled devices to the organization's network or owned devices. It aims to protect Personally Identifiable Information (PII) and confidential company data from risks associated with insecure Bluetooth connections.",
+  "scope": "This policy applies to any Bluetooth enabled device that is connected to <Company Name> network or owned devices.",
+  "requirements": [
+    {
+      "id": "bluetooth-baseline-requirements-policy-01",
+      "section": "4.1 Version",
+      "text": "No Bluetooth Device shall be deployed on <Company Name> equipment that does not meet a minimum of Bluetooth v2.1 specifications without written authorization from the Infosec Team.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-02",
+      "section": "4.1 Version",
+      "text": "Any Bluetooth equipment purchased prior to this policy must comply with all parts of this policy except the Bluetooth version specifications.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-03",
+      "section": "4.2 Pins and Pairing",
+      "text": "When pairing your Bluetooth unit to your Bluetooth enabled equipment (i.e. phone, laptop, etc.), ensure that you are not in a public area where your PIN can be compromised.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-04",
+      "section": "4.2 Pins and Pairing",
+      "text": "If your Bluetooth enabled equipment asks for you to enter your pin after you have initially paired it, you must refuse the pairing request.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-05",
+      "section": "4.2 Pins and Pairing",
+      "text": "If your Bluetooth enabled equipment asks for you to enter your pin after you have initially paired it, you must report it to Infosec, through your Help Desk, immediately.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-06",
+      "section": "4.3 Device Security Settings",
+      "text": "All Bluetooth devices shall employ ‘security mode 3’ which encrypts traffic in both directions, between your Bluetooth Device and its paired equipment.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-07",
+      "section": "4.3 Device Security Settings",
+      "text": "Use a minimum PIN length of 8.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-08",
+      "section": "4.3 Device Security Settings",
+      "text": "Switch the Bluetooth device to use the hidden mode (non-discoverable).",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-09",
+      "section": "4.3 Device Security Settings",
+      "text": "Only activate Bluetooth only when it is needed.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-10",
+      "section": "4.3 Device Security Settings",
+      "text": "Ensure device firmware is up-to-date.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-11",
+      "section": "4.4 Security Audits",
+      "text": "In the process of performing such audits, Infosec Team members shall not eavesdrop on any phone conversation.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-12",
+      "section": "4.5 Unauthorized Use",
+      "text": "Eavesdropping, device ID spoofing, DoS attacks, or any form of attacking other Bluetooth enabled devices is not authorized.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-13",
+      "section": "4.5 Unauthorized Use",
+      "text": "Using <Company Name>-owned Bluetooth equipment on non-<Company Name>-owned Bluetooth enabled devices is not authorized.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-14",
+      "section": "4.5 Unauthorized Use",
+      "text": "Unauthorized modification of Bluetooth devices for any purpose is not authorized.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-15",
+      "section": "4.6 User Responsibilities",
+      "text": "It is the Bluetooth user's responsibility to comply with this policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-16",
+      "section": "4.6 User Responsibilities",
+      "text": "Bluetooth mode must be turned off when not in use.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-17",
+      "section": "4.6 User Responsibilities",
+      "text": "PII and/or <Company Name> Confidential or Sensitive data must not be transmitted or stored on Bluetooth enabled devices.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-18",
+      "section": "4.6 User Responsibilities",
+      "text": "Bluetooth users must only access <Company Name> information systems using approved Bluetooth device hardware, software, solutions, and connections.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-19",
+      "section": "4.6 User Responsibilities",
+      "text": "Bluetooth device hardware, software, solutions, and connections that do not meet the standards of this policy shall not be authorized for deployment.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-20",
+      "section": "4.6 User Responsibilities",
+      "text": "Bluetooth users must act appropriately to protect information, network access, passwords, cryptographic keys, and Bluetooth equipment.",
+      "obligation": "must"
+    },
+    {
+      "id": "bluetooth-baseline-requirements-policy-21",
+      "section": "4.6 User Responsibilities",
+      "text": "Bluetooth users are required to report any misuse, loss, or theft of Bluetooth devices or systems immediately to Infosec.",
+      "obligation": "must"
+    }
+  ]
+}

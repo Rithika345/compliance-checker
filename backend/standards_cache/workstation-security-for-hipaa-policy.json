@@ -1,0 +1,127 @@
+{
+  "title": "Workstation Security (For HIPAA) Policy",
+  "summary": "This policy establishes requirements for securing workstations to protect sensitive information, including protected health information (PHI), in compliance with HIPAA. It outlines physical and technical safeguards, user responsibilities, and operational practices to ensure only authorized access and minimize risks.",
+  "scope": "This policy applies to all <Company Name> employees, contractors, workforce members, vendors and agents with a <Company Name>-owned or personal-workstation connected to the <Company Name> network.",
+  "requirements": [
+    {
+      "id": "workstation-security-for-hipaa-policy-01",
+      "section": "4. Policy",
+      "text": "Appropriate measures must be taken when using workstations to ensure the confidentiality, integrity and availability of sensitive information, including protected health information (PHI) and that access to sensitive information is restricted to authorized users.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-02",
+      "section": "3.1",
+      "text": "Workforce members using workstations shall consider the sensitivity of the information, including protected health information (PHI) that may be accessed and minimize the possibility of unauthorized access.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-03",
+      "section": "3.2",
+      "text": "<Company Name> will implement physical and technical safeguards for all workstations that access electronic protected health information to restrict access to authorized users.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-04",
+      "section": "3.3",
+      "text": "Restrict physical access to workstations to only authorized personnel.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-05",
+      "section": "3.3",
+      "text": "Secure workstations (screen lock or logout) prior to leaving area to prevent unauthorized access.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-06",
+      "section": "3.3",
+      "text": "Enable a password-protected screen saver with a short timeout period to ensure that workstations that were left unsecured will be protected.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-07",
+      "section": "3.3",
+      "text": "The password must comply with <Company Name> Password Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-08",
+      "section": "3.3",
+      "text": "Comply with all applicable password policies and procedures.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-09",
+      "section": "3.3",
+      "text": "Ensure workstations are used for authorized business purposes only.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-10",
+      "section": "3.3",
+      "text": "Never install unauthorized software on workstations.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-11",
+      "section": "3.3",
+      "text": "Store all sensitive information, including protected health information (PHI) on network servers.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-12",
+      "section": "3.3",
+      "text": "Keep food and drink away from workstations in order to avoid accidental spills.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-13",
+      "section": "3.3",
+      "text": "Secure laptops that contain sensitive information by using cable locks or locking laptops up in drawers or cabinets.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-14",
+      "section": "3.3",
+      "text": "Comply with the Portable Workstation Encryption Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-15",
+      "section": "3.3",
+      "text": "Comply with the Baseline Workstation Configuration Standard.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-16",
+      "section": "3.3",
+      "text": "Install privacy screen filters or use other physical barriers to alleviate exposing data.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-17",
+      "section": "3.3",
+      "text": "Ensure workstations are left on but logged off in order to facilitate after-hours updates.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-18",
+      "section": "3.3",
+      "text": "Exit running applications and close open documents.",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-19",
+      "section": "3.3",
+      "text": "Ensure that all workstations use a surge protector (not just a power strip) or a UPS (battery backup).",
+      "obligation": "must"
+    },
+    {
+      "id": "workstation-security-for-hipaa-policy-20",
+      "section": "3.3",
+      "text": "If wireless network access is used, ensure access is secure by following the Wireless Communication policy.",
+      "obligation": "must"
+    }
+  ]
+}

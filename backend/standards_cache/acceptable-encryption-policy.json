@@ -1,0 +1,73 @@
+{
+  "title": "Acceptable Encryption Policy",
+  "summary": "This policy governs the acceptable use of encryption algorithms, key management, and authentication protocols within the organization. It sets standards for algorithm selection, key generation, and certificate management to ensure compliance with industry and federal requirements.",
+  "scope": "This policy applies to all <Company Name> employees and affiliates.",
+  "requirements": [
+    {
+      "id": "acceptable-encryption-policy-01",
+      "section": "4.1.1",
+      "text": "Ciphers in use must meet or exceed the set defined as \"AES-compatible\" or \"partially AES-compatible\" according to the IETF/IRTF Cipher Catalog, or the set defined for use in the United States National Institute of Standards and Technology (NIST) publication FIPS 140-2, or any superseding documents according to the date of implementation.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-02",
+      "section": "4.1.2",
+      "text": "Algorithms in use must meet the standards defined for use in NIST publication FIPS 140-2 or any superseding document, according to date of implementation.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-03",
+      "section": "4.1.3",
+      "text": "RSA signature algorithms must use a secure padding scheme.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-04",
+      "section": "4.1.3",
+      "text": "RSA signature algorithms: Message hashing required.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-05",
+      "section": "4.3.1",
+      "text": "Key exchanges must use one of the following cryptographic protocols: Diffie-Hellman, IKE, or Elliptic curve Diffie-Hellman (ECDH).",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-06",
+      "section": "4.3.2",
+      "text": "End points must be authenticated prior to the exchange or derivation of session keys.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-07",
+      "section": "4.3.3",
+      "text": "Public keys used to establish trust must be authenticated prior to use.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-08",
+      "section": "4.3.4",
+      "text": "All servers used for authentication (for example, RADIUS or TACACS) must have installed a valid certificate signed by a known trusted provider.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-09",
+      "section": "4.3.5",
+      "text": "All servers and applications using SSL or TLS must have the certificates signed by a known, trusted provider.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-10",
+      "section": "4.4.1",
+      "text": "Cryptographic keys must be generated and stored in a secure manner that prevents loss, theft, or compromise.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-encryption-policy-11",
+      "section": "4.4.2",
+      "text": "Key generation must be seeded from an industry standard random number generator (RNG).",
+      "obligation": "must"
+    }
+  ]
+}

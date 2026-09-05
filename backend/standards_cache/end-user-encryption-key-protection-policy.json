@@ -1,0 +1,151 @@
+{
+  "title": "End User Encryption Key Protection Policy",
+  "summary": "This policy establishes requirements for protecting encryption keys under the control of end users, including operational and technical controls. It aims to prevent unauthorized disclosure and fraudulent use of encryption keys used for company business or to protect company data.",
+  "scope": "This policy applies to any encryption keys issued by <Company Name>, used for <Company Name> business, or used to protect data owned by <Company Name>, and to the person responsible for any such encryption key. Public keys contained in digital certificates are specifically exempted.",
+  "requirements": [
+    {
+      "id": "end-user-encryption-key-protection-policy-01",
+      "section": "4",
+      "text": "All encryption keys covered by this policy must be protected to prevent their unauthorized disclosure and subsequent fraudulent use.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-02",
+      "section": "4.1",
+      "text": "Keys used for secret key encryption, also called symmetric cryptography, must be protected as they are distributed to all parties that will use them.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-03",
+      "section": "4.1",
+      "text": "During distribution, the symmetric encryption keys must be encrypted using a stronger algorithm with a key of the longest key length for that algorithm authorized in <Company Name>’s Acceptable Encryption Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-04",
+      "section": "4.1",
+      "text": "If the keys are for the strongest algorithm, then the key must be split, each portion of the key encrypted with a different key that is the longest key length authorized and each encrypted portion is transmitted using different transmission mechanisms.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-05",
+      "section": "4.1",
+      "text": "Symmetric encryption keys, when at rest, must be protected with security measures at least as stringent as the measures used for distribution of that key.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-06",
+      "section": "4.2",
+      "text": "The private key should only be available to the end user to whom the corresponding digital certificate is issued.",
+      "obligation": "should"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-07",
+      "section": "4.2.1",
+      "text": "The public-private key pairs used by the <Company Name>’s public key infrastructure (PKI) are generated on the tamper-resistant smart card issued to an individual end user.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-08",
+      "section": "4.2.1",
+      "text": "The private key associated with an end user’s identity certificate, which are only used for digital signatures, will never leave the smart card.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-09",
+      "section": "4.2.1",
+      "text": "The private key associated with any encryption certificates, which are used to encrypt email and other documents, must be escrowed in compliance with <Company Name> policies.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-10",
+      "section": "4.2.1",
+      "text": "Access to the private keys stored on a <Company Name> issued smart card will be protected by a personal identification number (PIN) known only to the individual to whom the smart card is issued.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-11",
+      "section": "4.2.1",
+      "text": "The smart card software will be configured to require entering the PIN prior to any private key contained on the smart card being accessed.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-12",
+      "section": "4.2.2",
+      "text": "If the public-private key pair is generated on smartcard, the requirements for protecting the private keys are the same as those for private keys associated with <Company Name’s> PKI.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-13",
+      "section": "4.2.2",
+      "text": "If the keys are generated in software, the end user is required to create at least one backup of these keys and store any backup copies securely.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-14",
+      "section": "4.2.2",
+      "text": "The user is also required to create an escrow copy of any private keys used for encrypting data and deliver the escrow copy to the local Information Security representative for secure storage.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-15",
+      "section": "4.2.2",
+      "text": "The Infosec Team shall not escrow any private keys associated with identity certificates.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-16",
+      "section": "4.2.2",
+      "text": "All backups, including escrow copies, shall be protected with a password or passphrase that is compliant with <Company Name> Password Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-17",
+      "section": "4.2.2",
+      "text": "Infosec representatives will store and protect the escrowed keys as described in the <Company Name> Certificate Practice Statement Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-18",
+      "section": "4.2.2.1",
+      "text": "A web browser storing private keys will be configured to require the user to enter the certificate store password anytime a private key is accessed.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-19",
+      "section": "4.2.2.2",
+      "text": "PGP will be configured to require entering the passphrase for every use of the private keys in the secret key ring.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-20",
+      "section": "4.3",
+      "text": "Hardware tokens storing encryption keys will be treated as sensitive company equipment, as described in <Company Name>’s Physical Security policy, when outside company offices.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-21",
+      "section": "4.3",
+      "text": "All hardware tokens, smartcards, USB tokens, etc., will not be stored or left connected to any end user’s computer when not in use.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-22",
+      "section": "4.3",
+      "text": "For end users traveling with hardware tokens, they will not be stored or carried in the same container or bag as any computer.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-23",
+      "section": "4.4",
+      "text": "All PINs, passwords or passphrases used to protect encryption keys must meet complexity and length requirements described in <Company Name>’s Password Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "end-user-encryption-key-protection-policy-24",
+      "section": "4.5",
+      "text": "The loss, theft, or potential unauthorized disclosure of any encryption key covered by this policy must be reported immediately to The Infosec Team.",
+      "obligation": "must"
+    }
+  ]
+}

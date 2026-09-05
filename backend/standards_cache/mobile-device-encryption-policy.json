@@ -1,0 +1,55 @@
+{
+  "title": "Mobile Device Encryption Policy",
+  "summary": "This policy establishes requirements for encrypting data at rest on mobile devices used for company business. It defines mandatory encryption standards and restrictions on data storage for laptops, PDAs, and cell phones.",
+  "scope": "This policy applies to any mobile device issued by <Company Name> or used for <Company Name> business which contains stored data owned by <Company Name>.",
+  "requirements": [
+    {
+      "id": "mobile-device-encryption-policy-01",
+      "section": "4",
+      "text": "All mobile devices containing stored data owned by <Company Name> must use an approved method of encryption to protect data at rest.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-device-encryption-policy-02",
+      "section": "4",
+      "text": "Users are expressly forbidden from storing <Company Name> data on devices that are not issued by <Company Name>, such as storing <Company Name> email on a personal cell phone or PDA.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-device-encryption-policy-03",
+      "section": "4.1",
+      "text": "Laptops must employ full disk encryption with an approved software encryption package.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-device-encryption-policy-04",
+      "section": "4.1",
+      "text": "No <Company Name> data may exist on a laptop in plaintext.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-device-encryption-policy-05",
+      "section": "4.2",
+      "text": "Any <Company Name> data stored on a cell phone or PDA must be saved to an encrypted file system using <Company Name>-approved software.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-device-encryption-policy-06",
+      "section": "4.2",
+      "text": "<Company Name> shall also employ remote wipe technology to remotely disable and delete any data stored on a <Company Name> PDA or cell phone which is reported lost or stolen.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-device-encryption-policy-07",
+      "section": "4.3",
+      "text": "All encryption keys and pass-phrases must meet complexity requirements described in <Company Name>’s Password Protection Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-device-encryption-policy-08",
+      "section": "4.4",
+      "text": "The loss or theft of any mobile device containing <Company Name> data must be reported immediately.",
+      "obligation": "must"
+    }
+  ]
+}

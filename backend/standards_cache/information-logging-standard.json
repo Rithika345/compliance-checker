@@ -1,0 +1,169 @@
+{
+  "title": "Information Logging Standard",
+  "summary": "This policy establishes requirements for audit logging on production systems to ensure sufficient information is recorded for security, forensics, and compliance purposes. It specifies what activities must be logged, the required log elements, and standards for log formatting and storage.",
+  "scope": "This policy applies to all production systems on <Company Name> Network.",
+  "requirements": [
+    {
+      "id": "information-logging-standard-01",
+      "section": "4.1",
+      "text": "All systems that handle confidential information, accept network connections, or make access control (authentication and authorization) decisions shall record and retain audit-logging information sufficient to answer the following questions: What activity was performed?",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-02",
+      "section": "4.1",
+      "text": "All systems that handle confidential information, accept network connections, or make access control (authentication and authorization) decisions shall record and retain audit-logging information sufficient to answer the following questions: Who or what performed the activity, including where or on what system the activity was performed from (subject)?",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-03",
+      "section": "4.1",
+      "text": "All systems that handle confidential information, accept network connections, or make access control (authentication and authorization) decisions shall record and retain audit-logging information sufficient to answer the following questions: What the activity was performed on (object)?",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-04",
+      "section": "4.1",
+      "text": "All systems that handle confidential information, accept network connections, or make access control (authentication and authorization) decisions shall record and retain audit-logging information sufficient to answer the following questions: When was the activity performed?",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-05",
+      "section": "4.1",
+      "text": "All systems that handle confidential information, accept network connections, or make access control (authentication and authorization) decisions shall record and retain audit-logging information sufficient to answer the following questions: What tool(s) was the activity was performed with?",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-06",
+      "section": "4.1",
+      "text": "All systems that handle confidential information, accept network connections, or make access control (authentication and authorization) decisions shall record and retain audit-logging information sufficient to answer the following questions: What was the status (such as success vs. failure), outcome, or result of the activity?",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-07",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: Create, read, update, or delete confidential information, including confidential authentication information such as passwords.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-08",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: Create, update, or delete information not covered in #1.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-09",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: Initiate a network connection.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-10",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: Accept a network connection.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-11",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: User authentication and authorization for activities covered in #1 or #2 such as user login and logout.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-12",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: Grant, modify, or revoke access rights, including adding a new user or group, changing user privilege levels, changing file permissions, changing database object permissions, changing firewall rules, and user password changes.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-13",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: System, network, or services configuration changes, including installation of software patches and updates, or other installed software changes.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-14",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: Application process startup, shutdown, or restart.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-15",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: Application process abort, failure, or abnormal end, especially due to resource exhaustion or reaching a resource limit or threshold (such as for CPU, memory, network connections, network bandwidth, disk space, or other resources), the failure of network services such as DHCP or DNS, or hardware fault.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-16",
+      "section": "4.2",
+      "text": "Logs shall be created whenever any of the following activities are requested to be performed by the system: Detection of suspicious/malicious activity such as from an Intrusion Detection or Prevention System (IDS/IPS), anti-virus system, or anti-spyware system.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-17",
+      "section": "4.3",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Type of action – examples include authorize, create, read, update, delete, and accept network connection.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-18",
+      "section": "4.3",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Subsystem performing the action – examples include process or transaction name, process or transaction identifier.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-19",
+      "section": "4.3",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Identifiers (as many as available) for the subject requesting the action – examples include user name, computer name, IP address, and MAC address.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-20",
+      "section": "4.3",
+      "text": "Such identifiers should be standardized in order to facilitate log correlation.",
+      "obligation": "should"
+    },
+    {
+      "id": "information-logging-standard-21",
+      "section": "4.3",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Identifiers (as many as available) for the object the action was performed on – examples include file names accessed, unique identifiers of records accessed in a database, query parameters used to determine records accessed in a database, computer name, IP address, and MAC address.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-22",
+      "section": "4.3",
+      "text": "Such identifiers should be standardized in order to facilitate log correlation.",
+      "obligation": "should"
+    },
+    {
+      "id": "information-logging-standard-23",
+      "section": "4.3",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Before and after values when action involves updating a data element, if feasible.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-24",
+      "section": "4.3",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Date and time the action was performed, including relevant time-zone information if not in Coordinated Universal Time.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-25",
+      "section": "4.3",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Whether the action was allowed or denied by access-control mechanisms.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-26",
+      "section": "4.3",
+      "text": "Such logs shall identify or contain at least the following elements, directly or indirectly: Description and/or reason-codes of why the action was denied by the access-control mechanism, if applicable.",
+      "obligation": "must"
+    },
+    {
+      "id": "information-logging-standard-27",
+      "section": "4.4",
+      "text": "The system shall support the formatting and storage of audit logs in such a way as to ensure the integrity of the logs and to support enterprise-level analysis and reporting.",
+      "obligation": "must"
+    }
+  ]
+}

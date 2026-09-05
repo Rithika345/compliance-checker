@@ -1,0 +1,2867 @@
+[
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-01"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-02"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-03"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-04"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-05"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-06"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-07"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-08"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-09"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-10"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-encryption-policy-11"
+  },
+  {
+    "standard_id": "acceptable-encryption-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-01"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-02"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-03"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-04"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-05"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-06"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-07"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-08"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-09"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-10"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-11"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-12"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-13"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-14"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-15"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-16"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-17"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-18"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-19"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-20"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-21"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "database-credentials-policy-22"
+  },
+  {
+    "standard_id": "database-credentials-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-01"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-02"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-03"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-04"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-05"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-06"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-07"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-08"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-09"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-10"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-11"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-12"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-13"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-14"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-15"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-16"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-17"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-18"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-19"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-20"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-21"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-22"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-23"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-24"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-25"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-26"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-27"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-28"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-29"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-30"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-31"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-32"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-33"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-34"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-35"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-36"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "dmz-lab-security-policy-37"
+  },
+  {
+    "standard_id": "dmz-lab-security-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-01"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-02"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-03"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-04"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-05"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-06"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-07"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-08"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-09"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-10"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-11"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-12"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-13"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-14"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-15"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-policy-16"
+  },
+  {
+    "standard_id": "email-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-01"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-02"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-03"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-04"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-05"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-06"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-07"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-08"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-09"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-10"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-11"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-12"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-13"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-14"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "email-retention-policy-15"
+  },
+  {
+    "standard_id": "email-retention-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-01"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-02"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-03"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-04"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-05"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-06"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-07"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-08"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-09"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-10"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-11"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-12"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-13"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-14"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-15"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-16"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-17"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-18"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "employee-internet-use-monitoring-and-filtering-policy-19"
+  },
+  {
+    "standard_id": "employee-internet-use-monitoring-and-filtering-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-01"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-02"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-03"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-04"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-05"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-06"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-07"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-08"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-09"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-10"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-11"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-12"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-13"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-14"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-15"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-16"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-17"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-18"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-19"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-20"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-21"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-22"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-23"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "end-user-encryption-key-protection-policy-24"
+  },
+  {
+    "standard_id": "end-user-encryption-key-protection-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-01"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-02"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-03"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-04"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-05"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-06"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-07"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-08"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-09"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-10"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-11"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-12"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-13"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-14"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-15"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-16"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-17"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-18"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-19"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-20"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-21"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-22"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-23"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-24"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-25"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-26"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-27"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-28"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-29"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-30"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-31"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-32"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-33"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-34"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-35"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-36"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-37"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-38"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-39"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-40"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-41"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-42"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-43"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-44"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-45"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-46"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acceptable-use-policy-47"
+  },
+  {
+    "standard_id": "acceptable-use-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-01"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-02"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-03"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-04"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-05"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-06"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-07"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-08"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-09"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-10"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-11"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-12"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-13"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-14"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-15"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-16"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-17"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-18"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-19"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-20"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "extranet-policy-21"
+  },
+  {
+    "standard_id": "extranet-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-01"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-02"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-03"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-04"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-05"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-06"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-07"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-08"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-09"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-10"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-11"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-12"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-13"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-14"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-15"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-16"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-17"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-18"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-19"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-20"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-21"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-22"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-23"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-24"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-25"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-26"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "requirement",
+    "requirement_id": "information-logging-standard-27"
+  },
+  {
+    "standard_id": "information-logging-standard",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-01"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-02"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-03"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-04"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-05"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-06"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-07"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-08"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-09"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-10"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-11"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-12"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-13"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "acquisition-assessment-policy-14"
+  },
+  {
+    "standard_id": "acquisition-assessment-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "lab-anti-virus-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-anti-virus-policy-01"
+  },
+  {
+    "standard_id": "lab-anti-virus-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-anti-virus-policy-02"
+  },
+  {
+    "standard_id": "lab-anti-virus-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-anti-virus-policy-03"
+  },
+  {
+    "standard_id": "lab-anti-virus-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-anti-virus-policy-04"
+  },
+  {
+    "standard_id": "lab-anti-virus-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-anti-virus-policy-05"
+  },
+  {
+    "standard_id": "lab-anti-virus-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-anti-virus-policy-06"
+  },
+  {
+    "standard_id": "lab-anti-virus-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-anti-virus-policy-07"
+  },
+  {
+    "standard_id": "lab-anti-virus-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-01"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-02"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-03"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-04"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-05"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-06"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-07"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-08"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-09"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-10"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-11"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-12"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-13"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-14"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-15"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-16"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-17"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-18"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-19"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-20"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-21"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-22"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-23"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-24"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-25"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-26"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-27"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-28"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-29"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-30"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-31"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-32"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-33"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-34"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-35"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-36"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-37"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-38"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-39"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-40"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-41"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-42"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-43"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-44"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-45"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-46"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-47"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-48"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-49"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-50"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-51"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-52"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-53"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-54"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "lab-security-policy-55"
+  },
+  {
+    "standard_id": "lab-security-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "mobile-device-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-device-encryption-policy-01"
+  },
+  {
+    "standard_id": "mobile-device-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-device-encryption-policy-02"
+  },
+  {
+    "standard_id": "mobile-device-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-device-encryption-policy-03"
+  },
+  {
+    "standard_id": "mobile-device-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-device-encryption-policy-04"
+  },
+  {
+    "standard_id": "mobile-device-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-device-encryption-policy-05"
+  },
+  {
+    "standard_id": "mobile-device-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-device-encryption-policy-06"
+  },
+  {
+    "standard_id": "mobile-device-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-device-encryption-policy-07"
+  },
+  {
+    "standard_id": "mobile-device-encryption-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-device-encryption-policy-08"
+  },
+  {
+    "standard_id": "mobile-device-encryption-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "mobile-employee-endpoint-responsibility-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-employee-endpoint-responsibility-policy-01"
+  },
+  {
+    "standard_id": "mobile-employee-endpoint-responsibility-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-employee-endpoint-responsibility-policy-02"
+  },
+  {
+    "standard_id": "mobile-employee-endpoint-responsibility-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-employee-endpoint-responsibility-policy-03"
+  },
+  {
+    "standard_id": "mobile-employee-endpoint-responsibility-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-employee-endpoint-responsibility-policy-04"
+  },
+  {
+    "standard_id": "mobile-employee-endpoint-responsibility-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "mobile-employee-endpoint-responsibility-policy-05"
+  },
+  {
+    "standard_id": "mobile-employee-endpoint-responsibility-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "password-construction-guidelines",
+    "chunk_type": "requirement",
+    "requirement_id": "password-construction-guidelines-01"
+  },
+  {
+    "standard_id": "password-construction-guidelines",
+    "chunk_type": "requirement",
+    "requirement_id": "password-construction-guidelines-02"
+  },
+  {
+    "standard_id": "password-construction-guidelines",
+    "chunk_type": "requirement",
+    "requirement_id": "password-construction-guidelines-03"
+  },
+  {
+    "standard_id": "password-construction-guidelines",
+    "chunk_type": "requirement",
+    "requirement_id": "password-construction-guidelines-04"
+  },
+  {
+    "standard_id": "password-construction-guidelines",
+    "chunk_type": "requirement",
+    "requirement_id": "password-construction-guidelines-05"
+  },
+  {
+    "standard_id": "password-construction-guidelines",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-01"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-02"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-03"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-04"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-05"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-06"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-07"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-08"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-09"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-10"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-11"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-12"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-13"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-14"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-15"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-16"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-17"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "password-protection-policy-18"
+  },
+  {
+    "standard_id": "password-protection-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-01"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-02"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-03"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-04"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-05"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-06"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-07"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-08"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-09"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-10"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "remote-access-policy-11"
+  },
+  {
+    "standard_id": "remote-access-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "removable-media-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "removable-media-policy-01"
+  },
+  {
+    "standard_id": "removable-media-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "removable-media-policy-02"
+  },
+  {
+    "standard_id": "removable-media-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "removable-media-policy-03"
+  },
+  {
+    "standard_id": "removable-media-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "removable-media-policy-04"
+  },
+  {
+    "standard_id": "removable-media-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "risk-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "risk-assessment-policy-01"
+  },
+  {
+    "standard_id": "risk-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "risk-assessment-policy-02"
+  },
+  {
+    "standard_id": "risk-assessment-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "risk-assessment-policy-03"
+  },
+  {
+    "standard_id": "risk-assessment-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-01"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-02"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-03"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-04"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-05"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-06"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-07"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-08"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-09"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-10"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-11"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-12"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-13"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-14"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-15"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-16"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-17"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-18"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-19"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-20"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-21"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-22"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-23"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-24"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-25"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-26"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-27"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-28"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-29"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-30"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-31"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-32"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-33"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "router-and-switch-security-policy-34"
+  },
+  {
+    "standard_id": "router-and-switch-security-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-01"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-02"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-03"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-04"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-05"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-06"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-07"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-08"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-09"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-malware-protection-policy-10"
+  },
+  {
+    "standard_id": "server-malware-protection-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-01"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-02"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-03"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-04"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-05"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-06"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-07"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-08"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-09"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-10"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-11"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-12"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-13"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-14"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-15"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-16"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-17"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-18"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-19"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-20"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-21"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-22"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-23"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "server-security-policy-24"
+  },
+  {
+    "standard_id": "server-security-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "software-installation-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "software-installation-policy-01"
+  },
+  {
+    "standard_id": "software-installation-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "software-installation-policy-02"
+  },
+  {
+    "standard_id": "software-installation-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "software-installation-policy-03"
+  },
+  {
+    "standard_id": "software-installation-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "software-installation-policy-04"
+  },
+  {
+    "standard_id": "software-installation-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "software-installation-policy-05"
+  },
+  {
+    "standard_id": "software-installation-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "software-installation-policy-06"
+  },
+  {
+    "standard_id": "software-installation-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "software-installation-policy-07"
+  },
+  {
+    "standard_id": "software-installation-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-01"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-02"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-03"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-04"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-05"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-06"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-07"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-08"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-09"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-10"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-11"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-12"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-13"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "virtual-private-network-policy-14"
+  },
+  {
+    "standard_id": "virtual-private-network-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-01"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-02"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-03"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-04"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-05"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-06"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-07"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-08"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-09"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-10"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-11"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-12"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-13"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-14"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-15"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-16"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-17"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-18"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "web-application-security-policy-19"
+  },
+  {
+    "standard_id": "web-application-security-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-01"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-02"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-03"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-04"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-05"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-06"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-07"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-08"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-09"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-10"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-11"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "wireless-communication-policy-12"
+  },
+  {
+    "standard_id": "wireless-communication-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-01"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-02"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-03"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-04"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-05"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-06"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-07"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-08"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-09"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-10"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-11"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-12"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-13"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-14"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-15"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-16"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-17"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-18"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-19"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "workstation-security-for-hipaa-policy-20"
+  },
+  {
+    "standard_id": "workstation-security-for-hipaa-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-01"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-02"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-03"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-04"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-05"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-06"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-07"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-08"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-09"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-10"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-11"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-12"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-13"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-14"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-15"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-16"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-17"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-18"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-19"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-20"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "bluetooth-baseline-requirements-policy-21"
+  },
+  {
+    "standard_id": "bluetooth-baseline-requirements-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-01"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-02"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-03"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-04"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-05"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-06"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-07"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-08"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-09"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-10"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-11"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-12"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "requirement",
+    "requirement_id": "clean-desk-policy-13"
+  },
+  {
+    "standard_id": "clean-desk-policy",
+    "chunk_type": "profile",
+    "requirement_id": null
+  }
+]

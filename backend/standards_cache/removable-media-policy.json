@@ -1,0 +1,31 @@
+{
+  "title": "Removable Media Policy",
+  "summary": "This policy governs the use of removable media within the organization to minimize the risk of sensitive information loss and malware infections. It sets requirements for when and how removable media may be used and mandates encryption for sensitive data.",
+  "scope": "This policy covers all computers and servers operating in <Company Name>.",
+  "requirements": [
+    {
+      "id": "removable-media-policy-01",
+      "section": "4. Policy",
+      "text": "<Company Name> staff may only use <Company Name> removable media in their work computers.",
+      "obligation": "must"
+    },
+    {
+      "id": "removable-media-policy-02",
+      "section": "4. Policy",
+      "text": "<Company Name> removable media may not be connected to or used in computers that are not owned or leased by the <Company Name> without explicit permission of the <Company Name> InfoSec staff.",
+      "obligation": "must"
+    },
+    {
+      "id": "removable-media-policy-03",
+      "section": "4. Policy",
+      "text": "Sensitive information should be stored on removable media only when required in the performance of your assigned duties or when providing information required by other state or federal agencies.",
+      "obligation": "should"
+    },
+    {
+      "id": "removable-media-policy-04",
+      "section": "4. Policy",
+      "text": "When sensitive information is stored on removable media, it must be encrypted in accordance with the <Company Name> Acceptable Encryption Policy.",
+      "obligation": "must"
+    }
+  ]
+}

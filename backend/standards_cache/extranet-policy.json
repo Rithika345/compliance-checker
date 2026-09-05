@@ -1,0 +1,133 @@
+{
+  "title": "Extranet Policy",
+  "summary": "This policy governs the requirements and procedures for establishing, modifying, and terminating extranet connectivity between third parties and <Company Name> networks. It ensures that all such connections are properly reviewed, documented, and justified to protect company resources.",
+  "scope": "Connections between third parties that require access to non-public <Company Name> resources fall under this policy, regardless of whether a telco circuit (such as frame relay or ISDN) or VPN technology is used for the connection. Connectivity to third parties such as the Internet Service Providers (ISPs) that provide Internet access for <Company Name> or to the Public Switched Telephone Network do NOT fall under this policy.",
+  "requirements": [
+    {
+      "id": "extranet-policy-01",
+      "section": "4.1.1",
+      "text": "All new extranet connectivity will go through a security review with the Information Security department (InfoSec).",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-02",
+      "section": "4.1.2",
+      "text": "All new connection requests between third parties and <Company Name> require that the third party and <Company Name> representatives agree to and sign the Third Party Agreement.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-03",
+      "section": "4.1.2",
+      "text": "The Third Party Agreement must be signed by the Vice President of the Sponsoring Organization as well as a representative from the third party who is legally empowered to sign on behalf of the third party.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-04",
+      "section": "4.1.2",
+      "text": "The signed Third Party Agreement document is to be kept on file with the relevant extranet group.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-05",
+      "section": "4.1.2",
+      "text": "Documents pertaining to connections into <Company Name> labs are to be kept on file with the [name of team responsible for security of labs].",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-06",
+      "section": "4.1.3",
+      "text": "All production extranet connections must be accompanied by a valid business justification, in writing, that is approved by a project manager in the extranet group.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-07",
+      "section": "4.1.3",
+      "text": "Lab connections must be approved by the [name of team responsible for security of labs].",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-08",
+      "section": "4.1.4",
+      "text": "The Sponsoring Organization must designate a person to be the Point of Contact (POC) for the Extranet connection.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-09",
+      "section": "4.1.4",
+      "text": "In the event that the point of contact changes, the relevant extranet Organization must be informed promptly.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-10",
+      "section": "4.2",
+      "text": "Sponsoring Organizations within <Company Name> that wish to establish connectivity to a third party are to file a new site request with the proper extranet group.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-11",
+      "section": "4.2",
+      "text": "If the proposed connection is to terminate within a lab at <Company Name>, the Sponsoring Organization must engage the [name of team responsible for security of labs].",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-12",
+      "section": "4.2",
+      "text": "The Sponsoring Organization must provide full and complete information as to the nature of the proposed access to the extranet group and InfoSec, as requested.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-13",
+      "section": "4.2",
+      "text": "All connectivity established must be based on the least-access principle, in accordance with the approved business requirements and the security review.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-14",
+      "section": "4.2",
+      "text": "In no case will <Company Name> rely upon the third party to protect <Company Name>'s network or resources.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-15",
+      "section": "4.3",
+      "text": "All changes in access must be accompanied by a valid business justification, and are subject to security review.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-16",
+      "section": "4.3",
+      "text": "Changes are to be implemented via corporate change management process.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-17",
+      "section": "4.3",
+      "text": "The Sponsoring Organization is responsible for notifying the extranet management group and/or InfoSec when there is a material change in their originally provided information so that security and connectivity evolve accordingly.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-18",
+      "section": "4.4",
+      "text": "When access is no longer required, the Sponsoring Organization within <Company Name> must notify the extranet team responsible for that connectivity, which will then terminate the access.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-19",
+      "section": "4.4",
+      "text": "The extranet and lab security teams must conduct an audit of their respective connections on an annual basis to ensure that all existing connections are still needed, and that the access provided meets the needs of the connection.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-20",
+      "section": "4.4",
+      "text": "Connections that are found to be depreciated, and/or are no longer being used to conduct <Company Name> business, will be terminated immediately.",
+      "obligation": "must"
+    },
+    {
+      "id": "extranet-policy-21",
+      "section": "4.4",
+      "text": "Should a security incident or a finding that a circuit has been deprecated and is no longer being used to conduct <Company Name> business necessitate a modification of existing permissions, or termination of connectivity, InfoSec and/or the extranet team will notify the POC or the Sponsoring Organization of the change prior to taking any action.",
+      "obligation": "must"
+    }
+  ]
+}

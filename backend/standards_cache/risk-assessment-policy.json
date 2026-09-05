@@ -1,0 +1,25 @@
+{
+  "title": "Risk Assessment Policy",
+  "summary": "This policy governs the execution, development, and implementation of information security risk assessments and related remediation programs. It outlines the responsibilities of Infosec, departments, and employees in supporting risk assessments and remediation planning.",
+  "scope": "Risk assessments can be conducted on any entity within <Company Name> or any outside entity that has signed a Third Party Agreement with <Company Name>. RAs can be conducted on any information system, to include applications, servers, and networks, and any process or procedure by which these systems are administered and/or maintained.",
+  "requirements": [
+    {
+      "id": "risk-assessment-policy-01",
+      "section": "4. Policy",
+      "text": "The execution, development and implementation of remediation programs is the joint responsibility of Infosec and the department responsible for the system area being assessed.",
+      "obligation": "must"
+    },
+    {
+      "id": "risk-assessment-policy-02",
+      "section": "4. Policy",
+      "text": "Employees are expected to cooperate fully with any RA being conducted on systems for which they are held accountable.",
+      "obligation": "must"
+    },
+    {
+      "id": "risk-assessment-policy-03",
+      "section": "4. Policy",
+      "text": "Employees are further expected to work with the Infosec Risk Assessment Team in the development of a remediation plan.",
+      "obligation": "must"
+    }
+  ]
+}

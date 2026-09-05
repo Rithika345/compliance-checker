@@ -1,0 +1,85 @@
+{
+  "title": "Clean Desk Policy",
+  "summary": "This policy establishes the minimum requirements for maintaining a clean desk to ensure that sensitive and confidential information is secured and not left exposed in the workplace. It outlines specific actions employees must take to protect information in both physical and electronic forms.",
+  "scope": "This policy applies to all <Company Name> employees and affiliates.",
+  "requirements": [
+    {
+      "id": "clean-desk-policy-01",
+      "section": "4.1",
+      "text": "Employees are required to ensure that all sensitive/confidential information in hardcopy or electronic form is secure in their work area at the end of the day and when they are expected to be gone for an extended period.",
+      "obligation": "must"
+    },
+    {
+      "id": "clean-desk-policy-02",
+      "section": "4.2",
+      "text": "Computer workstations must be locked when workspace is unoccupied.",
+      "obligation": "must"
+    },
+    {
+      "id": "clean-desk-policy-03",
+      "section": "4.3",
+      "text": "Computer workstations must be shut completely down at the end of the work day.",
+      "obligation": "must"
+    },
+    {
+      "id": "clean-desk-policy-04",
+      "section": "4.4",
+      "text": "Any Restricted or Sensitive information must be removed from the desk and locked in a drawer when the desk is unoccupied and at the end of the work day.",
+      "obligation": "must"
+    },
+    {
+      "id": "clean-desk-policy-05",
+      "section": "4.5",
+      "text": "File cabinets containing Restricted or Sensitive information must be kept closed and locked when not in use or when not attended.",
+      "obligation": "must"
+    },
+    {
+      "id": "clean-desk-policy-06",
+      "section": "4.6",
+      "text": "Keys used for access to Restricted or Sensitive information must not be left at an unattended desk.",
+      "obligation": "must"
+    },
+    {
+      "id": "clean-desk-policy-07",
+      "section": "4.7",
+      "text": "Laptops must be either locked with a locking cable or locked away in a drawer.",
+      "obligation": "must"
+    },
+    {
+      "id": "clean-desk-policy-08",
+      "section": "4.8",
+      "text": "Passwords may not be left on sticky notes posted on or under a computer, nor may they be left written down in an accessible location.",
+      "obligation": "must"
+    },
+    {
+      "id": "clean-desk-policy-09",
+      "section": "4.9",
+      "text": "Printouts containing Restricted or Sensitive information should be immediately removed from the printer.",
+      "obligation": "should"
+    },
+    {
+      "id": "clean-desk-policy-10",
+      "section": "4.10",
+      "text": "Upon disposal Restricted and/or Sensitive documents should be shredded in the official shredder bins or placed in the lock confidential disposal bins.",
+      "obligation": "should"
+    },
+    {
+      "id": "clean-desk-policy-11",
+      "section": "4.11",
+      "text": "Whiteboards containing Restricted and/or Sensitive information should be erased.",
+      "obligation": "should"
+    },
+    {
+      "id": "clean-desk-policy-12",
+      "section": "4.12",
+      "text": "Lock away portable computing devices such as laptops and tablets.",
+      "obligation": "must"
+    },
+    {
+      "id": "clean-desk-policy-13",
+      "section": "4.13",
+      "text": "Treat mass storage devices such as CDROM, DVD or USB drives as sensitive and secure them in a locked drawer.",
+      "obligation": "must"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "title": "Wireless Communication Policy",
+  "summary": "This policy governs the requirements for wireless infrastructure devices connecting to the organization's network or providing wireless connectivity at company sites. It establishes mandatory controls for authentication, encryption, device management, and network isolation to protect information assets.",
+  "scope": "All employees, contractors, consultants, temporary and other workers at <Company Name>, including all personnel affiliated with third parties that maintain a wireless infrastructure device on behalf of <Company Name>. This policy applies to all wireless infrastructure devices that connect to a <Company Name> network or reside on a <Company Name> site that provide wireless connectivity to endpoint devices including, but not limited to, laptops, desktops, cellular phones, and tablets. This includes any form of wireless communication device capable of transmitting packet data.",
+  "requirements": [
+    {
+      "id": "wireless-communication-policy-01",
+      "section": "4.1",
+      "text": "All wireless infrastructure devices that reside at a <Company Name> site and connect to a <Company Name> network, or provide access to information classified as <Company Name> Confidential, or above must abide by the standards specified in the Wireless Communication Standard.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-02",
+      "section": "4.1",
+      "text": "All wireless infrastructure devices that reside at a <Company Name> site and connect to a <Company Name> network, or provide access to information classified as <Company Name> Confidential, or above must be installed, supported, and maintained by an approved support team.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-03",
+      "section": "4.1",
+      "text": "All wireless infrastructure devices that reside at a <Company Name> site and connect to a <Company Name> network, or provide access to information classified as <Company Name> Confidential, or above must use <Company Name> approved authentication protocols and infrastructure.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-04",
+      "section": "4.1",
+      "text": "All wireless infrastructure devices that reside at a <Company Name> site and connect to a <Company Name> network, or provide access to information classified as <Company Name> Confidential, or above must use <Company Name> approved encryption protocols.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-05",
+      "section": "4.1",
+      "text": "All wireless infrastructure devices that reside at a <Company Name> site and connect to a <Company Name> network, or provide access to information classified as <Company Name> Confidential, or above must maintain a hardware address (MAC address) that can be registered and tracked.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-06",
+      "section": "4.1",
+      "text": "All wireless infrastructure devices that reside at a <Company Name> site and connect to a <Company Name> network, or provide access to information classified as <Company Name> Confidential, or above must not interfere with wireless access deployments maintained by other support organizations.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-07",
+      "section": "4.2",
+      "text": "All lab wireless infrastructure devices that provide access to <Company Name> Confidential or above, must adhere to section 4.1 above.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-08",
+      "section": "4.2",
+      "text": "Lab and isolated wireless devices that do not provide general network connectivity to the <Company Name> network must be isolated from the corporate network (that is it must not provide any corporate connectivity) and comply with the Lab Security Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-09",
+      "section": "4.2",
+      "text": "Lab and isolated wireless devices that do not provide general network connectivity to the <Company Name> network must not interfere with wireless access deployments maintained by other support organizations.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-10",
+      "section": "4.3.1",
+      "text": "Wireless infrastructure devices that provide direct access to the <Company Name> corporate network, must conform to the Home Wireless Device Requirements as detailed in the Wireless Communication Standard.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-11",
+      "section": "4.3.2",
+      "text": "Wireless infrastructure devices that fail to conform to the Home Wireless Device Requirements must be installed in a manner that prohibits direct access to the <Company Name> corporate network.",
+      "obligation": "must"
+    },
+    {
+      "id": "wireless-communication-policy-12",
+      "section": "4.3.2",
+      "text": "Access to the <Company Name> corporate network through this device must use standard remote access authentication.",
+      "obligation": "must"
+    }
+  ]
+}

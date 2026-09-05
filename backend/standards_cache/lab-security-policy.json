@@ -1,0 +1,337 @@
+{
+  "title": "Lab Security Policy",
+  "summary": "This policy establishes security requirements for managing and safeguarding lab resources and networks, including those outside the corporate firewall. It defines responsibilities, access controls, technical safeguards, and compliance obligations for lab environments.",
+  "scope": "This policy applies to all employees, contractors, consultants, temporary and other workers at <Company Name> and its subsidiaries. It covers <Company Name> owned and managed labs, including labs outside the corporate firewall (DMZ).",
+  "requirements": [
+    {
+      "id": "lab-security-policy-01",
+      "section": "4.1.1",
+      "text": "Lab owning organizations are responsible for assigning lab managers, a point of contact (POC), and a back-up POC for each lab.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-02",
+      "section": "4.1.1",
+      "text": "Lab owners must maintain up-to-date POC information with InfoSec and the Corporate Enterprise Management Team.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-03",
+      "section": "4.1.1",
+      "text": "Lab managers or their backup must be available around-the-clock for emergencies, otherwise actions will be taken without their involvement.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-04",
+      "section": "4.1.2",
+      "text": "Lab managers are responsible for the security of their labs and the lab's impact on the corporate production network and any other networks.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-05",
+      "section": "4.1.2",
+      "text": "Lab managers are responsible for adherence to this policy and associated processes.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-06",
+      "section": "4.1.2",
+      "text": "Where policies and procedures are undefined lab managers must do their best to safeguard <Company Name> from security vulnerabilities.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-07",
+      "section": "4.1.3",
+      "text": "Lab managers are responsible for the lab's compliance with all <Company Name> security policies.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-08",
+      "section": "4.1.4",
+      "text": "The Lab Manager is responsible for controlling lab access.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-09",
+      "section": "4.1.4",
+      "text": "Access to any given lab will only be granted by the lab manager or designee, to those individuals with an immediate business need within the lab, either short-term or as defined by their ongoing job function.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-10",
+      "section": "4.1.4",
+      "text": "Lab managers must continually monitor the access list to ensure that those who no longer require access to the lab have their access terminated.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-11",
+      "section": "4.1.5",
+      "text": "All user passwords must comply with <Company Name>'s Password Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-12",
+      "section": "4.1.6",
+      "text": "Individual user accounts on any lab device must be deleted when no longer authorized within three (3) days.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-13",
+      "section": "4.1.6",
+      "text": "Group account passwords on lab computers (Unix, windows, etc) must be changed quarterly (once every 3 months).",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-14",
+      "section": "4.1.7",
+      "text": "PC-based lab computers must have <Company Name>'s standard, supported anti-virus software installed and scheduled to run at regular intervals.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-15",
+      "section": "4.1.7",
+      "text": "The anti-virus software and the virus pattern files must be kept up-to-date.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-16",
+      "section": "4.1.7",
+      "text": "Virus-infected computers must be removed from the network until they are verified as virus-free.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-17",
+      "section": "4.1.7",
+      "text": "Lab Admins/Lab Managers are responsible for creating procedures that ensure anti-virus software is run at regular intervals, and computers are verified as virus-free.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-18",
+      "section": "4.1.8",
+      "text": "Any activities with the intention to create and/or distribute malicious programs into <Company Name>'s networks (e.g., viruses, worms, Trojan horses, e-mail bombs, etc.) are prohibited, in accordance with the Acceptable Use Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-19",
+      "section": "4.1.9",
+      "text": "No lab shall provide production services.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-20",
+      "section": "4.1.10",
+      "text": "Information that is marked as <Company Name> Highly Confidential or <Company Name> Restricted is prohibited on lab equipment.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-21",
+      "section": "4.1.11",
+      "text": "Immediate access to equipment and system logs must be granted to members of InfoSec and the Network Support Organization upon request, in accordance with the Audit Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-22",
+      "section": "4.2.1",
+      "text": "The Network Support Organization must maintain a firewall device between the corporate production network and all lab equipment.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-23",
+      "section": "4.2.3",
+      "text": "The Network Support Organization must record all lab IP addresses, which are routed within <Company Name> networks, in Enterprise Address Management database along with current contact information for that lab.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-24",
+      "section": "4.2.4",
+      "text": "Any lab that wants to add an external connection must provide a diagram and documentation to InfoSec with business justification, the equipment, and the IP address space information.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-25",
+      "section": "4.2.4",
+      "text": "InfoSec must approve external connections before such connections are implemented.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-26",
+      "section": "4.2.5",
+      "text": "All traffic between the corporate production and the lab network must go through a Network Support Organization maintained firewall.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-27",
+      "section": "4.2.5",
+      "text": "Lab network devices (including wireless) must not cross-connect the lab and production networks.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-28",
+      "section": "4.2.6",
+      "text": "Original firewall configurations and any changes thereto must be reviewed and approved by InfoSec.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-29",
+      "section": "4.2.7",
+      "text": "Labs are prohibited from engaging in port scanning, network auto-discovery, traffic spamming/flooding, and other similar activities that negatively impact the corporate network and/or non-<Company Name> networks.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-30",
+      "section": "4.2.7",
+      "text": "These activities (port scanning, network auto-discovery, traffic spamming/flooding, and similar) must be restricted within the lab.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-31",
+      "section": "4.2.8",
+      "text": "Labs must not advertise network services that may compromise production network services or put lab confidential information at risk.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-32",
+      "section": "4.2.10",
+      "text": "Lab owned gateway devices are required to comply with all <Company Name> product security advisories.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-33",
+      "section": "4.2.10",
+      "text": "Lab owned gateway devices must authenticate against the Corporate Authentication servers.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-34",
+      "section": "4.2.11",
+      "text": "The enable password for all lab owned gateway devices must be different from all other equipment passwords in the lab.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-35",
+      "section": "4.2.11",
+      "text": "The enable password for all lab owned gateway devices must be in accordance with <Company Name>'s Password Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-36",
+      "section": "4.2.11",
+      "text": "The enable password for all lab owned gateway devices will only be provided to those who are authorized to administer the lab network.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-37",
+      "section": "4.2.12",
+      "text": "In labs where non-<Company Name> personnel have physical access (e.g., training labs), direct connectivity to the corporate production network is not allowed.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-38",
+      "section": "4.2.12",
+      "text": "No <Company Name> confidential information can reside on any computer equipment in labs where non-<Company Name> personnel have physical access.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-39",
+      "section": "4.2.12",
+      "text": "Connectivity for authorized personnel from these labs can be allowed to the corporate production network only if authenticated against the Corporate Authentication servers, temporary access lists (lock and key), SSH, client VPNs, or similar technology approved by InfoSec.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-40",
+      "section": "4.2.13",
+      "text": "Lab networks with external connections are prohibited from connecting to the corporate production network or other internal networks through a direct connection, wireless connection, or other computing equipment.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-41",
+      "section": "4.3.1",
+      "text": "New DMZ labs require a business justification and VP-level approval from the business unit.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-42",
+      "section": "4.3.1",
+      "text": "Changes to the connectivity or purpose of an existing DMZ lab must be reviewed and approved by the InfoSec Team.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-43",
+      "section": "4.3.2",
+      "text": "DMZ labs must be in a physically separate room, cage, or secured lockable rack with limited access.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-44",
+      "section": "4.3.2",
+      "text": "The Lab Manager must maintain a list of who has access to the equipment in DMZ labs.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-45",
+      "section": "4.3.3",
+      "text": "DMZ lab POCs must maintain network devices deployed in the DMZ lab up to the network support organization point of demarcation.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-46",
+      "section": "4.3.4",
+      "text": "DMZ labs must not connect to corporate internal networks, either directly, logically (for example, IPSEC tunnel), through a wireless connection, or multi-homed machine.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-47",
+      "section": "4.3.5",
+      "text": "An approved network support organization must maintain a firewall device between the DMZ lab and the Internet.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-48",
+      "section": "4.3.5",
+      "text": "Firewall devices must be configured based on least privilege access principles and the DMZ lab business requirements.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-49",
+      "section": "4.3.5",
+      "text": "Original firewall configurations and subsequent changes must be reviewed and approved by the InfoSec Team.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-50",
+      "section": "4.3.5",
+      "text": "All traffic between the DMZ lab and the Internet must go through the approved firewall.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-51",
+      "section": "4.3.5",
+      "text": "Cross-connections that bypass the firewall device are strictly prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-52",
+      "section": "4.3.6",
+      "text": "All routers and switches not used for testing and/or training must conform to the DMZ Router and Switch standardization documents.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-53",
+      "section": "4.3.7",
+      "text": "Operating systems of all hosts internal to the DMZ lab running Internet Services must be configured to the secure host installation and configuration standards published by the InfoSec Team.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-54",
+      "section": "4.3.8",
+      "text": "Remote administration must be performed over secure channels (for example, encrypted network connections using SSH or IPSEC) or console access independent from the DMZ networks.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-security-policy-55",
+      "section": "4.3.9",
+      "text": "DMZ lab devices must not be an open proxy to the Internet.",
+      "obligation": "must"
+    }
+  ]
+}

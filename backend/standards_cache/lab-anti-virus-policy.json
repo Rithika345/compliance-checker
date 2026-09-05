@@ -1,0 +1,49 @@
+{
+  "title": "Lab Anti-Virus Policy",
+  "summary": "This policy establishes requirements for anti-virus protection on all PC-based lab computers connected to the organization's lab networks. It governs the installation, maintenance, and operation of anti-virus software to ensure effective virus detection and prevention.",
+  "scope": "This policy applies to all <Company Name> lab computers that are PC-based or utilize PC-file directory sharing. This includes, but is not limited to, desktop computers, laptop computers, file/ftp/tftp/proxy servers, and any PC based lab equipment such as traffic generators.",
+  "requirements": [
+    {
+      "id": "lab-anti-virus-policy-01",
+      "section": "4. Policy",
+      "text": "All <Company Name> PC-based lab computers must have <Company Name>'s standard, supported anti-virus software installed.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-anti-virus-policy-02",
+      "section": "4. Policy",
+      "text": "All <Company Name> PC-based lab computers must have anti-virus software scheduled to run at regular intervals.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-anti-virus-policy-03",
+      "section": "4. Policy",
+      "text": "The anti-virus software and the virus pattern files must be kept up-to-date.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-anti-virus-policy-04",
+      "section": "4. Policy",
+      "text": "Virus-infected computers must be removed from the network until they are verified as virus-free.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-anti-virus-policy-05",
+      "section": "4. Policy",
+      "text": "Lab Admins/Lab Managers are responsible for creating procedures that ensure anti-virus software is run at regular intervals.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-anti-virus-policy-06",
+      "section": "4. Policy",
+      "text": "Lab Admins/Lab Managers are responsible for creating procedures that ensure computers are verified as virus-free.",
+      "obligation": "must"
+    },
+    {
+      "id": "lab-anti-virus-policy-07",
+      "section": "4. Policy",
+      "text": "Any activities with the intention to create and/or distribute malicious programs into <Company Name>'s networks (e.g., viruses, worms, Trojan horses, e-mail bombs, etc.) are prohibited, in accordance with the Acceptable Use Policy.",
+      "obligation": "must"
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "title": "Acceptable Use Policy",
+  "summary": "This policy governs the acceptable use of information, electronic and computing devices, and network resources at the organization. It outlines permitted and prohibited activities to protect company assets, information, and reputation.",
+  "scope": "This policy applies to the use of information, electronic and computing devices, and network resources to conduct <Company Name> business or interact with internal networks and business systems, whether owned or leased by <Company Name>, the employee, or a third party. All employees, contractors, consultants, temporary, and other workers at <Company Name> and its subsidiaries are responsible for exercising good judgment regarding appropriate use of information, electronic devices, and network resources in accordance with <Company Name> policies and standards, and local laws and regulation. This policy applies to all equipment that is owned or leased by <Company Name>.",
+  "requirements": [
+    {
+      "id": "acceptable-use-policy-01",
+      "section": "4.1.1",
+      "text": "You must ensure through legal or technical means that proprietary information is protected in accordance with the Data Protection Standard.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-02",
+      "section": "4.1.2",
+      "text": "You have a responsibility to promptly report the theft, loss or unauthorized disclosure of <Company Name> proprietary information.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-03",
+      "section": "4.1.3",
+      "text": "You may access, use or share <Company Name> proprietary information only to the extent it is authorized and necessary to fulfill your assigned job duties.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-04",
+      "section": "4.1.4",
+      "text": "Employees should be guided by departmental policies on personal use, and if there is any uncertainty, employees should consult their supervisor or manager.",
+      "obligation": "should"
+    },
+    {
+      "id": "acceptable-use-policy-05",
+      "section": "4.1.5",
+      "text": "Authorized individuals within <Company Name> may monitor equipment, systems and network traffic at any time, per Infosec's Audit Policy.",
+      "obligation": "may"
+    },
+    {
+      "id": "acceptable-use-policy-06",
+      "section": "4.1.6",
+      "text": "<Company Name> reserves the right to audit networks and systems on a periodic basis to ensure compliance with this policy.",
+      "obligation": "may"
+    },
+    {
+      "id": "acceptable-use-policy-07",
+      "section": "4.2.1",
+      "text": "All mobile and computing devices that connect to the internal network must comply with the Minimum Access Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-08",
+      "section": "4.2.2",
+      "text": "System level and user level passwords must comply with the Password Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-09",
+      "section": "4.2.2",
+      "text": "Providing access to another individual, either deliberately or through failure to secure its access, is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-10",
+      "section": "4.2.3",
+      "text": "All computing devices must be secured with a password-protected screensaver with the automatic activation feature set to 10 minutes or less.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-11",
+      "section": "4.2.3",
+      "text": "You must lock the screen or log off when the device is unattended.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-12",
+      "section": "4.2.4",
+      "text": "Postings by employees from a <Company Name> email address to newsgroups should contain a disclaimer stating that the opinions expressed are strictly their own and not necessarily those of <Company Name>, unless posting is in the course of business duties.",
+      "obligation": "should"
+    },
+    {
+      "id": "acceptable-use-policy-13",
+      "section": "4.2.5",
+      "text": "Employees must use extreme caution when opening e-mail attachments received from unknown senders, which may contain malware.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-14",
+      "section": "4.3.1",
+      "text": "Violations of the rights of any person or company protected by copyright, trade secret, patent or other intellectual property, or similar laws or regulations, including, but not limited to, the installation or distribution of 'pirated' or other software products that are not appropriately licensed for use by <Company Name>, are strictly prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-15",
+      "section": "4.3.1",
+      "text": "Unauthorized copying of copyrighted material including, but not limited to, digitization and distribution of photographs from magazines, books or other copyrighted sources, copyrighted music, and the installation of any copyrighted software for which <Company Name> or the end user does not have an active license is strictly prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-16",
+      "section": "4.3.1",
+      "text": "Accessing data, a server or an account for any purpose other than conducting <Company Name> business, even if you have authorized access, is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-17",
+      "section": "4.3.1",
+      "text": "Exporting software, technical information, encryption software or technology, in violation of international or regional export control laws, is illegal. The appropriate management should be consulted prior to export of any material that is in question.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-18",
+      "section": "4.3.1",
+      "text": "Introduction of malicious programs into the network or server (e.g., viruses, worms, Trojan horses, e-mail bombs, etc.) is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-19",
+      "section": "4.3.1",
+      "text": "Revealing your account password to others or allowing use of your account by others is prohibited. This includes family and other household members when work is being done at home.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-20",
+      "section": "4.3.1",
+      "text": "Using a <Company Name> computing asset to actively engage in procuring or transmitting material that is in violation of sexual harassment or hostile workplace laws in the user's local jurisdiction is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-21",
+      "section": "4.3.1",
+      "text": "Making fraudulent offers of products, items, or services originating from any <Company Name> account is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-22",
+      "section": "4.3.1",
+      "text": "Making statements about warranty, expressly or implied, unless it is a part of normal job duties, is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-23",
+      "section": "4.3.1",
+      "text": "Effecting security breaches or disruptions of network communication is prohibited. Security breaches include, but are not limited to, accessing data of which the employee is not an intended recipient or logging into a server or account that the employee is not expressly authorized to access, unless these duties are within the scope of regular duties.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-24",
+      "section": "4.3.1",
+      "text": "Disruption includes, but is not limited to, network sniffing, pinged floods, packet spoofing, denial of service, and forged routing information for malicious purposes.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-25",
+      "section": "4.3.1",
+      "text": "Port scanning or security scanning is expressly prohibited unless prior notification to Infosec is made.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-26",
+      "section": "4.3.1",
+      "text": "Executing any form of network monitoring which will intercept data not intended for the employee's host, unless this activity is a part of the employee's normal job/duty, is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-27",
+      "section": "4.3.1",
+      "text": "Circumventing user authentication or security of any host, network or account is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-28",
+      "section": "4.3.1",
+      "text": "Introducing honeypots, honeynets, or similar technology on the <Company Name> network is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-29",
+      "section": "4.3.1",
+      "text": "Interfering with or denying service to any user other than the employee's host (for example, denial of service attack) is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-30",
+      "section": "4.3.1",
+      "text": "Using any program/script/command, or sending messages of any kind, with the intent to interfere with, or disable, a user's terminal session, via any means, locally or via the Internet/Intranet/Extranet, is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-31",
+      "section": "4.3.1",
+      "text": "Providing information about, or lists of, <Company Name> employees to parties outside <Company Name> is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-32",
+      "section": "4.3.2",
+      "text": "Sending unsolicited email messages, including the sending of 'junk mail' or other advertising material to individuals who did not specifically request such material (email spam), is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-33",
+      "section": "4.3.2",
+      "text": "Any form of harassment via email, telephone or paging, whether through language, frequency, or size of messages, is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-34",
+      "section": "4.3.2",
+      "text": "Unauthorized use, or forging, of email header information is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-35",
+      "section": "4.3.2",
+      "text": "Solicitation of email for any other email address, other than that of the poster's account, with the intent to harass or to collect replies, is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-36",
+      "section": "4.3.2",
+      "text": "Creating or forwarding 'chain letters', 'Ponzi' or other 'pyramid' schemes of any type is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-37",
+      "section": "4.3.2",
+      "text": "Use of unsolicited email originating from within <Company Name>'s networks of other Internet/Intranet/Extranet service providers on behalf of, or to advertise, any service hosted by <Company Name> or connected via <Company Name>'s network is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-38",
+      "section": "4.3.2",
+      "text": "Posting the same or similar non-business-related messages to large numbers of Usenet newsgroups (newsgroup spam) is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-39",
+      "section": "4.3.3",
+      "text": "Blogging by employees, whether using <Company Name>’s property and systems or personal computer systems, is also subject to the terms and restrictions set forth in this Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-40",
+      "section": "4.3.3",
+      "text": "Limited and occasional use of <Company Name>’s systems to engage in blogging is acceptable, provided that it is done in a professional and responsible manner, does not otherwise violate <Company Name>’s policy, is not detrimental to <Company Name>’s best interests, and does not interfere with an employee's regular work duties.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-41",
+      "section": "4.3.3",
+      "text": "Blogging from <Company Name>’s systems is also subject to monitoring.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-42",
+      "section": "4.3.3",
+      "text": "Employees are prohibited from revealing any <Company> confidential or proprietary information, trade secrets or any other material covered by <Company>’s Confidential Information policy when engaged in blogging.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-43",
+      "section": "4.3.3",
+      "text": "Employees shall not engage in any blogging that may harm or tarnish the image, reputation and/or goodwill of <Company Name> and/or any of its employees.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-44",
+      "section": "4.3.3",
+      "text": "Employees are also prohibited from making any discriminatory, disparaging, defamatory or harassing comments when blogging or otherwise engaging in any conduct prohibited by <Company Name>’s Non-Discrimination and Anti-Harassment policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-45",
+      "section": "4.3.3",
+      "text": "Employees may also not attribute personal statements, opinions or beliefs to <Company Name> when engaged in blogging.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-46",
+      "section": "4.3.3",
+      "text": "If an employee is expressing his or her beliefs and/or opinions in blogs, the employee may not, expressly or implicitly, represent themselves as an employee or representative of <Company Name>.",
+      "obligation": "must"
+    },
+    {
+      "id": "acceptable-use-policy-47",
+      "section": "4.3.3",
+      "text": "<Company Name>’s trademarks, logos and any other <Company Name> intellectual property may also not be used in connection with any blogging activity.",
+      "obligation": "must"
+    }
+  ]
+}

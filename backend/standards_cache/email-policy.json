@@ -1,0 +1,103 @@
+{
+  "title": "Email Policy",
+  "summary": "This policy governs the acceptable and unacceptable use of the organization's email system. It outlines requirements for ethical use, data protection, retention, and monitoring of email communications.",
+  "scope": "This policy covers appropriate use of any email sent from a <Company Name> email address and applies to all employees, vendors, and agents operating on behalf of <Company Name>.",
+  "requirements": [
+    {
+      "id": "email-policy-01",
+      "section": "4.1",
+      "text": "All use of email must be consistent with <Company Name> policies and procedures of ethical conduct, safety, compliance with applicable laws and proper business practices.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-02",
+      "section": "4.2",
+      "text": "<Company Name> email account should be used primarily for <Company Name> business-related purposes.",
+      "obligation": "should"
+    },
+    {
+      "id": "email-policy-03",
+      "section": "4.2",
+      "text": "Non-<Company Name> related commercial uses are prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-04",
+      "section": "4.3",
+      "text": "All <Company Name> data contained within an email message or an attachment must be secured according to the Data Protection Standard.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-05",
+      "section": "4.4",
+      "text": "Email should be retained only if it qualifies as a <Company Name> business record.",
+      "obligation": "should"
+    },
+    {
+      "id": "email-policy-06",
+      "section": "4.5",
+      "text": "Email that is identified as a <Company Name> business record shall be retained according to <Company Name> Record Retention Schedule.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-07",
+      "section": "4.6",
+      "text": "The <Company Name> email system shall not to be used for the creation or distribution of any disruptive or offensive messages, including offensive comments about race, gender, hair color, disabilities, age, sexual orientation, pornography, religious beliefs and practice, political beliefs, or national origin.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-08",
+      "section": "4.6",
+      "text": "Employees who receive any emails with this content from any <Company Name> employee should report the matter to their supervisor immediately.",
+      "obligation": "should"
+    },
+    {
+      "id": "email-policy-09",
+      "section": "4.7",
+      "text": "Users are prohibited from automatically forwarding <Company Name> email to a third party email system.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-10",
+      "section": "4.7",
+      "text": "Individual messages which are forwarded by the user must not contain <Company Name> confidential or above information.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-11",
+      "section": "4.8",
+      "text": "Users are prohibited from using third-party email systems and storage servers such as Google, Yahoo, and MSN Hotmail etc. to conduct <Company Name> business, to create or memorialize any binding transactions, or to store or retain email on behalf of <Company Name>.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-12",
+      "section": "4.8",
+      "text": "Such communications and transactions should be conducted through proper channels using <Company Name>-approved documentation.",
+      "obligation": "should"
+    },
+    {
+      "id": "email-policy-13",
+      "section": "4.9",
+      "text": "Non-work related email shall be saved in a separate folder from work related email.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-14",
+      "section": "4.9",
+      "text": "Sending chain letters or joke emails from a <Company Name> email account is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-15",
+      "section": "4.10",
+      "text": "<Company Name> employees shall have no expectation of privacy in anything they store, send or receive on the company’s email system.",
+      "obligation": "must"
+    },
+    {
+      "id": "email-policy-16",
+      "section": "4.11",
+      "text": "<Company Name> may monitor messages without prior notice.",
+      "obligation": "may"
+    }
+  ]
+}

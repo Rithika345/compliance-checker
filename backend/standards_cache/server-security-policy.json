@@ -1,0 +1,151 @@
+{
+  "title": "Server Security Policy",
+  "summary": "This policy establishes standards for the secure configuration, management, and monitoring of internal server equipment. It aims to minimize unauthorized access to proprietary information and technology by defining requirements for server ownership, configuration, and auditing.",
+  "scope": "All employees, contractors, consultants, temporary and other workers at Cisco and its subsidiaries must adhere to this policy. This policy applies to server equipment that is owned, operated, or leased by Cisco or registered under a Cisco-owned internal network domain.",
+  "requirements": [
+    {
+      "id": "server-security-policy-01",
+      "section": "4.1.1",
+      "text": "All internal servers deployed at <Company Name> must be owned by an operational group that is responsible for system administration.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-02",
+      "section": "4.1.1",
+      "text": "Approved server configuration guides must be established and maintained by each operational group, based on business needs and approved by InfoSec.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-03",
+      "section": "4.1.1",
+      "text": "Each operational group must establish a process for changing the configuration guides, which includes review and approval by InfoSec.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-04",
+      "section": "4.1.1",
+      "text": "Servers must be registered within the corporate enterprise management system.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-05",
+      "section": "4.1.1",
+      "text": "At a minimum, the following information is required to positively identify the point of contact: Server contact(s) and location, and a backup contact; Hardware and Operating System/Version; Main functions and applications, if applicable.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-06",
+      "section": "4.1.1",
+      "text": "Information in the corporate enterprise management system must be kept up-to-date.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-07",
+      "section": "4.1.1",
+      "text": "Configuration changes for production servers must follow the appropriate change management procedures.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-08",
+      "section": "4.1.2",
+      "text": "Authorized personnel may monitor and audit equipment, systems, processes, and network traffic per the Audit Policy.",
+      "obligation": "may"
+    },
+    {
+      "id": "server-security-policy-09",
+      "section": "4.2.1",
+      "text": "Operating System configuration should be in accordance with approved InfoSec guidelines.",
+      "obligation": "should"
+    },
+    {
+      "id": "server-security-policy-10",
+      "section": "4.2.2",
+      "text": "Services and applications that will not be used must be disabled where practical.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-11",
+      "section": "4.2.3",
+      "text": "Access to services should be logged and/or protected through access-control methods such as a web application firewall, if possible.",
+      "obligation": "should"
+    },
+    {
+      "id": "server-security-policy-12",
+      "section": "4.2.4",
+      "text": "The most recent security patches must be installed on the system as soon as practical, the only exception being when immediate application would interfere with business requirements.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-13",
+      "section": "4.2.5",
+      "text": "Trust relationships between systems are a security risk, and their use should be avoided.",
+      "obligation": "should"
+    },
+    {
+      "id": "server-security-policy-14",
+      "section": "4.2.5",
+      "text": "Do not use a trust relationship when some other method of communication is sufficient.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-15",
+      "section": "4.2.6",
+      "text": "Always use standard security principles of least required access to perform a function.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-16",
+      "section": "4.2.6",
+      "text": "Do not use root when a non-privileged account will do.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-17",
+      "section": "4.2.7",
+      "text": "If a methodology for secure channel connection is available (i.e., technically feasible), privileged access must be performed over secure channels, (e.g., encrypted network connections using SSH or IPSec).",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-18",
+      "section": "4.2.8",
+      "text": "Servers should be physically located in an access-controlled environment.",
+      "obligation": "should"
+    },
+    {
+      "id": "server-security-policy-19",
+      "section": "4.2.9",
+      "text": "Servers are specifically prohibited from operating from uncontrolled cubicle areas.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-20",
+      "section": "4.3.1",
+      "text": "All security-related events on critical or sensitive systems must be logged and audit trails saved as follows: All security related logs will be kept online for a minimum of 1 week.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-21",
+      "section": "4.3.1",
+      "text": "Daily incremental tape backups will be retained for at least 1 month.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-22",
+      "section": "4.3.1",
+      "text": "Weekly full tape backups of logs will be retained for at least 1 month.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-23",
+      "section": "4.3.1",
+      "text": "Monthly full backups will be retained for a minimum of 2 years.",
+      "obligation": "must"
+    },
+    {
+      "id": "server-security-policy-24",
+      "section": "4.3.2",
+      "text": "Security-related events will be reported to InfoSec, who will review logs and report incidents to IT management.",
+      "obligation": "must"
+    }
+  ]
+}

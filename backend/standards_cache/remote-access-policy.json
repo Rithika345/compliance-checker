@@ -1,0 +1,73 @@
+{
+  "title": "Remote Access Policy",
+  "summary": "This policy governs the requirements and rules for connecting to the company's network remotely. It aims to minimize risks associated with remote access, including unauthorized use and exposure to compromised external networks.",
+  "scope": "This policy applies to all <Company Name> employees, contractors, vendors and agents with a <Company Name>-owned or personally-owned computer or workstation used to connect to the <Company Name> network. It covers remote access connections used to do work on behalf of <Company Name>, including reading or sending email and viewing intranet web resources, and any and all technical implementations of remote access used to connect to <Company Name> networks.",
+  "requirements": [
+    {
+      "id": "remote-access-policy-01",
+      "section": "4",
+      "text": "General access to the Internet for recreational use through the <Company Name> network is strictly limited to <Company Name> employees, contractors, vendors and agents (hereafter referred to as “Authorized Users”).",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-02",
+      "section": "4",
+      "text": "When accessing the <Company Name> network from a personal computer, Authorized Users are responsible for preventing access to any <Company Name> computer resources or data by non-Authorized Users.",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-03",
+      "section": "4",
+      "text": "Performance of illegal activities through the <Company Name> network by any user (Authorized or otherwise) is prohibited.",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-04",
+      "section": "4",
+      "text": "Authorized Users will not use <Company Name> networks to access the Internet for outside business interests.",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-05",
+      "section": "4.1.1",
+      "text": "Secure remote access must be strictly controlled with encryption (i.e., Virtual Private Networks (VPNs)) and strong pass-phrases.",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-06",
+      "section": "4.1.2",
+      "text": "Authorized Users shall protect their login and password, even from family members.",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-07",
+      "section": "4.1.3",
+      "text": "While using a <Company Name>-owned computer to remotely connect to <Company Name>'s corporate network, Authorized Users shall ensure the remote host is not connected to any other network at the same time, with the exception of personal networks that are under their complete control or under the complete control of an Authorized User or Third Party.",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-08",
+      "section": "4.1.4",
+      "text": "Use of external resources to conduct <Company Name> business must be approved in advance by InfoSec and the appropriate business unit manager.",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-09",
+      "section": "4.1.5",
+      "text": "All hosts that are connected to <Company Name> internal networks via remote access technologies must use the most up-to-date anti-virus software (place url to corporate software site here), this includes personal computers.",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-10",
+      "section": "4.1.5",
+      "text": "Third party connections must comply with requirements as stated in the Third Party Agreement.",
+      "obligation": "must"
+    },
+    {
+      "id": "remote-access-policy-11",
+      "section": "4.1.6",
+      "text": "Personal equipment used to connect to <Company Name>'s networks must meet the requirements of <Company Name>-owned equipment for remote access as stated in the Hardware and Software Configuration Standards for Remote Access to <Company Name> Networks.",
+      "obligation": "must"
+    }
+  ]
+}

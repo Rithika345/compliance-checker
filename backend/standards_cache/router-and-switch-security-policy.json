@@ -1,0 +1,211 @@
+{
+  "title": "Router and Switch Security Policy",
+  "summary": "This policy establishes the minimum security configuration requirements for all routers and switches connected to production networks or used in a production capacity. It details mandatory and recommended controls for authentication, service configuration, access control, and management of network devices.",
+  "scope": "All employees, contractors, consultants, temporary and other workers at <Company Name> and its subsidiaries must adhere to this policy. All routers and switches connected to <Company Name> production networks are affected.",
+  "requirements": [
+    {
+      "id": "router-and-switch-security-policy-01",
+      "section": "4. Policy",
+      "text": "No local user accounts are configured on the router.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-02",
+      "section": "4. Policy",
+      "text": "Routers and switches must use TACACS+ for all user authentication.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-03",
+      "section": "4. Policy",
+      "text": "The enable password on the router or switch must be kept in a secure encrypted form.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-04",
+      "section": "4. Policy",
+      "text": "The router or switch must have the enable password set to the current production router/switch password from the device’s support organization.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-05",
+      "section": "4. Policy",
+      "text": "The following services or features must be disabled: IP directed broadcasts.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-06",
+      "section": "4. Policy",
+      "text": "The following services or features must be disabled: Incoming packets at the router/switch sourced with invalid addresses such as RFC1918 addresses.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-07",
+      "section": "4. Policy",
+      "text": "The following services or features must be disabled: TCP small services.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-08",
+      "section": "4. Policy",
+      "text": "The following services or features must be disabled: UDP small services.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-09",
+      "section": "4. Policy",
+      "text": "The following services or features must be disabled: All source routing and switching.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-10",
+      "section": "4. Policy",
+      "text": "The following services or features must be disabled: All web services running on router.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-11",
+      "section": "4. Policy",
+      "text": "The following services or features must be disabled: <Company Name> discovery protocol on Internet connected interfaces.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-12",
+      "section": "4. Policy",
+      "text": "The following services or features must be disabled: Telnet, FTP, and HTTP services.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-13",
+      "section": "4. Policy",
+      "text": "The following services or features must be disabled: Auto-configuration.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-14",
+      "section": "4. Policy",
+      "text": "The following services should be disabled unless a business justification is provided: <Company Name> discovery protocol and other discovery protocols.",
+      "obligation": "should"
+    },
+    {
+      "id": "router-and-switch-security-policy-15",
+      "section": "4. Policy",
+      "text": "The following services should be disabled unless a business justification is provided: Dynamic trunking.",
+      "obligation": "should"
+    },
+    {
+      "id": "router-and-switch-security-policy-16",
+      "section": "4. Policy",
+      "text": "The following services should be disabled unless a business justification is provided: Scripting environments, such as the TCL shell.",
+      "obligation": "should"
+    },
+    {
+      "id": "router-and-switch-security-policy-17",
+      "section": "4. Policy",
+      "text": "Password-encryption must be configured.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-18",
+      "section": "4. Policy",
+      "text": "NTP must be configured to a corporate standard source.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-19",
+      "section": "4. Policy",
+      "text": "All routing updates shall be done using secure routing updates.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-20",
+      "section": "4. Policy",
+      "text": "Use corporate standardized SNMP community strings.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-21",
+      "section": "4. Policy",
+      "text": "Default SNMP community strings, such as public or private, must be removed.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-22",
+      "section": "4. Policy",
+      "text": "SNMP must be configured to use the most secure version of the protocol allowed for by the combination of the device and management systems.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-23",
+      "section": "4. Policy",
+      "text": "Access control lists must be used to limit the source and type of traffic that can terminate on the device itself.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-24",
+      "section": "4. Policy",
+      "text": "Access control lists for transiting the device are to be added as business needs arise.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-25",
+      "section": "4. Policy",
+      "text": "The router must be included in the corporate enterprise management system with a designated point of contact.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-26",
+      "section": "4. Policy",
+      "text": "Each router must have the following statement presented for all forms of login whether remote or local: \"UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED. You must have explicit permission to access or configure this device. All activities performed on this device may be logged, and violations of this policy may result in disciplinary action, and may be reported to law enforcement. There is no right to privacy on this device. Use of this system shall constitute consent to monitoring.\"",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-27",
+      "section": "4. Policy",
+      "text": "Telnet may never be used across any network to manage a router, unless there is a secure tunnel protecting the entire communication path.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-28",
+      "section": "4. Policy",
+      "text": "SSH version 2 is the preferred management protocol.",
+      "obligation": "should"
+    },
+    {
+      "id": "router-and-switch-security-policy-29",
+      "section": "4. Policy",
+      "text": "Dynamic routing protocols must use authentication in routing updates sent to neighbors.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-30",
+      "section": "4. Policy",
+      "text": "Password hashing for the authentication string must be enabled when supported.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-31",
+      "section": "4. Policy",
+      "text": "The corporate router configuration standard will define the category of sensitive routing and switching devices, and require additional services or configuration on sensitive devices including: IP access list accounting.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-32",
+      "section": "4. Policy",
+      "text": "The corporate router configuration standard will define the category of sensitive routing and switching devices, and require additional services or configuration on sensitive devices including: Device logging.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-33",
+      "section": "4. Policy",
+      "text": "The corporate router configuration standard will define the category of sensitive routing and switching devices, and require additional services or configuration on sensitive devices including: Incoming packets at the router sourced with invalid addresses, such as RFC1918 addresses, or those that could be used to spoof network traffic shall be dropped.",
+      "obligation": "must"
+    },
+    {
+      "id": "router-and-switch-security-policy-34",
+      "section": "4. Policy",
+      "text": "The corporate router configuration standard will define the category of sensitive routing and switching devices, and require additional services or configuration on sensitive devices including: Router console and modem access must be restricted by additional security controls.",
+      "obligation": "must"
+    }
+  ]
+}

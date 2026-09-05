@@ -1,0 +1,37 @@
+{
+  "title": "Mobile Employee Endpoint Responsibility Policy",
+  "summary": "This policy establishes security requirements for employees using mobile devices or endpoint computers for company business outside of an office setting. It covers the protection of company-issued devices and the handling of company data on such devices.",
+  "scope": "This policy applies to any mobile device, or endpoint computer issued by <Company Name> or used for <Company Name> business which contains stored data owned by <Company Name>.",
+  "requirements": [
+    {
+      "id": "mobile-employee-endpoint-responsibility-policy-01",
+      "section": "4",
+      "text": "All employees shall assist in protecting devices issued by <Company Name> or storing <Company Name> data.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-employee-endpoint-responsibility-policy-02",
+      "section": "4",
+      "text": "Users are expressly forbidden from storing <Company Name> data on devices that are not issued by <Company Name>, such as storing <Company Name> email on a personal cell phone or PDA.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-employee-endpoint-responsibility-policy-03",
+      "section": "4.1",
+      "text": "Employees are to notify the security department immediately if they see error messages for Secunia, Anti-virus and Endpoint security products.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-employee-endpoint-responsibility-policy-04",
+      "section": "4.1",
+      "text": "Employees shall run an online malware scanner at least once a month for a “second opinion”.",
+      "obligation": "must"
+    },
+    {
+      "id": "mobile-employee-endpoint-responsibility-policy-05",
+      "section": "4.2",
+      "text": "After installing a Browser Add-on, employees shall run a browser testing tool.",
+      "obligation": "must"
+    }
+  ]
+}

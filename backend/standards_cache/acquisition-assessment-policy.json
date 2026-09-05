@@ -1,0 +1,91 @@
+{
+  "title": "Acquisition Assessment Policy",
+  "summary": "This policy governs the information security assessment and integration requirements for companies acquired by <Company Name>. It defines minimum security standards that must be met before connecting acquired entities to the corporate network.",
+  "scope": "This policy applies to all companies acquired by <Company Name> and pertains to all systems, networks, laboratories, test equipment, hardware, software and firmware, owned and/or operated by the acquired company.",
+  "requirements": [
+    {
+      "id": "acquisition-assessment-policy-01",
+      "section": "4.2.1.1",
+      "text": "All hosts (servers, desktops, laptops) will be replaced or re-imaged with a <Company Name> standard image or will be required to adopt the minimum standards for end user devices.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-02",
+      "section": "4.2.1.2",
+      "text": "Business critical production servers that cannot be replaced or re-imaged must be audited and a waiver granted by Infosec.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-03",
+      "section": "4.2.1.3",
+      "text": "All PC based hosts will require <Company Name> approved virus protection before the network connection.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-04",
+      "section": "4.2.2.1",
+      "text": "All network devices will be replaced or re-imaged with a <Company Name> standard image.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-05",
+      "section": "4.2.2.2",
+      "text": "Wireless network access points will be configured to the <Company Name> standard.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-06",
+      "section": "4.2.3.1",
+      "text": "All Internet connections will be terminated.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-07",
+      "section": "4.2.3.2",
+      "text": "When justified by business requirements, air-gapped Internet connections require Infosec review and approval.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-08",
+      "section": "4.2.4.1",
+      "text": "All remote access connections will be terminated.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-09",
+      "section": "4.2.4.2",
+      "text": "Remote access to the production network will be provided by <Company Name>.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-10",
+      "section": "4.2.5.1",
+      "text": "Lab equipment must be physically separated and secured from non-lab areas.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-11",
+      "section": "4.2.5.2",
+      "text": "The lab network must be separated from the corporate production network with a firewall between the two networks.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-12",
+      "section": "4.2.5.3",
+      "text": "Any direct network connections (including analog lines, ISDN lines, T1, etc.) to external customers, partners, etc., must be reviewed and approved by the Lab Security Group (LabSec).",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-13",
+      "section": "4.2.5.4",
+      "text": "All acquired labs must meet with LabSec lab policy, or be granted a waiver by LabSec.",
+      "obligation": "must"
+    },
+    {
+      "id": "acquisition-assessment-policy-14",
+      "section": "4.2.5.5",
+      "text": "In the event the acquired networks and computer systems being connected to the corporate network fail to meet these requirements, the <Company Name> Chief Information Officer (CIO) must acknowledge and approve of the risk to <Company Name>'s networks.",
+      "obligation": "must"
+    }
+  ]
+}

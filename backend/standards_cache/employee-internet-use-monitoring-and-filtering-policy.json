@@ -1,0 +1,121 @@
+{
+  "title": "Employee Internet Use Monitoring and Filtering Policy",
+  "summary": "This policy establishes standards for monitoring and filtering employee Internet use on the organization's network. It defines requirements for logging, access to monitoring reports, filtering of inappropriate content, and handling of exceptions.",
+  "scope": "This policy applies to all <Company Name> employees, contractors, vendors and agents with a <Company Name>-owned or personally-owned computer or workstation connected to the <Company Name> network. It applies to all end user initiated communications between <Company Name>’s network and the Internet, including web browsing, instant messaging, file transfer, file sharing, and other standard and proprietary protocols. Server to Server communications, such as SMTP traffic, backups, automated data transfers or database communications are excluded from this policy.",
+  "requirements": [
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-01",
+      "section": "4.1",
+      "text": "The Information Technology Department shall monitor Internet use from all computers and devices connected to the corporate network.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-02",
+      "section": "4.1",
+      "text": "For all traffic the monitoring system must record the source IP Address, the date, the time, the protocol, and the destination site or server.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-03",
+      "section": "4.1",
+      "text": "Where possible, the system should record the User ID of the person or account initiating the traffic.",
+      "obligation": "should"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-04",
+      "section": "4.1",
+      "text": "Internet Use records must be preserved for 180 days.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-05",
+      "section": "4.2",
+      "text": "General trending and activity reports will be made available to any employee as needed upon request to the Information Technology Department.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-06",
+      "section": "4.2",
+      "text": "Computer Security Incident Response Team (CSIRT) members may access all reports and data if necessary to respond to a security incident.",
+      "obligation": "may"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-07",
+      "section": "4.2",
+      "text": "Internet Use reports that identify specific users, sites, teams, or devices will only be made available to associates outside the CSIRT upon written or email request to Information Systems from a Human Resources Representative.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-08",
+      "section": "4.3",
+      "text": "The Information Technology Department shall block access to Internet websites and protocols that are deemed inappropriate for <Company Name>’s corporate environment.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-09",
+      "section": "4.3",
+      "text": "The following protocols and categories of websites should be blocked: Adult/Sexually Explicit Material, Advertisements & Pop-Ups, Chat and Instant Messaging, Gambling, Hacking, Illegal Drugs, Intimate Apparel and Swimwear, Peer to Peer File Sharing, Personals and Dating, Social Network Services, SPAM, Phishing and Fraud, Spyware, Tasteless and Offensive Content, Violence, Intolerance and Hate, Web Based Email.",
+      "obligation": "should"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-10",
+      "section": "4.4",
+      "text": "The Information Technology Department shall periodically review and recommend changes to web and protocol filtering rules.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-11",
+      "section": "4.4",
+      "text": "Human Resources shall review these recommendations and decide if any changes are to be made.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-12",
+      "section": "4.4",
+      "text": "Changes to web and protocol filtering rules will be recorded in the Internet Use Monitoring and Filtering Policy.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-13",
+      "section": "4.5",
+      "text": "If a site is mis-categorized, employees may request the site be un-blocked by submitting a ticket to the Information Technology help desk.",
+      "obligation": "may"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-14",
+      "section": "4.5",
+      "text": "An IT employee will review the request and un-block the site if it is mis-categorized.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-15",
+      "section": "4.5",
+      "text": "Employees may access blocked sites with permission if appropriate and necessary for business purposes.",
+      "obligation": "may"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-16",
+      "section": "4.5",
+      "text": "If an employee needs access to a site that is blocked and appropriately categorized, they must submit a request to their Human Resources representative.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-17",
+      "section": "4.5",
+      "text": "HR will present all approved exception requests to Information Technology in writing or by email.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-18",
+      "section": "4.5",
+      "text": "Information Technology will unblock that site or category for that associate only.",
+      "obligation": "must"
+    },
+    {
+      "id": "employee-internet-use-monitoring-and-filtering-policy-19",
+      "section": "4.5",
+      "text": "Information Technology will track approved exceptions and report on them upon request.",
+      "obligation": "must"
+    }
+  ]
+}
