@@ -9,17 +9,18 @@ import json
 import re
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
 from pydantic import ValidationError
 from pypdf import PdfReader
 
-from app.config import EMBED_BATCH_SIZE, MIN_EXTRACTED_CHARS
+from app.config import EMBED_BATCH_SIZE, EMBED_MODEL, LLM_MODEL, MIN_EXTRACTED_CHARS
 from app.extract import normalize_whitespace, pdf_reader_to_text
 from app.llm import chat_json_validated, embed
 from app.prompts import EXTRACT_REQUIREMENTS_SYSTEM, EXTRACT_REQUIREMENTS_USER_TEMPLATE
-from app.schemas import StandardExtraction
+from app.schemas import IngestMeta, StandardExtraction
 
 BACKEND_ROOT = Path(__file__).resolve().parent
 STANDARDS_SRC = BACKEND_ROOT.parent / "standards_src"
@@ -68,6 +69,14 @@ def load_or_extract(pdf_path: Path, slug: str, force: bool) -> StandardExtractio
     # the LLM's own ids (see prompts.py) are only for its internal ordering.
     for i, req in enumerate(extraction.requirements, start=1):
         req.id = f"{slug}-{i:02d}"
+
+    extraction.meta = IngestMeta(
+        source_filename=pdf_path.name,
+        ingested_at=datetime.now(timezone.utc).isoformat(),
+        extraction_model=LLM_MODEL,
+        embedding_model=EMBED_MODEL,
+        requirement_count=len(extraction.requirements),
+    )
 
     cache_path.write_text(extraction.model_dump_json(indent=2))
     return extraction
