@@ -42,7 +42,7 @@ def evaluate_document(filename: str) -> tuple[MatchResult, list[FindingOut]]:
     return match, findings
 
 
-def run_compliant() -> None:
+def run_compliant() -> dict[Verdict, int]:
     print("=== compliant_procedure.md ===")
     match, findings = evaluate_document("compliant_procedure.md")
     print(f"  matched={match.matched} standard={match.standard_id} score={match.score:.4f}")
@@ -51,6 +51,7 @@ def run_compliant() -> None:
     counts = build_counts(findings)
     print(f"  counts={ {v.value: c for v, c in counts.items()} }")
     print()
+    return counts
 
 
 def run_violations() -> tuple[int, int]:
@@ -86,10 +87,55 @@ def run_unrelated() -> None:
     print()
 
 
+def run_format_regression() -> None:
+    """compliant_clean_desk_procedure.pdf and .docx carry the same content as
+    the .md version (paragraphs re-flowed, markdown syntax stripped) --
+    confirms the pipeline behaves consistently across upload formats.
+
+    This deliberately does NOT use compliant_procedure.md/Password Protection
+    Policy: that standard has a known, documented sibling-confusion issue
+    (Password Protection vs. Password Construction) that flips the matched
+    standard when headings are flattened to plain text -- confirmed stable
+    across repeated runs, not a flake. That's a real, separate finding (see
+    DECISIONS.md and tests/test_known_issues.py, which keeps it visible via
+    an explicit xfail rather than hiding it). Format-handling consistency
+    needs a standard with no close sibling to test the thing it's meant to
+    test, so this uses Clean Desk Policy instead, whose top candidate led
+    the runner-up by 0.06+ for all three formats.
+    """
+    print("=== compliant_clean_desk_procedure.md (format regression baseline) ===")
+    md_match, md_findings = evaluate_document("compliant_clean_desk_procedure.md")
+    print(f"  matched={md_match.matched} standard={md_match.standard_id} score={md_match.score:.4f}")
+    assert md_match.matched, "compliant_clean_desk_procedure.md should match a standard"
+    md_counts = build_counts(md_findings)
+    print(f"  counts={ {v.value: c for v, c in md_counts.items()} }")
+    print()
+
+    for filename in ("compliant_clean_desk_procedure.pdf", "compliant_clean_desk_procedure.docx"):
+        print(f"=== {filename} (format regression) ===")
+        match, findings = evaluate_document(filename)
+        print(f"  matched={match.matched} standard={match.standard_id} score={match.score:.4f}")
+        assert match.matched, f"{filename} should match a standard"
+        assert match.standard_id == md_match.standard_id, (
+            f"{filename} matched {match.standard_id}, expected {md_match.standard_id} (same as the .md version)"
+        )
+
+        counts = build_counts(findings)
+        print(f"  counts={ {v.value: c for v, c in counts.items()} }")
+        for verdict in Verdict:
+            diff = abs(counts[verdict] - md_counts[verdict])
+            assert diff <= 2, (
+                f"{filename} {verdict.value} count {counts[verdict]} differs from .md's "
+                f"{md_counts[verdict]} by {diff} (> 2)"
+            )
+        print()
+
+
 def main() -> None:
     run_compliant()
     caught, total = run_violations()
     run_unrelated()
+    run_format_regression()
 
     print(f"=== Summary: {caught}/{total} planted violations caught ===")
     if caught < total:

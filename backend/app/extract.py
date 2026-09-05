@@ -60,7 +60,15 @@ def pdf_reader_to_text(reader: PdfReader) -> str:
 
 
 def normalize_whitespace(text: str) -> str:
-    """Collapse run of spaces/tabs and excess blank lines. Shared with ingest.py."""
+    """Collapse run of spaces/tabs and excess blank lines. Shared with ingest.py.
+
+    Line endings are normalized to bare "\\n" first: chunk_text()'s paragraph
+    splitter looks for the literal substring "\\n\\n", which a Windows-style
+    "\\r\\n\\r\\n" blank line does not contain (\\r,\\n,\\r,\\n has no two
+    adjacent \\n's), so an un-normalized CRLF document would silently lose
+    all its paragraph boundaries before chunking ever saw it.
+    """
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
@@ -85,7 +93,7 @@ def extract_text(data: bytes) -> str:
             raise UnsupportedDocument("File could not be read as a valid DOCX document.") from exc
     else:
         try:
-            text = data.decode("utf-8")
+            text = data.decode("utf-8-sig")  # -sig strips a UTF-8 BOM if present; no-op otherwise
         except UnicodeDecodeError:
             text = data.decode("latin-1")
 
