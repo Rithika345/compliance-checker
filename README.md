@@ -21,7 +21,7 @@ limitations in more depth. This file covers what you need to run it.
 ## Setup
 
 ```bash
-git clone <this repo>
+git clone https://github.com/Rithika345/compliance-checker.git
 cd compliance-checker
 python3 -m venv venv
 source venv/bin/activate
