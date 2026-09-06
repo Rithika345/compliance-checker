@@ -1,11 +1,13 @@
 # Document Compliance Checker
 
 Upload an operating procedure (PDF, DOCX, TXT, or MD) and it's checked against the single
-best-matching SANS security standard from a curated library of 30. If no standard plausibly
-applies, the app says so instead of forcing a match. If one does apply, every requirement of
-that standard gets one of four verdicts — aligned, contradicted, missing, or flagged for review
-— and every quote shown alongside a verdict has been checked against the real document text
-before it's displayed.
+best-matching security standard from a curated library of 30 policies loaded from the
+**SANS Security Policy Templates**, via a GitHub mirror of the collection (see `standards_src/`
+for the source PDFs and `DECISIONS.md` for how the 30 were chosen from the full set). If no
+standard plausibly applies, the app says so instead of forcing a match. If one does apply, every
+requirement of that standard gets one of four verdicts — aligned, contradicted, missing, or
+flagged for review — and every quote shown alongside a verdict has been checked against the real
+document text before it's displayed.
 
 See `DESIGN.md` for the architecture, the reasoning behind the design decisions, and known
 limitations in more depth. This file covers what you need to run it.
@@ -22,11 +24,16 @@ limitations in more depth. This file covers what you need to run it.
 git clone <this repo>
 cd compliance-checker
 python3 -m venv venv
-source venv/bin/activate          # Windows: venv\Scripts\activate
+source venv/bin/activate
 pip install -r backend/requirements.txt
 cp .env.example .env
 # edit .env and fill in STANFORD_API_KEY
 ```
+
+**Windows:** activate the venv with `venv\Scripts\activate` instead of `source venv/bin/activate`,
+and copy the env file with `copy .env.example .env` instead of `cp .env.example .env`. The rest of
+the steps are the same. This project was developed and tested on **macOS with Python 3.14** —
+the Windows commands above are the standard equivalents, but haven't been run/tested here.
 
 The standards library is pre-built and committed (`backend/standards_cache/`), so there's no
 ingest step to run before starting the app — `python backend/ingest.py` is only needed if you
