@@ -78,24 +78,11 @@ UI state; screenshots of the three core outcomes are in `screenshots/`.
 
 ## AI-assistant usage
 
-- **Claude (chat)** was used for design planning (`DESIGN_PLAN.md`) before the build started. A
-  status summary was prepared partway through the build (covering what had been implemented,
-  tested, and corrected so far) for review in that same chat session, which had the original
-  planning context but hadn't seen anything since.
-- **Claude Code** did the implementation, stage by stage, from `BUILD_PLAN.md`, and later built out
-  the `pytest` unit test suite and the PDF/DOCX format-regression fixtures.
-- **A Chrome browser automation skill** was used to actually drive the UI in a real browser for
-  Stage 5 (upload each test document, confirm each state renders, and adversarially test the
-  escaping behavior with an injected script payload) rather than only testing the API directly.
-
-This wasn't a rubber-stamp process. Rithika reviewed the regression outputs at each stage, made
-the actual design decisions when tradeoffs came up (which fix to take, what to leave as a known
-limitation, how to scope a test), and wrote `DESIGN.md` herself, in her own words, from
-`DECISIONS.md` and the planning sections of `DESIGN_PLAN.md` — it was not generated. Every stage
-ended with a summary of what was built, the verify output, and one thing the assistant was unsure
-about or surprised by, recorded before moving to the next stage; every decision and correction —
-including real mistakes the assistant caught in its own earlier work (curation errors, a
-formatting bug, an error-handling gap) — is logged chronologically in `DECISIONS.md`.
+An AI chat assistant was used for design planning (`DESIGN_PLAN.md`) before the build started,
+and an AI coding assistant was used for implementation, stage by stage, from `BUILD_PLAN.md`.
+Rithika reviewed the regression outputs at each stage, made the design decisions when tradeoffs
+came up, and wrote `DESIGN.md` herself, in her own words. Stage-by-stage notes and every decision
+made along the way are logged chronologically in `DECISIONS.md`.
 
 ## Known limitations
 
