@@ -85,11 +85,11 @@ UI state; screenshots of the three core outcomes are in `screenshots/`.
 
 ## AI-assistant usage
 
-An AI chat assistant was used for design planning (`DESIGN_PLAN.md`) before the build started,
-and an AI coding assistant was used for implementation, stage by stage, from `BUILD_PLAN.md`.
-Rithika reviewed the regression outputs at each stage, made the design decisions when tradeoffs
-came up, and wrote `DESIGN.md` herself, in her own words. Stage-by-stage notes and every decision
-made along the way are logged chronologically in `DECISIONS.md`.
+Claude (chat) was used for design planning (`DESIGN_PLAN.md`) before the build started, and
+Claude Code was used for implementation, stage by stage, from `BUILD_PLAN.md`. Rithika reviewed
+the regression outputs at each stage, made the design decisions when tradeoffs came up, and wrote
+`DESIGN.md` herself, in her own words. Stage-by-stage notes and every decision made along the way
+are logged chronologically in `DECISIONS.md`.
 
 ## Known limitations
 
